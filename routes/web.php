@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Routing\Router;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+$router->group(['prefix' => 'admin', 'namespace' => 'Admin'], function (Router $router) {
+    $router->get('/', 'HomeController@index');
+});
