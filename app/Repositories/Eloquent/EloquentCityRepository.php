@@ -8,5 +8,17 @@ use App\Repositories\Contracts\CityRepository;
 
 class EloquentCityRepository extends EloquentBaseRepository implements CityRepository
 {
-    // code
+    public function cities()
+    {
+        return $this->model
+            ->whereParentId(0)
+            ->pluck('name', 'id');
+    }
+
+    public function districts($city_id)
+    {
+        return $this->model
+            ->whereParentId($city_id)
+            ->pluck('name', 'id');
+    }
 }

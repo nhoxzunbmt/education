@@ -6,5 +6,7 @@ use App\Repositories\Contracts\BaseRepository;
 
 interface CityRepository extends BaseRepository
 {
-    //
+        public function cities();
+
+        public function districts($city_id);
 }

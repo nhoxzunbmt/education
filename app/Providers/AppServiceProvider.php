@@ -8,19 +8,19 @@ use App\Repositories\Eloquent\EloquentBlogRepository;
 use App\Repositories\Eloquent\EloquentCityRepository;
 use App\Repositories\Eloquent\EloquentSubjectRepository;
 use App\Repositories\Eloquent\EloquentDayRepository;
-use App\Repositories\Eloquent\EloquentAgencyRepository;
+use App\Repositories\Eloquent\EloquentPartnerRepository;
 use App\Repositories\Contracts\UserRepository;
 use App\Repositories\Contracts\BlogRepository;
 use App\Repositories\Contracts\CityRepository;
 use App\Repositories\Contracts\SubjectRepository;
 use App\Repositories\Contracts\DayRepository;
-use App\Repositories\Contracts\AgencyRepository;
+use App\Repositories\Contracts\PartnerRepository;
 use App\Models\User;
 use App\Models\Blog;
 use App\Models\City;
 use App\Models\Subject;
 use App\Models\Day;
-use App\Models\Agency;
+use App\Models\Partner;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -67,8 +67,8 @@ class AppServiceProvider extends ServiceProvider
             }
         );
         $this->app->bind(
-            AgencyRepository::class, function () {
-                return new EloquentAgencyRepository(new Agency());
+            PartnerRepository::class, function () {
+                return new EloquentPartnerRepository(new Partner());
             }
         );
     }

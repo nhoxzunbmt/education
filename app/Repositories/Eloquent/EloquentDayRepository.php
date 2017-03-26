@@ -8,5 +8,8 @@ use App\Repositories\Contracts\DayRepository;
 
 class EloquentDayRepository extends EloquentBaseRepository implements DayRepository
 {
-    // code
+    public function days()
+    {
+        return $this->model->all();
+    }
 }

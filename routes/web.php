@@ -19,8 +19,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
+$router->get('districts/{city_id}', 'DistrictsController@show');
+
+$router->group(['namespace' => 'Front'], function (Router $router) {
+    $router->get('dang-ky-tim-gia-su', 'PeopleController@create');
+    $router->post('dang-ky-tim-gia-su', 'PeopleController@store');
+    $router->get('dang-ky-gia-su', 'TeachersController@create');
+    $router->post('dang-ky-gia-su', 'TeachersController@store');
+    $router->get('/', 'HomeController@index');
+    $router->get('contact', 'HomeController@contact');
+});
+
 Route::get('/home', 'HomeController@index');
 
-$router->group(['prefix' => 'admin', 'namespace' => 'Admin'], function (Router $router) {
+$router->group(['prefix' => 'backend', 'namespace' => 'Back'], function (Router $router) {
+    $router->get('login', 'SessionController@getLogin');
+    $router->post('login', 'SessionController@login');
     $router->get('/', 'HomeController@index');
 });

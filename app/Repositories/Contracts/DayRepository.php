@@ -6,5 +6,5 @@ use App\Repositories\Contracts\BaseRepository;
 
 interface DayRepository extends BaseRepository
 {
-    //
+    public function days();
 }

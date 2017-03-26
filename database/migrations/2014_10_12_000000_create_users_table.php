@@ -18,8 +18,21 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('mobile', 12); // So dt di dong
+            $table->string('phone', 15)->nullable(); // So dt ban
+            $table->string('avatar', 150)->nullable(); // Anh the doi voi sv
+            $table->string('file_id', 150)->nullable(); // The SV or Bang cap
+            $table->string('note', 255)->nullable(); // Admin ghi nhung cau noi yeu thich
+            $table->unsignedTinyInteger('gender')->default(0); // 1: nam, 2: nu
+            $table->unsignedTinyInteger('skin')->default(0); // Admin skins
+            $table->date('birthday')->nullable();
+            $table->boolean('confirmed')->default(false);
             $table->rememberToken();
+            $table->timestamp('last_login')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->engine = 'InnoDB';
         });
     }
 
