@@ -8,5 +8,18 @@ use App\Repositories\Contracts\UserRepository;
 
 class EloquentUserRepository extends EloquentBaseRepository implements UserRepository
 {
-    // code
+    public function users($role_id = null)
+    {
+        $query = $this->model
+            ->with('role', 'partner');
+
+        if ($role_id)
+        {
+            $query->whereRoleId($role_id);
+        }
+
+        $query->orderBy('created_at', 'DESC');
+
+        return $query;
+    }
 }

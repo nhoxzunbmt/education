@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('note', 255)->nullable(); // Admin ghi nhung cau noi yeu thich
             $table->unsignedTinyInteger('gender')->default(0); // 1: nam, 2: nu
             $table->unsignedTinyInteger('skin')->default(0); // Admin skins
+            $table->unsignedTinyInteger('branch')->default(0); // Chi nhanh
             $table->date('birthday')->nullable();
             $table->boolean('confirmed')->default(false);
             $table->rememberToken();

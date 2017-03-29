@@ -77,6 +77,7 @@ class PeopleController extends Controller
         $grades = $this->status->grades();
         $numbers = $this->status->numbers();
         $levels = $this->status->levels();
+        $times = $this->status->times();
         $days = $this->day->days();
         $subjects = $this->subject->subjects();
 
@@ -87,6 +88,7 @@ class PeopleController extends Controller
             'levels' => $levels,
             'days' => $days,
             'subjects' => $subjects,
+            'times' => $times,
             'captcha' => Captcha::html()
         ]);
     }
@@ -100,7 +102,7 @@ class PeopleController extends Controller
         $request['role_id'] = 5;
         $grades = $request['grades'];
         $days = $request['days'];
-        $subjects = $reques['subjects'];
+        $subjects = $request['subjects'];
         $email = $request['email'];
 
         foreach ($grades as $grade) {

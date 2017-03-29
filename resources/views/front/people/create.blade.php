@@ -65,12 +65,17 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6{{ $errors->has('number') ? ' has-error' : '' }}">
+                    <div class="col-md-3{{ $errors->has('number') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.number') }} <span class="required">*</span></label>
                         {!! Form::select('number', $numbers, null, ['class' => 'form-control','placeholder' => trans('lang.number')]) !!}
                     </div>
 
-                    <div class="col-md-6{{ $errors->has('level') ? ' has-error' : '' }}">
+                    <div class="col-md-5{{ $errors->has('number') ? ' has-error' : '' }}">
+                        <label>{{ trans('lang.timer') }} <span class="required">*</span></label>
+                        {!! Form::select('time', $times, null, ['class' => 'form-control','placeholder' => trans('lang.p_timer')]) !!}
+                    </div>
+
+                    <div class="col-md-4{{ $errors->has('level') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.level') }} <span class="required">*</span></label>
                         {!! Form::select('level', $levels, null, ['class' => 'form-control','placeholder' => trans('lang.level')]) !!}
                     </div>

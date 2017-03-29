@@ -452,16 +452,16 @@ footer {
 }
 .col-left {
     border: 1px solid #e2e2e2;
-    -webkit-border-radius: 5px;
+    /*-webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 5px;*/
     margin-bottom: 30px
 }
 .col-right {
     border: 1px solid #e2e2e2;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*border-radius: 5px;*/
     margin-bottom: 60px
 }
 .strip-lessons,
@@ -482,17 +482,23 @@ ul.submenu-col {
     margin: 0;
     padding: 0;
     font-weight: 700;
-    font-size: 14px
+    font-size: 14px;
+    margin-bottom: 7px;
 }
 ul.submenu-col li a {
     text-decoration: none;
-    padding: 4px 10px;
+    padding: 7px 10px;
     display: block;
-    margin-bottom: 3px
+    border-bottom: 1px dotted #efefef;
+}
+ul.submenu-col li:last-child a {
+    border-bottom: none;
 }
 ul.submenu-col li a#active {
     background: url(img/arrow.png) 96% center no-repeat #099ad1;
-    color: #fff
+    color: #fff;
+    padding: 10px;
+    border-bottom: none;
 }
 ul.submenu-col li a:hover {
     background: #efefef;
@@ -521,10 +527,11 @@ ul.submenu-col li a:hover {
     -webkit-border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    color: #fff
+    color: #fff;
+    padding: 5px;
 }
-.title-course h3 {
-    font-size: 18px;
+.title-course p {
+    font-size: 14px;
     padding: 3px 0 3px 15px;
     color: #fff;
     margin: 0
@@ -1316,7 +1323,7 @@ a#megamenu-button-mobile.active {
     float: left;
     color: #fff;
     width: 1170px;
-    margin: 0 0 40px;
+    /*margin: 0 0 40px;*/
     padding: 30px 15px 0;
     -webkit-border-bottom-right-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -1358,7 +1365,7 @@ a#megamenu-button-mobile.active {
 }
 .megamenu>li .drop-down-container.normal {
     position: absolute;
-    top: 50px;
+    /*top: 50px;*/
     left: -15px;
     display: none;
     width: auto;
@@ -1380,14 +1387,14 @@ ul.tabs {
 }
 .drop-down-container.normal ul li a {
     display: block;
-    padding: 5px 10px;
+    padding: 5px 15px;
     width: 180px;
-    margin-bottom: 3px;
+    /*margin-bottom: 3px;*/
     color: #fff;
     background-color: #09c;
-    -webkit-border-radius: 4px;
+    /*-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px
+    border-radius: 4px*/
 }
 .drop-down-container.normal ul li a:hover {
     background-color: #2d343e;

@@ -23,10 +23,10 @@ class RolesTableSeeder extends Seeder
         DB::table('roles')->insert([
             ['name' => 'Super', 'slug' => 'super', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Admin', 'slug' => 'admin', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['name' => 'Report', 'slug' => 'report', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['name' => 'Admin Amazon', 'slug' => 'amazon', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Teacher', 'slug' => 'teacher', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Personal', 'slug' => 'personal', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['name' => 'Amazon', 'slug' => 'amazon', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            
         ]);
     }
 }

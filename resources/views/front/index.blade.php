@@ -11,26 +11,84 @@
 @section('content')
     <section class="col-md-6 col-sm-6">
         <div class="col-right">
-            <h2>Upcoming courses</h2>
-            <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
-            <hr>
-               <div class="strip-lessons">
             <div class="row">
-                <div class="col-md-3 col-xs-6">
-                    <div class="box-style-one borders"><img src="css/img/lessons.png" alt=""><h5>Intro</h5></div>
+                <div class="col-md-6">
+                    <div class="strip-courses">
+                        <div class="title-course">
+                            <p><i class="icon-graduation-cap"></i>Lớp đang cần gia sư</p>
+                            <ul>
+                                <li><i class="icon-bookmark"></i> ID: 012</li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+                            <ul>
+                                <li><i class="icon-book"></i> 10 Lessons</li>
+                                <li><i class="icon-reorder"></i> Level Intermediate</li>
+                            </ul>
+                        <a href="course-detail.html" class="button_medium button-align-2">Read more </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="clearfix visible-xs-block"></div>
-                <div class="col-md-9">
-                    <h4>Autem possim his</h4>
-                    <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
-                    <ul class="data-lessons">
-                        <li><i class="icon-time"></i>Duration: 3 hours</li>
-                        <li><i class="icon-film"></i><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li>
-                        <li><i class="icon-cloud-download"></i><a href="#">Donwload prospect</a></li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="strip-courses">
+                        <div class="title-course">
+                            <p>Vo Van Do</p>
+                            <ul>
+                                <li><i class="icon-bookmark"></i> ID: 012</li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+                            <ul>
+                                <li><i class="icon-book"></i> 10 Lessons</li>
+                                <li><i class="icon-reorder"></i> Level Intermediate</li>
+                            </ul>
+                        <a href="course-detail.html" class="button_medium button-align-2">Read more </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="strip-courses">
+                        <div class="title-course">
+                            <p>Vo Van Do</p>
+                            <ul>
+                                <!-- <li><i class="icon-calendar"></i> Start date: 24/06/13</li> -->
+                                <li><i class="icon-bookmark"></i> ID: 012</li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+                            <ul>
+                                <li><i class="icon-book"></i> 10 Lessons</li>
+                                <li><i class="icon-reorder"></i> Level Intermediate</li>
+                            </ul>
+                        <a href="course-detail.html" class="button_medium button-align-2">Read more </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="strip-courses">
+                        <div class="title-course">
+                            <h6>Name</h6>
+                            <ul>
+                                <!-- <li><i class="icon-calendar"></i> Start date: 24/06/13</li> -->
+                                <li><i class="icon-bookmark"></i> ID: 012</li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+                            <ul>
+                                <li><i class="icon-book"></i> 10 Lessons</li>
+                                <li><i class="icon-reorder"></i> Level Intermediate</li>
+                            </ul>
+                        <a href="course-detail.html" class="button_medium button-align-2">Read more </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div><!-- End Strip course -->
+
+            
             
             
             <div class="strip-lessons">

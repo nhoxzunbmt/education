@@ -29,25 +29,25 @@
                         <label>{{ trans('lang.name') }}<span class="required"> *</span></label>
                         {!! Form::text('name', null, ['class' => 'form-control']) !!}
                     </div>
-                    <div class="col-md-5{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <div class="col-md-4{{ $errors->has('email') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.email') }}<span class="required"> *</span></label>
                         {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                     </div>
-                    <div class="col-md-3{{ $errors->has('gender') ? ' has-error' : '' }}">
+                    <div class="col-md-4{{ $errors->has('gender') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.gender') }} <span class="required">*</span></label>
                         {!! Form::select('gender', $genders, null, ['class' => 'form-control','placeholder' => trans('lang.gender')]) !!}
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3{{ $errors->has('birthday') ? ' has-error' : '' }}">
+                    <div class="col-md-4{{ $errors->has('birthday') ? ' has-error' : '' }}">
                         <div id="birthday" class="input-append" style="position:relative;">
                             <label>{{ trans('lang.birthday') }} <span class="required">* </span></label>
                             {!! Form::text('birthday', null, ['class' => 'dateinput form-control']) !!}
                             <span class="add-on" style="position:absolute; top:34px; right:5px; cursor:pointer"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <label>{{ trans('lang.mobile') }} <span class="required"> * </span></label>
                         {!! Form::text('mobile', null, ['class' => 'form-control']) !!}
                     </div>
@@ -76,23 +76,28 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6{{ $errors->has('avatar') ? ' has-error' : '' }}">
+                    <div class="col-md-5{{ $errors->has('avatar') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.avatar') }} <span class="required"> * </span><small style="color: red;">{{ trans('lang.the') }}</small></label>
                         {!! Form::file('avatar', ['class' => 'form-control']) !!}
                     </div>
-                    <div class="col-md-6{{ $errors->has('file_id') ? ' has-error' : '' }}">
+                    <div class="col-md-7{{ $errors->has('file_id') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.file_id') }}<span class="required"> * </span><small style="color: red;">{{ trans('lang.cmt') }}</small></label>
                         {!! Form::file('file_id', ['class' => 'form-control']) !!}
                     </div>
                 </div><br />
 
                 <div class="row">
-                    <div class="col-md-6{{ $errors->has('number') ? ' has-error' : '' }}">
+                    <div class="col-md-4{{ $errors->has('number') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.front.teacher_number') }} <span class="required">*</span></label>
                         {!! Form::select('number', $numbers, null, ['class' => 'form-control','placeholder' => trans('lang.number')]) !!}
                     </div>
 
-                    <div class="col-md-6{{ $errors->has('level') ? ' has-error' : '' }}">
+                    <div class="col-md-5{{ $errors->has('number') ? ' has-error' : '' }}">
+                        <label>{{ trans('lang.timer') }} <span class="required">*</span></label>
+                        {!! Form::select('time', $times, null, ['class' => 'form-control','placeholder' => trans('lang.p_timer')]) !!}
+                    </div>
+
+                    <div class="col-md-3{{ $errors->has('level') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.front.teacher_level') }} <span class="required">*</span></label>
                         {!! Form::select('level', $levels, null, ['class' => 'form-control','placeholder' => trans('lang.front.teacher_level')]) !!}
                     </div>
