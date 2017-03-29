@@ -79,6 +79,7 @@ class TeachersController extends Controller
         $grades = $this->status->grades();
         $numbers = $this->status->numbers();
         $levels = $this->status->teacher_levels();
+        $times = $this->status->times();
         $days = $this->day->days();
         $subjects = $this->subject->subjects();
         $genders = $this->status->genders();
@@ -91,6 +92,7 @@ class TeachersController extends Controller
             'days' => $days,
             'subjects' => $subjects,
             'genders' => $genders,
+            'times' => $times,
             'captcha' => Captcha::html()
         ]);
     }

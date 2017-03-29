@@ -67,6 +67,13 @@ class Status
         2 => 'Nữ'
     ];
 
+    const TIMES = [
+        1 => 'Buổi sáng',
+        2 => 'Buổi chiều',
+        3 => 'Buổi tối',
+        4 => 'Tất cả'
+    ];
+
     /**
      * @var array
      */
@@ -92,6 +99,11 @@ class Status
      */
     private $teacher_levels;
 
+    /**
+     * @var array
+     */
+    private $times;
+
     public function __construct()
     {
         $this->grades = self::GRADES;
@@ -99,6 +111,7 @@ class Status
         $this->levels = self::LEVELS;
         $this->genders = self::GENDERS;
         $this->teacher_levels = self::TEACHER_LEVELS;
+        $this->times = self::TIMES;
     }
 
     public function grades()
@@ -124,5 +137,10 @@ class Status
     public function teacher_levels()
     {
         return $this->teacher_levels;
+    }
+
+    public function times()
+    {
+        return $this->times;
     }
 }

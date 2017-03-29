@@ -24,13 +24,37 @@
         <div class="menu">
             <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 151px;"><ul class="list" style="height: 151px; overflow: hidden; width: auto;">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active open"><a href="index.html" class="toggled waves-effect waves-block"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>                                               
-                <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
+                <li class="active">
+                    <a href="index.html" class="toggled waves-effect waves-block">
+                        <i class="zmdi zmdi-home"></i><span>{{ trans('lang.back.dashboard') }}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="zmdi zmdi-calendar-check"></i><span>{{ trans('lang.back.account') }}</span>
+                    </a>
                     <ul class="ml-menu">
-                        <li><a href="doctor-schedule.html" class=" waves-effect waves-block">Doctor Schedule</a></li>
-                        <li><a href="book-appointment.html" class=" waves-effect waves-block">Book Appointment</a></li>
+                        <li>{{ link_to('backend/roles', trans('lang.back.role'), ['class' => 'waves-effect waves-block']) }}</li>
+                        <li>{{ link_to('#', trans('lang.back.admin'), ['class' => 'waves-effect waves-block']) }}</li>
+                        <li>{{ link_to('#', trans('lang.back.partner'), ['class' => 'waves-effect waves-block']) }}</li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="index.html" class="toggled waves-effect waves-block">
+                        <i class="zmdi zmdi-account-o"></i><span>{{ trans('lang.back.personal') }}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="toggled waves-effect waves-block">
+                        <i class="zmdi zmdi-account-add"></i><span>{{ trans('lang.back.teacher') }}</span>
+                    </a>
+                </li>
+
+                
+
                 <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
                     <ul class="ml-menu">
                         <li><a href="doctors.html" class=" waves-effect waves-block">All Doctors</a></li>

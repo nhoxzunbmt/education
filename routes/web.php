@@ -36,4 +36,7 @@ $router->group(['prefix' => 'backend', 'namespace' => 'Back'], function (Router 
     $router->get('login', 'SessionController@getLogin');
     $router->post('login', 'SessionController@login');
     $router->get('/', 'HomeController@index');
+    $router->resource('roles', 'RolesController');
+    $router->resource('users', 'UsersController');
+    $router->resource('partners', 'PartnersController', ['only' => ['index', 'show', 'distroy']]);
 });
