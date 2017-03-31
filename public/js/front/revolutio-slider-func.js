@@ -8,7 +8,7 @@ tpj(document).ready(function() {
     tpj('.fullwidthbanner').revolution({
         delay: 9000,
         startwidth: 960,
-        startheight: 500,
+        startheight: 312,
         onHoverStop: "on",
         thumbWidth: 100,
         thumbHeight: 50,

@@ -28,6 +28,13 @@ $router->group(['namespace' => 'Front'], function (Router $router) {
     $router->post('dang-ky-gia-su', 'TeachersController@store');
     $router->get('/', 'HomeController@index');
     $router->get('contact', 'HomeController@contact');
+    $router->get('phu-huynh-can-biet', 'PeopleController@know');
+    $router->get('phu-huynh-luu-y', 'PeopleController@care');
+    $router->get('hoc-phi-gia-su', 'PeopleController@fee');
+    $router->get('dich-vu-gia-su', 'PeopleController@service');
+    $router->get('gia-su-nhan-lop', 'TeachersController@process');
+    $router->get('phi-gia-su', 'TeachersController@fee');
+    $router->get('gia-su-can-biet', 'TeachersController@know');
 });
 
 Route::get('/home', 'HomeController@index');

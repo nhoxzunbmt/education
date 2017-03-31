@@ -30,47 +30,4 @@ class RolesController extends Controller
             'roles' => $roles
         ]);
     }
-
-    public function create()
-    {
-
-        return view('back.roles.create', [
-            // code
-        ]);
-    }
-
-    public function store(StoreRole $request)
-    {
-        
-        return redirect('/');
-    }
-
-    public function edit()
-    {
-        
-        return view('back.roles.edit', [
-            // code
-        ]);
-    }
-
-    public function update(UpdateRole $request)
-    {
-        
-        return redirect('/')
-            ->with('success', '');
-    }
-
-    public function view($id)
-    {
-        
-        return view('back.roles.view', [
-            // code
-        ]);
-    }
-
-    public function destroy($id)
-    {
-        
-        return redirect('/');
-    }
 }

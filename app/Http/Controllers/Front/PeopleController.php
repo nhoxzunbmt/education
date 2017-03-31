@@ -96,29 +96,16 @@ class PeopleController extends Controller
     public function store(StorePeople $request)
     {
         $request = $request->all();
-        $d = '';
-        $s = '';
-        $g = '';
+        $request['code'] = rand(10000, 99999);
         $request['role_id'] = 5;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
         $email = $request['email'];
 
-        foreach ($grades as $grade) {
-            $g .= ' ,'.$grade;
-        }
-        $request['grades'] = $g;
-
-        foreach ($days as $day) {
-            $d .= ' ,'.$day;
-        }
-        $request['days'] = $d;
-
-        foreach ($subjects as $subject) {
-            $s .= ' ,'.$subject;
-        }
-        $request['subjects'] = $s;
+        $request['grades'] = join_arr($grades);
+        $request['days'] = join_arr($days);
+        $request['subjects'] = join_arr($subjects);
 
         if (!$email) {
             $request['email'] = $request['mobile'];
@@ -144,5 +131,25 @@ class PeopleController extends Controller
         }
 
         return redirect('/');
+    }
+
+    public function know()
+    {
+        return view('front.people.know');
+    }
+
+    public function care()
+    {
+        return view('front.people.care');
+    }
+
+    public function fee()
+    {
+        return view('front.people.fee');
+    }
+
+    public function service()
+    {
+        return view('front.people.service');
     }
 }

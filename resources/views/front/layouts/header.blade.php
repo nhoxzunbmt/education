@@ -7,14 +7,7 @@
             </a>
         </div>
         <div class="col-md-8 col-sm-8">
-            <div id="phone" class="hidden-xs"><strong>(+84)(0)1674.537.055 </strong>dovv1987@gmail.com</div>
-            <div id="menu-top">
-                <ul>
-                    <li><a href="index.html" title="Home">Home</a> | </li>
-                    <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
-                    <li><a href="contact.html" title="Contact">Contact</a></li>
-                </ul>
-            </div>
+            <div id="phone" class="hidden-xs"><strong>(+84)(0)1674.537.055</strong>dovv1987@gmail.com</div>
         </div>
         </div>
     </div>
@@ -39,10 +32,12 @@
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.parents') }}</a>
             <div class="drop-down-container normal">
-               <ul>
-                   <li><a href="about-us.html" title="About">About</a></li>
-                   <li><a href="all-courses.html" title="All courses">All Courses</a></li>
-                   <li><a href="course-detail.html" title="Course detail">Course detail</a></li>
+                <ul>
+                    <li>{{ link_to(url('/dang-ky-tim-gia-su'), trans('lang.menu.ph_dk')) }}</li>
+                    <li>{{ link_to(url('/phu-huynh-can-biet'), trans('lang.menu.ph_what')) }}</li>
+                    <li>{{ link_to(url('/phu-huynh-luu-y'), trans('lang.menu.ph_note')) }}</li>
+                    <li>{{ link_to(url('/hoc-phi-gia-su'), trans('lang.menu.hocphi')) }}</li>
+                    <li>{{ link_to(url('/dich-vu-gia-su'), trans('lang.menu.dichvu')) }}</li>
                 </ul>
             </div>
         </li>
@@ -50,10 +45,11 @@
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.teacher') }}</a>
             <div class="drop-down-container normal">
-               <ul>
-                   <li><a href="about-us.html" title="About">About</a></li>
-                   <li><a href="all-courses.html" title="All courses">All Courses</a></li>
-                   <li><a href="course-detail.html" title="Course detail">Course detail</a></li>
+                <ul>
+                    <li>{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
+                    <li>{{ link_to(url('/gia-su-nhan-lop'), trans('lang.menu.quytrinh')) }}</li>
+                    <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi')) }}</li>
+                    <li>{{ link_to(url('/gia-su-can-biet'), trans('lang.menu.gs_what')) }}</li>
                 </ul>
             </div>
         </li>

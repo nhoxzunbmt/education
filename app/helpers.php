@@ -27,6 +27,28 @@ if (!function_exists('format_number')) {
     }
 }
 
+if (!function_exists('join_arr')) {
+    function join_arr($arr)
+    {
+        $count_arr = count($arr);
+        $list = '';
+
+        if ($count_arr == 1) {
+            foreach ($arr as $value) {
+                $list = $value;
+            }
+        } else {
+            foreach ($arr as $key => $value) {
+                $list .= $value. ', ';
+            }
+        }
+
+        return $list;
+    }
+}
+
+
+
 if (!function_exists('curd')) {
     function curd($value)
     {

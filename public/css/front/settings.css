@@ -526,6 +526,7 @@ website:   	http://www.themepunch.com
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
+    height: 500px !important;
 }
 /************************************************
 	  - SOME CAPTION MODIFICATION AT START  -
