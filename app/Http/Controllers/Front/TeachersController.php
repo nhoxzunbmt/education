@@ -100,28 +100,15 @@ class TeachersController extends Controller
     public function store(StoreTeacher $request)
     {
         $request = $request->all();
-        $d = '';
-        $s = '';
-        $g = '';
+        $request['code'] = rand(10000, 99999);
         $request['role_id'] = 6;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
 
-        foreach ($grades as $grade) {
-            $g .= ' ,'.$grade;
-        }
-        $request['grades'] = $g;
-
-        foreach ($days as $day) {
-            $d .= ' ,'.$day;
-        }
-        $request['days'] = $d;
-
-        foreach ($subjects as $subject) {
-            $s .= ' ,'.$subject;
-        }
-        $request['subjects'] = $s;
+        $request['grades'] = join_arr($grades);
+        $request['days'] = join_arr($days);
+        $request['subjects'] = join_arr($subjects);
 
         $avatar = 'avatar_'.time().'.'.$request['avatar']->getClientOriginalExtension();
         $file_id = 'file_id_'.time().'.'.$request['file_id']->getClientOriginalExtension();
@@ -149,5 +136,20 @@ class TeachersController extends Controller
         }
 
         return redirect('/');
+    }
+
+    public function process()
+    {
+        return view('front.teacher.process');
+    }
+
+    public function fee()
+    {
+        return view('front.teacher.fee');
+    }
+
+    public function know()
+    {
+        return view('front.teacher.know');
     }
 }

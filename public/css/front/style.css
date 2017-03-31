@@ -75,6 +75,12 @@ a:hover {
     color: #005580;
     text-decoration: underline
 }
+.text-vertical {
+    vertical-align: middle !important;
+}
+.text-bold {
+    font-weight: bold;
+}
 .uneditable-input,
 input[type=email],
 input[type=url],
@@ -296,8 +302,8 @@ a.button_red_small {
     border: none;
     background: #f66;
     color: #fff;
-    padding: 2px 8px;
-    margin-bottom: 15px;
+    padding: 3px 8px;
+    /*margin-bottom: 15px;*/
     text-decoration: none;
     transition: background .5s ease;
     -moz-transition: background .5s ease;
@@ -327,6 +333,22 @@ a.button_red_small:hover {
 .button-align-2 {
     float: right;
     margin-top: -30px
+}
+.btn-02 {
+    float: right;
+    margin-top: -25px
+}
+.bg-fb {
+    background-color: #3b5998 !important;
+}
+.bg-tw {
+    background-color: #1b96e1 !important;
+}
+.bg-gg {
+    background-color: #db4437 !important;
+}
+.bg-envelope {
+    background-color: #999 !important;
 }
 #menu-top,
 #phone {
@@ -407,9 +429,9 @@ footer {
     padding-left: 15px
 }
 #main-boxes {
-    margin-top: -35px;
+    margin-top: -40px;
     z-index: 1;
-    margin-bottom: 35px
+    margin-bottom: 10px
 }
 .feat h3 {
     text-shadow: 1px 2px 0 rgba(255, 255, 255, 1)
@@ -464,6 +486,9 @@ footer {
     /*border-radius: 5px;*/
     margin-bottom: 60px
 }
+.p-10 {
+    padding: 10px 20px;
+}
 .strip-lessons,
 .strip-staff {
     border-bottom: 1px solid #eee
@@ -495,10 +520,12 @@ ul.submenu-col li:last-child a {
     border-bottom: none;
 }
 ul.submenu-col li a#active {
-    background: url(img/arrow.png) 96% center no-repeat #099ad1;
+    background: url(img/arrow.png) 95% center no-repeat #099ad1;
     color: #fff;
     padding: 10px;
     border-bottom: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 ul.submenu-col li a:hover {
     background: #efefef;
@@ -515,24 +542,24 @@ ul.submenu-col li a:hover {
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: #395070;
-    margin-bottom: 30px
+    margin-bottom: 15px
 }
 .date-news,
 .strip-courses.gray {
     background: #f8f8f8
 }
 .title-course {
-    background: #2d343e;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background: #34cccd;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     color: #fff;
     padding: 5px;
 }
 .title-course p {
     font-size: 14px;
-    padding: 3px 0 3px 15px;
+    padding: 3px 0 3px 5px;
     color: #fff;
     margin: 0
 }
@@ -540,7 +567,7 @@ ul.submenu-col li a:hover {
     position: absolute;
     color: #fff;
     right: 15px;
-    top: 7px
+    top: 10px
 }
 .title-course ul li {
     display: inline-block;
@@ -552,16 +579,16 @@ ul.submenu-col li a:hover {
     padding: 15px
 }
 .strip-courses .description ul {
-    margin: 0;
+    margin: 15px 0 0 0;
     padding: 0
 }
 .strip-courses .description ul li {
     display: inline-block;
     font-weight: 600;
-    margin-right: 8px;
+    /*margin-right: 8px;
     padding-right: 8px;
     border-right: 1px solid #ccc;
-    line-height: 16px;
+    line-height: 16px;*/
     zoom: 1
 }
 .strip-courses .description ul li.online {
@@ -569,6 +596,9 @@ ul.submenu-col li a:hover {
 }
 .strip-courses .description ul li:last-child {
     border-right: none
+}
+.strip-courses .description p {
+    margin-bottom: 0px;
 }
 .box-style-one {
     -webkit-border-radius: 5px;
@@ -916,7 +946,7 @@ ul.list_4 li {
     display: block;
     font-size: 14px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
-    padding: 25px 25px 5px;
+    padding: 15px 15px 5px;
     text-decoration: none;
     font-weight: 700;
     -webkit-box-shadow: 0 10px 12px -6px rgba(000, 000, 000, .4), inset 0 0 0 5px rgba(255, 255, 255, .1);
@@ -940,7 +970,7 @@ ul.list_4 li {
 }
 .box-style-2 img {
     float: right;
-    margin: 0 0 15px 20px
+    margin: 0 0 5px 5px
 }
 .box-style-2 h3 {
     color: #FF9;

@@ -1,6 +1,6 @@
 <section class="slider">
     <div class="fullwidthbanner-container">
-        <div class="fullwidthbanner">
+        <div class="fullwidthbanner" style="height: 500px !important;">
             <ul>
                 <li data-transition="flyin" data-slotamount="1" data-masterspeed="300" data-thumb="images/thumbs/thumb1.jpg" data-delay="4000">
                     <img src="{{ url('/') }}/slides/slide-intro.jpg" alt="">

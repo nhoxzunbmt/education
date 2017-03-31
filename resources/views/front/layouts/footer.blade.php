@@ -14,7 +14,7 @@
                     <li><i class="icon-home"></i> 11 Fifth Ave, Loftus - NEW JERSEY, US</li>
                     <li><i class="icon-phone"></i> Telephone: + 61 (2) 8093 3400</li>
                     <li><i class="icon-phone-sign"></i> Fax: +61 (2) 9542 3599</li>
-                    <li><i class="icon-envelope"></i> Email: <a href="#"><span class="__cf_email__" data-cfemail="aedddbccc3c7ddddc7c1c0ddeecac1c3cfc7c080cdc1c3">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></li>
+                    <li><i class="icon-envelope"></i> Email: <a href="#">dovv1987@gmail.com</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4" id="quick-links">
