@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Arial:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 iframe, input.dateinput {
     width: 100%
 }
@@ -6,7 +7,8 @@ iframe, input.dateinput {
 }
 body {
     background: url(img/pattern.jpg) #f8f8f8;
-    font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Arial';
+    font-size: 14px;
     color: #555;
     -webkit-font-smoothing: antialiased!important
 }
@@ -74,6 +76,9 @@ a:focus,
 a:hover {
     color: #005580;
     text-decoration: underline
+}
+.red {
+    color: red!important;
 }
 .text-vertical {
     vertical-align: middle !important;
@@ -336,7 +341,7 @@ a.button_red_small:hover {
 }
 .btn-02 {
     float: right;
-    margin-top: -25px
+    margin-top: -27px
 }
 .bg-fb {
     background-color: #3b5998 !important;
@@ -349,6 +354,9 @@ a.button_red_small:hover {
 }
 .bg-envelope {
     background-color: #999 !important;
+}
+.p-5 {
+    padding: 6px 10px !important;
 }
 #menu-top,
 #phone {
@@ -566,17 +574,17 @@ ul.submenu-col li a:hover {
 .title-course ul {
     position: absolute;
     color: #fff;
-    right: 15px;
+    right: 5px;
     top: 10px
 }
 .title-course ul li {
     display: inline-block;
     font-weight: 600;
-    margin-left: 15px;
+    /*margin-left: 15px;*/
     zoom: 1
 }
 .strip-courses .description {
-    padding: 15px
+    padding: 10px
 }
 .strip-courses .description ul {
     margin: 15px 0 0 0;
@@ -860,17 +868,28 @@ ul.recent_post li:last-child {
     margin-bottom: 30px
 }
 #toTop {
-    width: 100px;
-    border: 1px solid #ccc;
-    background: #f7f7f7;
-    padding: 5px;
+    width: 36px;
+    height: 36px;
+    /*border-radius: 50%;*/
+    /*border: 1px solid #ccc;*/
+    background: rgba(0,0,0,0.2);
+    padding: 10px 0 0 5px;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 5px;
     cursor: pointer;
     display: none;
     color: #333;
     font-size: 11px
+}
+#toTop::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border: 1px solid #fff;
 }
 ul.list_1 li,
 ul.list_2 li,
@@ -891,8 +910,12 @@ ul.list_3,
 ul.list_4 {
     padding-bottom: 15px
 }
+.color_1 {
+    color: #08c;
+}
 ul.list_1 li {
-    background: url(img/tick_1.png) left 3px no-repeat
+    background: url(img/tick_1.png) left 3px no-repeat;
+    padding-bottom: 5px;
 }
 ul.list_2 li {
     background: url(img/arrow_2.png) 3px 5px no-repeat
@@ -1266,7 +1289,7 @@ a.clostalert {
     border: none;
     margin: 0;
     background-color: transparent;
-    padding: 14px 0 15px 15px;
+    padding: 13px 0 15px 15px;
     -webkit-transition: background-color .4s ease-out;
     -moz-transition: background-color .4s ease-out;
     -o-transition: background-color .4s ease-out;
@@ -1290,7 +1313,7 @@ a.clostalert {
 }
 .megamenu>li a.drop-down,
 .megamenu>li a.nodrop-down {
-    line-height: 44px;
+    line-height: 45px;
     outline: 0;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
     text-decoration: none;
@@ -1410,7 +1433,7 @@ ul.tabs {
 .drop-down-container.normal ul {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 .drop-down-container.normal ul li {
     text-align: left
@@ -1427,6 +1450,10 @@ ul.tabs {
     border-radius: 4px*/
 }
 .drop-down-container.normal ul li a:hover {
+    background-color: #2d343e;
+    color: #fff
+}
+.drop-down-container.normal ul li a.active {
     background-color: #2d343e;
     color: #fff
 }

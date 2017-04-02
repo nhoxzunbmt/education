@@ -21,4 +21,11 @@ class EloquentCityRepository extends EloquentBaseRepository implements CityRepos
             ->whereParentId($city_id)
             ->pluck('name', 'id');
     }
+
+    public function city($id)
+    {
+        $city = $this->model->find($id);
+
+        return $city->name;
+    }
 }

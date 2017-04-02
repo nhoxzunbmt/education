@@ -26,7 +26,7 @@
             {!! Form::open(['action' => ['Front\PeopleController@store'], 'method' =>  'POST']) !!}
                 <div class="row">
                     <div class="col-md-6{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <label>{{ trans('lang.name') }}<span class="required">*</span></label>
+                        <label>{{ trans('lang.name') }}<span class="required"> *</span></label>
                         {!! Form::text('name', null, ['class' => 'form-control ie7-margin']) !!}
                     </div>
                     <div class="col-md-6">
@@ -37,7 +37,7 @@
 
                 <div class="row">
                     <div class="col-md-6{{ $errors->has('mobile') ? ' has-error' : '' }}">
-                        <label>{{ trans('lang.mobile') }} <span class="required">*</span></label>
+                        <label>{{ trans('lang.mobile') }} <span class="required"> *</span></label>
                         {!! Form::text('mobile', null, ['class' => 'form-control ie7-margin']) !!}
                     </div>
                     <div class="col-md-6">
@@ -48,7 +48,7 @@
 
                 <div class="row">
                     <div class="col-md-6{{ $errors->has('city') ? ' has-error' : '' }}">
-                        <label>{{ trans('lang.city') }} <span class="required">*</span></label>
+                        <label>{{ trans('lang.city') }} <span class="required"> *</span></label>
                         {!! Form::select('city', $lists, null, ['class' => 'form-control','placeholder' => trans('lang.city'), 'id' => 'city_id']) !!}
                     </div>
                     <div class="col-md-6{{ $errors->has('city_id') ? ' has-error' : '' }}">
@@ -107,7 +107,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <label>{{ trans('lang.days') }} <span class="required">*</span></label>
+                        <label>{{ trans('lang.p_days') }} <span class="required">*</span></label>
                     </div>
                     @foreach ($days as $key => $day)
                         <div class="col-md-2">
@@ -119,8 +119,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <label>{{ trans('lang.salary') }}<br />
-                        <small style="color: red;">1 buổi của Giáo viên là: 90 phút, 1 buổi Sinh Viên là: 120 phút</small>
+                        <label>{{ trans('lang.salary') }}<small style="color: red;"> (1 buổi của Giáo viên là: 90 phút, 1 buổi Sinh Viên là: 120 phút)</small>
                         </label>
                         {!! Form::text('salary', null, ['class' => 'form-control ie7-margin']) !!}
                     </div>

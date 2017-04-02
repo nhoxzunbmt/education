@@ -1,7 +1,7 @@
 <aside class="col-md-3 col-sm-3">
     <div class="col-left">
         <ul class="submenu-col">
-            <li><a href="#" id="active">{{ trans('lang.menu.ph') }}</a></li>
+            <li><a href="javascript:void(0)" id="active">{{ trans('lang.menu.ph') }}</a></li>
             <li>{{ link_to(url('/dang-ky-tim-gia-su'), trans('lang.menu.ph_dk')) }}</li>
             <li>{{ link_to(url('/phu-huynh-can-biet'), trans('lang.menu.ph_what')) }}</li>
             <li>{{ link_to(url('/phu-huynh-luu-y'), trans('lang.menu.ph_note')) }}</li>
@@ -9,7 +9,7 @@
             <li>{{ link_to(url('/dich-vu-gia-su'), trans('lang.menu.dichvu')) }}</li>
         </ul>
         <ul class="submenu-col">
-            <li><a href="#" id="active">{{ trans('lang.menu.gs') }}</a></li>
+            <li><a href="javascript:void(0)" id="active">{{ trans('lang.menu.gs') }}</a></li>
             <li>{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
             <li>{{ link_to(url('/gia-su-nhan-lop'), trans('lang.menu.quytrinh')) }}</li>
             <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi')) }}</li>

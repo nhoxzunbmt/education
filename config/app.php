@@ -12,7 +12,9 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Education',
+    'slug' => 'Cần gia sư dạy môn',
+    'gs' => 'gia sư dạy môn',
 
     /*
     |--------------------------------------------------------------------------
@@ -135,6 +137,16 @@ return [
     |
     */
 
+    /**
+     * Redis Key
+     */
+    'partners' => 'partners',
+
+    /**
+     * Per Page
+     */
+    'page' => 12,
+
     'providers' => [
 
         /*
@@ -179,6 +191,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         // Captcha
         LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
+        /*---- Debug -----*/
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -229,5 +243,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 ];

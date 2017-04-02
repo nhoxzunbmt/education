@@ -17,18 +17,8 @@
 <div class="megamenu_container">
 <a id="megamenu-button-mobile" href="#">Menu</a>
     <ul class="megamenu">
-        <li><a href="{{ url('/') }}" class="nodrop-down">{{ trans('lang.home') }}</a></li>
-        <li class="drop-normal">
-            <a href="javascript:void(0)" class="drop-down">{{ trans('lang.new_class') }}</a>
-            <div class="drop-down-container normal">
-               <ul>
-                   <li><a href="about-us.html" title="About">About</a></li>
-                   <li><a href="all-courses.html" title="All courses">All Courses</a></li>
-                   <li><a href="course-detail.html" title="Course detail">Course detail</a></li>
-                </ul>
-            </div>
-        </li>
-        
+        <li>{{ link_to(url('/'), trans('lang.home'), ['class' => 'nodrop-down']) }}</li>
+        <li>{{ link_to(url('/danh-sach-lop'), trans('lang.new_class'), ['class' => 'nodrop-down']) }}</li>
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.parents') }}</a>
             <div class="drop-down-container normal">
@@ -42,19 +32,19 @@
             </div>
         </li>
         
-        <li class="drop-normal">
+        <li class="drop-normal active">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.teacher') }}</a>
             <div class="drop-down-container normal">
                 <ul>
                     <li>{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
                     <li>{{ link_to(url('/gia-su-nhan-lop'), trans('lang.menu.quytrinh')) }}</li>
-                    <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi')) }}</li>
+                    <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi'), ['class' => 'active']) }}</li>
                     <li>{{ link_to(url('/gia-su-can-biet'), trans('lang.menu.gs_what')) }}</li>
                 </ul>
             </div>
         </li>
         
-        <li><a href="blog.html" class="nodrop-down">{{ trans('lang.payment') }}</a></li>
+        <li>{{ link_to(url('/thanh-toan'), trans('lang.payment'), ['class' => 'nodrop-down']) }}</li>
         
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.recruit') }}</a>
@@ -88,7 +78,6 @@
                         <hr>
                         
                         <div class="row">
-                        
                             <div class="col-md-6">
                                 <h5>Questions?</h5>
                                 <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
@@ -106,18 +95,34 @@
             </div>
         </li>
 
-        <!-- <li class="pull-right" style="padding-bottom: 10px;">
-            <a href="#" class="nodrop-down" style="line-height: 0px;">Login</a>
-        </li> -->
-        <li class="drop-normal pull-right" style="padding-bottom: 10px;">
-            <a href="javascript:void(0)" class="drop-down" style="line-height: 0px; text-transform: none;">dovv1987@gmail.com</a>
-            <div class="drop-down-container normal">
-               <ul>
-                   <li><a href="#" title="About">Profile</a></li>
-                   <li><a href="#" title="Course detail">Logout</a></li>
-                </ul>
-            </div>
-        </li>
+        @if (!auth()->check())
+            <li class="pull-right" style="padding-bottom: 10px;">
+                {{ link_to(url('login'), trans('lang.login'), ['class' => 'nodrop-down', 'style' => 'line-height: 0px']) }}
+            </li>
+        @else
+            <li class="drop-normal pull-right" style="padding-bottom: 10px;">
+                <a href="javascript:void(0)" class="drop-down" style="line-height: 0px; text-transform: none;">{{ auth()->user()->email }}</a>
+                <div class="drop-down-container normal">
+                   <ul>
+                       <li><a href="#" title="About">Profile</a></li>
+                       <li>
+                            {{ link_to(url('/logout'), 'Logout', ['id' => 'logout']) }}
+                            {!! Form::open(['url' => 'backend/logout', 'class' => 'logout-form']) !!}{!! Form::close() !!}
+                    </ul>
+                </div>
+            </li>
+        @endif
     </ul>
 </div>
 </nav>
+
+@section('scripts')
+    <script type="text/javascript">
+        $(function() {
+            $('#logout').click(function(e) {
+                e.preventDefault();
+                $('#logout-form').submit();
+            });
+        }
+    </script>
+@endsection

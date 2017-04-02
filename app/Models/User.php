@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Role;
+use App\Models\Blog;
+use App\Models\Partner;
 use Carbon\Carbon;
 use Hash;
 
@@ -29,8 +31,10 @@ class User extends Authenticatable
         'file_id',
         'note',
         'gender',
-        'birthday',
         'skin',
+        'branch',
+        'birthday',
+        'address',
         'confirmed',
         'last_login'
     ];
@@ -68,6 +72,22 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Get the blogs for the user.
+     */
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+
+    /**
+     * Get the partner for the user.
+     */
+    public function partners()
+    {
+        return $this->hasMany(Partner::class);
     }
 
     public function last_login()

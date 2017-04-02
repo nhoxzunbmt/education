@@ -4,20 +4,9 @@
             <ul>
                 <li data-transition="flyin" data-slotamount="1" data-masterspeed="300" data-thumb="images/thumbs/thumb1.jpg" data-delay="4000">
                     <img src="{{ url('/') }}/slides/slide-intro.jpg" alt="">
-                    <div class="caption randomrotate" data-x="center" data-y="120" data-speed="300" data-start="1200" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/logo.png" alt=""></div>
                 </li>
                 <li data-transition="3dcurtain-horizontal" data-slotamount="1" data-masterspeed="300" data-thumb="images/thumbs/thumb2.jpg">
                     <img src="{{ url('/') }}/slides/slide-1.jpg" alt="">
-
-                    <div class="caption randomrotate" data-x="center" data-y="90" data-speed="300" data-start="1000" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/diagram.png" alt="Image 9"></div>
-
-                    <div class="caption randomrotate" data-x="150" data-y="80" data-speed="300" data-start="2000" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/icon-slide-1.png" alt=""></div>
-
-                    <div class="caption randomrotate" data-x="180" data-y="300" data-speed="300" data-start="2500" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/icon-slide-2.png" alt=""></div>
-
-                    <div class="caption randomrotate" data-x="620" data-y="80" data-speed="300" data-start="3000" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/icon-slide-3.png" alt=""></div>
-
-                    <div class="caption randomrotate" data-x="605" data-y="300" data-speed="300" data-start="3500" data-easing="easeOutExpo"><img src="{{ url('/') }}/slides/icon-slide-4.png" alt=""></div>
                 </li>
                 <li data-transition="3dcurtain-horizontal" data-slotamount="1" data-masterspeed="300" data-thumb="images/thumbs/thumb2.jpg">
                     <img src="{{ url('/') }}/slides/slide-2.jpg" alt="">

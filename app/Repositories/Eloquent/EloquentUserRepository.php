@@ -11,14 +11,14 @@ class EloquentUserRepository extends EloquentBaseRepository implements UserRepos
     public function users($role_id = null)
     {
         $query = $this->model
-            ->with('role', 'partner');
+            ->with('role');
 
         if ($role_id)
         {
             $query->whereRoleId($role_id);
         }
 
-        $query->orderBy('created_at', 'DESC');
+        $datas = $query->orderBy('created_at', 'DESC');
 
         return $query;
     }

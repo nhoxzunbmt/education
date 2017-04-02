@@ -15,7 +15,7 @@
             <h3>Phụ huynh cần lưu ý</h3><hr>
             <div class="row">
                 <div class="col-md-12">
-                    <h5>1. Loai 1:</h5>
+                    <h5 class="color_1">1. Loai 1:</h5>
                     <table class="table table-bordered table-striped">
                         <tbody>
                             <tr>
@@ -61,7 +61,7 @@
                         </tbody>
                     </table>
 
-                    <h5>2. Bang 2:</h5>
+                    <h5 class="color_1">2. Bang 2:</h5>
                     <table class="table table-bordered table-striped">
                         <tbody>
                             <tr>
@@ -107,7 +107,7 @@
                         </tbody>
                     </table>
 
-                    <h5>3. Bang 3:</h5>
+                    <h5 class="color_1">3. Bang 3:</h5>
                     <table class="table table-bordered table-striped">
                         <tbody>
                             <tr>

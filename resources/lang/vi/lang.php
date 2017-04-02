@@ -2,14 +2,15 @@
 
 return [
     'home' => 'Trang chủ',
-    'new_class' => 'Lớp mới',
+    'new_class' => 'Danh sách lớp',
     'parents' => 'Phụ huynh',
     'teacher' => 'Gia sư',
     'payment' => 'Thanh toán',
     'recruit' => 'Tuyển dụng',
     'contact' => 'Liên hệ',
     'email' => 'Email',
-    'password' => 'Password',
+    'emmail_or_phone' => 'Email hoặc số điện thoại',
+    'password' => 'Mật khẩu',
     'remember' => 'Ghi nhớ mật khẩu',
     'login' => 'Đăng nhập',
     'signup' => 'Đăng ký',
@@ -20,7 +21,8 @@ return [
     'district' => 'Quận/Huyện',
     'mobile' => 'Số đi động',
     'phone' => 'Số máy bàn (nếu có)',
-    'days' => 'Các thứ trong tuần',
+    'days' => 'Những ngày tôi có thể dạy',
+    'p_days' => 'Những ngày con tôi có thể học',
     'subjects' => 'Các môn học',
     'gender' => 'Giới tính',
     'grade' => 'Tôi muốn tìm gia sư cho con tôi đang học lớp',
@@ -42,6 +44,7 @@ return [
     'the' => '(ưu tiên ảnh thẻ)',
     'birthday' => 'Ngày sinh',
     'no_result' => 'Ối! không tìm thấy kết quả  nào!',
+    'detail' => 'Chi tiết',
     'menu' => [
         'ph' => 'Phụ huynh',
         'gs' => 'Gia sư',
@@ -166,6 +169,8 @@ return [
         '' => '',
     ],
     'message' => [
+        'log' => 'Email hoặc số điện thoại không được để trống',
+        'password' => 'Mật khẩu không được để trống',
         'name' => 'Họ và tên không được để trống',
         'city' => 'Không được bỏ trống tỉnh/thành phố',
         'city_id' => 'Không được bỏ trống quận/huyện',
@@ -179,5 +184,8 @@ return [
         'subjects' => 'Chọn ít nhất một môn học',
         'captcha' => 'Chưa nhập mã bảo mật hoặc không đúng',
         'term' => 'Đồng ý với các điều khoản',
+        'locked' => 'Tài khoản của ban đang bị khóa, vui lòng liên hệ với quản trị',
+        'err_login' => 'Email hoặc mật khẩu không đúng',
+        'logouted' => 'Logoutd',
     ],
 ];
