@@ -101,7 +101,7 @@ class TeachersController extends Controller
     {
         $request = $request->all();
         $request['code'] = rand(10000, 99999);
-        $request['role_id'] = 6;
+        $request['role_id'] = 4;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
@@ -118,6 +118,8 @@ class TeachersController extends Controller
         $request['file_id'] = $file_id;
         $request['birthday'] = Carbon::parse($request['birthday'])->format('Y-m-d');
         $request['password'] = bcrypt($request['mobile']);
+        $request['title'] = $request['name'].' '.config('app.gs').' '.$request['subjects'];
+        $request['slug'] = str_slug($request['title']);
 
         DB::beginTransaction();
 
@@ -151,5 +153,15 @@ class TeachersController extends Controller
     public function know()
     {
         return view('front.teacher.know');
+    }
+
+    public function lists()
+    {
+        // code
+    }
+
+    public function payment()
+    {
+        return view('front.teacher.payment');
     }
 }

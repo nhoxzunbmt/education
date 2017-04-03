@@ -50,6 +50,7 @@
         {!! HTML::script(elixir('js/front/modernizr.custom.17475.js')); !!}
         {!! HTML::script(elixir('js/front/jquery.easing.js')); !!}
         {!! HTML::script(elixir('js/front/megamenu.js')); !!}
+        {!! HTML::script(elixir('js/front/functions.js')); !!}
         {!! HTML::script(elixir('js/front/jquery.fancybox.pack.js')); !!}
         {!! HTML::script(elixir('js/front/jquery.fancybox-media.js')); !!}
         {!! HTML::script(elixir('js/front/fancy_func.js')); !!}
@@ -63,7 +64,7 @@
 
         <script>
             $(document).ready(function() {
-                $('#example-1').sticklr({
+                $('#short').sticklr({
                     animate: true,
                     showOn: 'hover'
                 });
@@ -75,7 +76,7 @@
                 });
             }, 3000);
         </script>
-        <ul id="example-1" class="sticklr">
+        <ul id="short" class="sticklr">
             <li>
                 <a href="#" class=" icon-font" style="text-indent:-9999px"></a>
                 <ul>

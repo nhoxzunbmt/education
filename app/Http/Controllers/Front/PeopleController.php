@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\Controller;
 use LaravelCaptcha\Facades\Captcha;
 use App\Repositories\Contracts\CityRepository as City;
@@ -13,6 +14,7 @@ use App\Repositories\Contracts\UserRepository as User;
 use App\Repositories\Contracts\PartnerRepository as Partner;
 use App\Http\Requests\Front\StorePeople;
 use App\Models\Status;
+use Carbon\Carbon;
 use DB;
 use Exception;
 use Log;
@@ -101,18 +103,13 @@ class PeopleController extends Controller
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
-        $email = $request['email'];
-
+        $email = $request['email'] ?: $request['email'] = 'a_'.rand(0, 999999).'@gmail.com';
         $request['grades'] = join_arr($grades);
         $request['days'] = join_arr($days);
         $request['subjects'] = join_arr($subjects);
-
-        if (!$email) {
-            $request['email'] = $request['mobile'];
-            $request['password'] = bcrypt($request['mobile']);
-        } else {
-            $request['password'] = bcrypt($request['mobile']);
-        }
+        $request['password'] = bcrypt($request['mobile']);
+        $request['title'] = config('app.slug').' '.$request['subjects'].' '.$request['grades'];
+        $request['slug'] = str_slug($request['title'].$request['code']);
 
         DB::beginTransaction();
 
@@ -151,5 +148,37 @@ class PeopleController extends Controller
     public function service()
     {
         return view('front.people.service');
+    }
+
+    public function list()
+    {
+        $key_redis = config('app.partners');
+        $lists = Redis::get($key_redis);
+
+        if (!$lists)
+        {
+            $lists = $this->partner->partners(5);
+            $redis = Redis::connection();
+            $redis->set($key_redis, $lists);
+        } else {
+            $lists = json_decode($lists);
+        }
+
+        return view('front.people.list', [
+            'lists' => $lists,
+            'city' => $this->city,
+            'status' => $this->status
+        ]);
+    }
+
+    public function show($slug)
+    {
+        $partner = $this->partner->partner($slug);
+        
+        return view('front.people.view', [
+            'partner' => $partner,
+            'city' => $this->city,
+            'status' => $this->status
+        ]);
     }
 }

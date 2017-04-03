@@ -24,11 +24,11 @@
                 <div id="message-newsletter"></div>
                 <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
                     <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Your Email" class="form-control">
-                    <button id="submit-newsletter" class="button_medium add-bottom-20" style="top:2px; position:relative"> Subscribe</button>
+                    <button id="submit-newsletter" class="button_medium" style="position:relative"> Subscribe</button>
                 </form>
             </div>
         </div>
     </div>
 </footer>
 
-<div id="toTop">Back to Top</div>
+<div id="toTop" title="Lên trên"><i class="icon-chevron-up"></i></div>

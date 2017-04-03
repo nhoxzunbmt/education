@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
 $router->get('districts/{city_id}', 'DistrictsController@show');
+$router->get('login', 'Auth\LoginController@getLogin');
+$router->post('login', 'Auth\LoginController@login');
+$router->get('logout', 'Auth\LoginController@logout');
+$router->post('logout', 'Auth\LoginController@logout');
 
 $router->group(['namespace' => 'Front'], function (Router $router) {
     $router->get('dang-ky-tim-gia-su', 'PeopleController@create');
@@ -32,9 +36,13 @@ $router->group(['namespace' => 'Front'], function (Router $router) {
     $router->get('phu-huynh-luu-y', 'PeopleController@care');
     $router->get('hoc-phi-gia-su', 'PeopleController@fee');
     $router->get('dich-vu-gia-su', 'PeopleController@service');
+    $router->get('danh-sach-lop', 'PeopleController@list');
+    $router->get('chi-tiet/{slug}', 'PeopleController@show');
     $router->get('gia-su-nhan-lop', 'TeachersController@process');
     $router->get('phi-gia-su', 'TeachersController@fee');
     $router->get('gia-su-can-biet', 'TeachersController@know');
+    $router->get('danh-sach-gia-su', 'TeachersController@list');
+    $router->get('thanh-toan', 'TeachersController@payment');
 });
 
 Route::get('/home', 'HomeController@index');

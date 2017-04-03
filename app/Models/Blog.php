@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\User;
 
 class Blog extends Model
 {
@@ -33,4 +34,12 @@ class Blog extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    /**
+     * Get the user for the blogs.
+     */
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

@@ -35,7 +35,7 @@
                                     <li><a href="#" class="button_red_small bg-tw"><i class="icon-twitter"></i></a></li>
                                     <li><a href="#" class="button_red_small bg-gg"><i class="icon-google-plus"></i></a></li>
                                 </ul>
-                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02']) }}
+                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02 p-5']) }}
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                                     <li><a href="#" class="button_red_small bg-tw"><i class="icon-twitter"></i></a></li>
                                     <li><a href="#" class="button_red_small bg-gg"><i class="icon-google-plus"></i></a></li>
                                 </ul>
-                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02']) }}
+                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02 p-5']) }}
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                                     <li><a href="#" class="button_red_small bg-tw"><i class="icon-twitter"></i></a></li>
                                     <li><a href="#" class="button_red_small bg-gg"><i class="icon-google-plus"></i></a></li>
                                 </ul>
-                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02']) }}
+                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02 p-5']) }}
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                                     <li><a href="#" class="button_red_small bg-tw"><i class="icon-twitter"></i></a></li>
                                     <li><a href="#" class="button_red_small bg-gg"><i class="icon-google-plus"></i></a></li>
                                 </ul>
-                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02']) }}
+                                {{ link_to('#', trans('lang.signup'), ['class' => 'button_red_small btn-02 p-5']) }}
                         </div>
                     </div>
                 </div>

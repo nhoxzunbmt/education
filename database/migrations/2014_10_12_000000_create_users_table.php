@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password');
             $table->string('mobile', 12); // So dt di dong
             $table->string('phone', 15)->nullable(); // So dt ban
@@ -27,7 +27,8 @@ class CreateUsersTable extends Migration
             $table->unsignedTinyInteger('skin')->default(0); // Admin skins
             $table->unsignedTinyInteger('branch')->default(0); // Chi nhanh
             $table->date('birthday')->nullable();
-            $table->boolean('confirmed')->default(false);
+            $table->string('address', 150);
+            $table->boolean('confirmed')->default(true);
             $table->rememberToken();
             $table->timestamp('last_login')->nullable();
             $table->timestamps();

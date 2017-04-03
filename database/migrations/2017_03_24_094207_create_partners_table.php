@@ -25,6 +25,8 @@ class CreatePartnersTable extends Migration
                 ->references('id')
                 ->on('cities')
                 ->onDelete('cascade');
+            $table->string('title', 255);
+            $table->string('slug', 255);
             $table->string('code', 10)->nullable(); // Ma lop hoc
             $table->string('grades', 255)->nullable(); // Lop 1,2, 3
             $table->string('days', 255)->nullable(); // So ngay hoc or ngay day (Thu 2...)

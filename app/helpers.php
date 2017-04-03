@@ -16,14 +16,15 @@ if (!function_exists('format_date')) {
     }
 }
 
-if (!function_exists('format_number')) {
-    function format_number($value)
+if (!function_exists('salary')) {
+    function salary($value)
     {
         if ($value)
         {
-            return number_format($value);
+            return number_format($value).'đ/buổi';
         }
-        return 0;
+
+        return number_format(200000).'đ/buổi';
     }
 }
 
@@ -35,11 +36,15 @@ if (!function_exists('join_arr')) {
 
         if ($count_arr == 1) {
             foreach ($arr as $value) {
-                $list = $value;
+                $list = $value.'.';
             }
         } else {
             foreach ($arr as $key => $value) {
-                $list .= $value. ', ';
+                if ($key == count($arr) - 1) {
+                    $list .= $value.'.';
+                } else {
+                    $list .= $value. ', ';
+                }
             }
         }
 

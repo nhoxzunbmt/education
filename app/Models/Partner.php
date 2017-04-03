@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\User;
+use App\Models\City;
 
 class Partner extends Model
 {
@@ -23,6 +25,8 @@ class Partner extends Model
     protected $fillable = [
         'user_id',
         'city_id',
+        'title',
+        'slug',
         'code',
         'grades',
         'days',
@@ -41,4 +45,20 @@ class Partner extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    /**
+     * Get the city for the partners.
+     */
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    /**
+     * Get the user for the partners.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
