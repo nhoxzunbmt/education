@@ -78,7 +78,10 @@ a:hover {
     text-decoration: underline
 }
 .red {
-    color: red!important;
+    color: #f66!important;
+}
+.bg-red {
+    background-color: #f66!important;
 }
 .text-vertical {
     vertical-align: middle !important;
@@ -868,28 +871,19 @@ ul.recent_post li:last-child {
     margin-bottom: 30px
 }
 #toTop {
-    width: 36px;
-    height: 36px;
-    /*border-radius: 50%;*/
-    /*border: 1px solid #ccc;*/
-    background: rgba(0,0,0,0.2);
-    padding: 10px 0 0 5px;
-    position: fixed;
-    bottom: 10px;
-    right: 5px;
+    background: url(img/ontop.png);
     cursor: pointer;
+    height: 46px;
+    opacity: .5;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 46px;
+    border-radius: 5px;
     display: none;
-    color: #333;
-    font-size: 11px
 }
-#toTop::after {
-    content: "";
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border: 1px solid #fff;
+#toTop:hover {
+    opacity: 1;
 }
 ul.list_1 li,
 ul.list_2 li,

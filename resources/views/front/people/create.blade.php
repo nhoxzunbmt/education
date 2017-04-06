@@ -139,16 +139,23 @@
                     <div class="col-md-2">
                         {!! Form::text('captcha', null, ['class' => 'form-control']) !!}
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         {!! $captcha !!}
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-8">
                         {{ Form::checkbox('term', null, false, ['id' => 'term']) }}
-                        <label for="term"><span></span>{{ trans('lang.term_1') }} <a href="#">{{ trans('lang.term_2') }}</a> {{ trans('lang.term_3') }}</label>
+                        <label for="term" style="padding-top: 6px;padding-left: 10px;"><span></span>{{ trans('lang.term_1') }} <a href="#">{{ trans('lang.term_2') }}</a> {{ trans('lang.term_3') }}</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        {!! Form::submit(trans('lang.signup'), ['class' => 'button_medium']) !!}
                     </div>
                     <div class="col-md-2">
-                        {!! Form::submit(trans('lang.signup'), ['class' => 'button_medium pull-right']) !!}
+                        {!! Form::reset('Nhập lại', ['class' => 'button_medium bg-red']) !!}
                     </div>
+                    <div class="col-md-8"></div>
                 </div>
             {!! Form::close() !!}
         </div>

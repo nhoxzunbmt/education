@@ -2,8 +2,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4" id="logo">
-            <a href="index.html">
-                <img src="css/img/logo.png" alt="Logo">
+            <a href="{{ url('/') }}">
+                <img src="http://www.ansonika.com/edu/img/logo.png" alt="Logo">
             </a>
         </div>
         <div class="col-md-8 col-sm-8">
