@@ -31,4 +31,4 @@
     </div>
 </footer>
 
-<div id="toTop" title="Lên trên"><i class="icon-chevron-up"></i></div>
+<div id="toTop" title="Lên trên"></div>

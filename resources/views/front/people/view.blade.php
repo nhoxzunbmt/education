@@ -44,7 +44,7 @@
                 </div>
                 <p>Dia chi ban do</p>
                 <div class="col-md-12">
-                    <div id="map_1"><iframe style="height:300px; width:100%; border:0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.336900888852!2d-0.18850530000000001!3d51.52538029999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10d04b6d1a254faa!2sMaida+Vale+Library!5e0!3m2!1sit!2sit!4v1410245771307"></iframe></div>
+                    <div id="map_1"><iframe style="height:300px; width:100%; border:0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=Số 9, Tôn Thất Huyết, Dong Da, Ha noi. "></iframe></div>
                 </div>
             </div>
         </div>
