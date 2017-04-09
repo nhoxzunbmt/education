@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redis;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Front\FrontBaseController;
 use LaravelCaptcha\Facades\Captcha;
 use App\Repositories\Contracts\CityRepository as City;
 use App\Repositories\Contracts\DayRepository as Day;
@@ -20,7 +20,7 @@ use Exception;
 use Log;
 use Throwable;
 
-class PeopleController extends Controller
+class PeopleController extends FrontBaseController
 {
     /**
      * @var CityRepository
@@ -71,6 +71,8 @@ class PeopleController extends Controller
         $this->status = $status;
         $this->user = $user;
         $this->partner = $partner;
+
+        parent::__construct();
     }
 
     public function create()

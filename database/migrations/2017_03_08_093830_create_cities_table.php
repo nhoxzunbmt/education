@@ -17,7 +17,7 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->unsignedTinyInteger('parent_id')->default(false);
             $table->string('name', 50);
-            $table->string('code', 3);
+            $table->string('slug', 100);
             $table->timestamps();
             $table->softDeletes();
 

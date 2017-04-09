@@ -43,6 +43,7 @@ $router->group(['namespace' => 'Front'], function (Router $router) {
     $router->get('gia-su-can-biet', 'TeachersController@know');
     $router->get('danh-sach-gia-su', 'TeachersController@list');
     $router->get('thanh-toan', 'TeachersController@payment');
+    $router->get('grades/{slug}', 'BranchsController@index');
 });
 
 Route::get('/home', 'HomeController@index');

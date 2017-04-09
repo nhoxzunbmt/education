@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Front\FrontBaseController;
 
-class HomeController extends Controller
+class HomeController extends FrontBaseController
 {
     /**
      * Create a new controller instance.

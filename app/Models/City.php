@@ -23,6 +23,7 @@ class City extends Model
     protected $fillable = [
         'parent_id',
         'name',
+        'slug'
     ];
 
     /**
@@ -31,4 +32,9 @@ class City extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    public function slugs($city_id)
+    {
+        return $this->whereParentId($city_id)->get();
+    }
 }

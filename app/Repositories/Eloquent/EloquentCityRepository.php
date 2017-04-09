@@ -28,4 +28,13 @@ class EloquentCityRepository extends EloquentBaseRepository implements CityRepos
 
         return $city->name;
     }
+
+    public function getIdBySlug($slug)
+    {
+        $city = $this->model
+            ->whereSlug($slug)
+            ->firstOrFail();
+
+        return $city;
+    }
 }

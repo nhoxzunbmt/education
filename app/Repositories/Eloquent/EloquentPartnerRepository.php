@@ -29,4 +29,18 @@ class EloquentPartnerRepository extends EloquentBaseRepository implements Partne
             ->whereSlug($slug)
             ->firstOrFail();
     }
+
+    public function branchs($city_id)
+    {
+        $query = $this->model
+            ->with(['city', 'user' => function ($q) {
+                    $q->whereRoleId(5);
+                 }])
+            ->whereCityId($city_id)
+            ->whereStatus(false);
+
+        $datas = $query->paginate(config('app.page'));
+
+        return $datas;
+    }
 }
