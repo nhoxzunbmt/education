@@ -11,4 +11,6 @@ interface CityRepository extends BaseRepository
     public function districts($city_id);
 
     public function city($id);
+
+    public function getIdBySlug($slug);
 }
