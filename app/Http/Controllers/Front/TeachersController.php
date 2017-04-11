@@ -119,7 +119,7 @@ class TeachersController extends FrontBaseController
         $request['avatar'] = $avatar;
         $request['file_id'] = $file_id;
         $request['birthday'] = Carbon::parse($request['birthday'])->format('Y-m-d');
-        $request['password'] = bcrypt($request['mobile']);
+        $request['password'] = $request['mobile'];
         $request['title'] = $request['name'].' '.config('app.gs').' '.$request['subjects'];
         $request['slug'] = str_slug($request['title']);
 

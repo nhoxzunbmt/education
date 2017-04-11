@@ -542,6 +542,10 @@ ul.submenu-col li a:hover {
     background: #efefef;
     color: #326e99
 }
+ul.submenu-col li.active {
+    background: #efefef;
+    color: #326e99
+}
 .box-style-one img.picture,
 .title-course {
     -moz-border-radius-topleft: 5px;

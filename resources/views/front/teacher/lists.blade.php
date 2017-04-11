@@ -12,8 +12,7 @@
 @section('content')
     <section class="col-md-6 col-sm-6">
         <div class="col-right p-10">
-            <h3>Danh sách các lớp hiện có</h3><hr>
-            @foreach ($lists->chunk(2) as $a)
+            <h3>Danh sách gia sư hiện có</h3><hr>
             <div class="row">
                 @foreach($a as $list)
                     <div class="col-md-6">

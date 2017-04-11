@@ -21,11 +21,12 @@ Route::get('/', function () {
 
 $router->get('districts/{city_id}', 'DistrictsController@show');
 $router->get('login', 'Auth\LoginController@getLogin');
-$router->post('login', 'Auth\LoginController@login');
+$router->post('login', ['as' => 'login', 'uses' => 'Auth\LoginController@login']);
 $router->get('logout', 'Auth\LoginController@logout');
 $router->post('logout', 'Auth\LoginController@logout');
 
 $router->group(['namespace' => 'Front'], function (Router $router) {
+    $router->get('profile', 'ProfileController@show');
     $router->get('dang-ky-tim-gia-su', 'PeopleController@create');
     $router->post('dang-ky-tim-gia-su', 'PeopleController@store');
     $router->get('dang-ky-gia-su', 'TeachersController@create');

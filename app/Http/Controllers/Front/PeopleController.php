@@ -22,6 +22,8 @@ use Throwable;
 
 class PeopleController extends FrontBaseController
 {
+    const ROLE_ID = 5;
+
     /**
      * @var CityRepository
      */
@@ -101,7 +103,7 @@ class PeopleController extends FrontBaseController
     {
         $request = $request->all();
         $request['code'] = rand(10000, 99999);
-        $request['role_id'] = 5;
+        $request['role_id'] = self::ROLE_ID;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
@@ -109,12 +111,11 @@ class PeopleController extends FrontBaseController
         $request['grades'] = join_arr($grades);
         $request['days'] = join_arr($days);
         $request['subjects'] = join_arr($subjects);
-        $request['password'] = bcrypt($request['mobile']);
+        $request['password'] = $request['mobile'];
         $request['title'] = config('app.slug').' '.$request['subjects'].' '.$request['grades'];
-        $request['slug'] = str_slug($request['title'].$request['code']);
+        $request['slug'] = str_slug($request['title'].'-'.$request['code']);
 
         DB::beginTransaction();
-
         try {
             $user = $this->user->create($request);
             $request['user_id'] = $user->id;
@@ -152,24 +153,31 @@ class PeopleController extends FrontBaseController
         return view('front.people.service');
     }
 
-    public function list()
+    public function list(Request $request)
     {
-        $key_redis = config('app.partners');
-        $lists = Redis::get($key_redis);
+        // $key_redis = config('app.partners');
+        // $lists = Redis::get($key_redis);
+        $search_grades = $this->status->search_grades();
+        $params = $request->only(['grades', 'city', 'city_id']);
+        $lists = $this->partner->partners(self::ROLE_ID, $request->all());
 
-        if (!$lists)
-        {
-            $lists = $this->partner->partners(5);
-            $redis = Redis::connection();
-            $redis->set($key_redis, $lists);
-        } else {
-            $lists = json_decode($lists);
-        }
+        // if (!$lists)
+        // {
+        //     $lists = $this->partner->partners(self::ROLE_ID, $request->all());
+        //     $redis = Redis::connection();
+        //     $redis->set($key_redis, $lists);
+        // } else {
+        //     dd(1);
+        //     $lists = json_decode($lists);
+        // }
 
         return view('front.people.list', [
             'lists' => $lists,
             'city' => $this->city,
-            'status' => $this->status
+            'cities' => $this->city->cities(),
+            'search_grades' => $search_grades,
+            'status' => $this->status,
+            'params' => $params ?: $params = null
         ]);
     }
 
