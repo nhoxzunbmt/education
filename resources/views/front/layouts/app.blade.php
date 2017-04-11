@@ -35,7 +35,7 @@
         {!! Html::style(elixir('css/front/settings.css')) !!}
         
         <!-- Scripts -->
-        <script>
+        <script type="text/javascript">
             window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
         </script>
     </head>
@@ -86,6 +86,10 @@
             //         showOn: 'hover'
             //     });
             // });
+            $('#logout').click(function(e) {
+                e.preventDefault();
+                $('#logout-form').submit();
+            });
             window.setTimeout(function() {
                 $(".alert").fadeTo(500, 0).slideUp(500, function(){
                     $(this).remove(); 

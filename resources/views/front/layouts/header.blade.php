@@ -17,33 +17,33 @@
 <div class="megamenu_container">
 <a id="megamenu-button-mobile" href="#">Menu</a>
     <ul class="megamenu">
-        <li>{{ link_to(url('/danh-sach-lop'), trans('lang.new_class'), ['class' => 'nodrop-down']) }}</li>
-        <li class="drop-normal">
+        <li class="{!! set_active(['danh-sach-lop']) !!}">{{ link_to(url('danh-sach-lop'), trans('lang.new_class'), ['class' => 'nodrop-down']) }}</li>
+        <li class="drop-normal {!! set_active(['dang-ky-tim-gia-su', 'phu-huynh-can-biet', 'phu-huynh-luu-y', 'hoc-phi-gia-su', 'dich-vu-gia-su']) !!}">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.parents') }}</a>
             <div class="drop-down-container normal">
                 <ul>
-                    <li>{{ link_to(url('/dang-ky-tim-gia-su'), trans('lang.menu.ph_dk')) }}</li>
-                    <li>{{ link_to(url('/phu-huynh-can-biet'), trans('lang.menu.ph_what')) }}</li>
-                    <li>{{ link_to(url('/phu-huynh-luu-y'), trans('lang.menu.ph_note')) }}</li>
-                    <li>{{ link_to(url('/hoc-phi-gia-su'), trans('lang.menu.hocphi')) }}</li>
-                    <li>{{ link_to(url('/dich-vu-gia-su'), trans('lang.menu.dichvu')) }}</li>
+                    <li>{{ link_to(url('dang-ky-tim-gia-su'), trans('lang.menu.ph_dk'), ['class' => set_active(['dang-ky-tim-gia-su'])]) }}</li>
+                    <li>{{ link_to(url('phu-huynh-can-biet'), trans('lang.menu.ph_what') ,['class' => set_active(['phu-huynh-can-biet'])]) }}</li>
+                    <li>{{ link_to(url('phu-huynh-luu-y'), trans('lang.menu.ph_note'), ['class' => set_active(['phu-huynh-luu-y'])]) }}</li>
+                    <li>{{ link_to(url('hoc-phi-gia-su'), trans('lang.menu.hocphi'), ['class' => set_active(['hoc-phi-gia-su'])]) }}</li>
+                    <li>{{ link_to(url('dich-vu-gia-su'), trans('lang.menu.dichvu'), ['class' => set_active(['dich-vu-gia-su'])]) }}</li>
                 </ul>
             </div>
         </li>
         
-        <li class="drop-normal active">
+        <li class="drop-normal {!! set_active(['dang-ky-gia-su', 'gia-su-nhan-lop', 'phi-gia-su', 'gia-su-can-biet']) !!}">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.teacher') }}</a>
             <div class="drop-down-container normal">
                 <ul>
-                    <li>{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
-                    <li>{{ link_to(url('/gia-su-nhan-lop'), trans('lang.menu.quytrinh')) }}</li>
-                    <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi'), ['class' => 'active']) }}</li>
-                    <li>{{ link_to(url('/gia-su-can-biet'), trans('lang.menu.gs_what')) }}</li>
+                    <li>{{ link_to(url('dang-ky-gia-su'), trans('lang.menu.gs_dk') , ['class' => set_active(['dang-ky-gia-su'])]) }}</li>
+                    <li>{{ link_to(url('gia-su-nhan-lop'), trans('lang.menu.quytrinh') , ['class' => set_active(['gia-su-nhan-lop'])]) }}</li>
+                    <li>{{ link_to(url('phi-gia-su'), trans('lang.menu.phi'), ['class' => set_active(['phi-gia-su'])]) }}</li>
+                    <li>{{ link_to(url('gia-su-can-biet'), trans('lang.menu.gs_what') , ['class' => set_active(['gia-su-can-biet'])]) }}</li>
                 </ul>
             </div>
         </li>
         
-        <li>{{ link_to(url('/thanh-toan'), trans('lang.payment'), ['class' => 'nodrop-down']) }}</li>
+        <li class="{!! set_active(['thanh-toan']) !!}">{{ link_to(url('thanh-toan'), trans('lang.payment'), ['class' => 'nodrop-down']) }}</li>
         
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.recruit') }}</a>
@@ -115,14 +115,3 @@
     </ul>
 </div>
 </nav>
-
-@section('scripts')
-    <script type="text/javascript">
-        $(function() {
-            $('#logout').click(function(e) {
-                e.preventDefault();
-                $('#logout-form').submit();
-            });
-        }
-    </script>
-@endsection
