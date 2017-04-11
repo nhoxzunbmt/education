@@ -28,6 +28,7 @@ class StorePeople extends FormRequest
             'mobile' => [
                 'bail',
                 'required',
+                'unique:users',
                 'regex: /^(01[2689]|09|0[123456789])[0-9]{8}$/',
             ],
             'city' => 'bail|required',

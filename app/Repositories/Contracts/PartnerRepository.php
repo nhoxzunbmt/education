@@ -6,7 +6,7 @@ use App\Repositories\Contracts\BaseRepository;
 
 interface PartnerRepository extends BaseRepository
 {
-    public function partners($role_id);
+    public function partners($role_id, $request);
 
     public function partner($slug);
 

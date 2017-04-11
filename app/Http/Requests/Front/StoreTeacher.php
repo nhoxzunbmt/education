@@ -25,12 +25,13 @@ class StoreTeacher extends FormRequest
     {
         return [
             'name' => 'bail|required',
-            'email' => 'bail|required|email',
+            'email' => 'bail|required|email|unique:users',
             'gender' => 'bail|required|between: 1, 2',
             'birthday' => 'bail|required|date_format: "d-m-Y"',
             'mobile' => [
                 'bail',
                 'required',
+                'unique:users',
                 'regex: /^(01[2689]|09|0[123456789])[0-9]{8}$/',
             ],
             'city' => 'bail|required',

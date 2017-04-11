@@ -10,7 +10,7 @@
         </ul>
         <ul class="submenu-col">
             <li><a href="javascript:void(0)" id="active">{{ trans('lang.menu.gs') }}</a></li>
-            <li>{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
+            <li class="active">{{ link_to(url('/dang-ky-gia-su'), trans('lang.menu.gs_dk')) }}</li>
             <li>{{ link_to(url('/gia-su-nhan-lop'), trans('lang.menu.quytrinh')) }}</li>
             <li>{{ link_to(url('/phi-gia-su'), trans('lang.menu.phi')) }}</li>
             <li>{{ link_to(url('/gia-su-can-biet'), trans('lang.menu.gs_what')) }}</li>

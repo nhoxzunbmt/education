@@ -25,6 +25,27 @@ class Status
         18 => 'Lớp khác'
     ];
 
+    const SEARCH_GRADES = [
+        'Lớp lá' => 'Lớp lá',
+        'Lớp 1' => 'Lớp 1',
+        'Lớp 2' => 'Lớp 2',
+        'Lớp 3' => 'Lớp 3',
+        'Lớp 4' => 'Lớp 4',
+        'Lớp 5' => 'Lớp 5',
+        'Lớp 6' => 'Lớp 6',
+        'Lớp 7' => 'Lớp 7',
+        'Lớp 8' => 'Lớp 8',
+        'Lớp 9' => 'Lớp 9',
+        'Lớp 10' => 'Lớp 10',
+        'Lớp 11' => 'Lớp 11',
+        'Lớp 12' => 'Lớp 12',
+        'Luyện thi ĐH - CĐ' => 'Luyện thi ĐH - CĐ',
+        'Lớp năng khiếu' => 'Lớp năng khiếu',
+        'Lớp ngoại ngữ' => 'Lớp ngoại ngữ',
+        'Lớp ngoại ngữ' => 'Hệ Đại học',
+        'Lớp khác' => 'Lớp khác'
+    ];
+
     const NUMBERS = [
         1 => '1 buổi',
         2 => '2 buổi',
@@ -114,6 +135,11 @@ class Status
      */
     private $status;
 
+    /**
+     * @var array
+     */
+    private $search_grades;
+
     public function __construct()
     {
         $this->grades = self::GRADES;
@@ -123,11 +149,17 @@ class Status
         $this->teacher_levels = self::TEACHER_LEVELS;
         $this->times = self::TIMES;
         $this->status = self::STATUS;
+        $this->search_grades = self::SEARCH_GRADES;
     }
 
     public function grades()
     {
         return $this->grades;
+    }
+
+    public function search_grades()
+    {
+        return $this->search_grades;
     }
 
     public function numbers()

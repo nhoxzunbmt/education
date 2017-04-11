@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-md-4 col-sm-4" id="logo">
             <a href="{{ url('/') }}">
-                <img src="http://www.ansonika.com/edu/img/logo.png" alt="Logo">
+                <img src="http://www.ansonika.com/edu/img/logo.png">
             </a>
         </div>
         <div class="col-md-8 col-sm-8">
@@ -17,7 +17,6 @@
 <div class="megamenu_container">
 <a id="megamenu-button-mobile" href="#">Menu</a>
     <ul class="megamenu">
-        <li>{{ link_to(url('/'), trans('lang.home'), ['class' => 'nodrop-down']) }}</li>
         <li>{{ link_to(url('/danh-sach-lop'), trans('lang.new_class'), ['class' => 'nodrop-down']) }}</li>
         <li class="drop-normal">
             <a href="javascript:void(0)" class="drop-down">{{ trans('lang.parents') }}</a>
@@ -103,11 +102,12 @@
             <li class="drop-normal pull-right" style="padding-bottom: 10px;">
                 <a href="javascript:void(0)" class="drop-down" style="line-height: 0px; text-transform: none;">{{ auth()->user()->email }}</a>
                 <div class="drop-down-container normal">
-                   <ul>
-                       <li><a href="#" title="About">Profile</a></li>
-                       <li>
+                    <ul>
+                        <li>{{ link_to(url('/profile'), 'Thông tin cá nhân') }}</li>
+                        <li>
                             {{ link_to(url('/logout'), 'Logout', ['id' => 'logout']) }}
                             {!! Form::open(['url' => 'backend/logout', 'class' => 'logout-form']) !!}{!! Form::close() !!}
+                        </li>
                     </ul>
                 </div>
             </li>

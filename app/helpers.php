@@ -52,7 +52,12 @@ if (!function_exists('join_arr')) {
     }
 }
 
-
+if (!function_exists('current_year')) {
+    function current_year()
+    {
+        return Carbon::now()->year;
+    }
+}
 
 if (!function_exists('curd')) {
     function curd($value)

@@ -70,6 +70,7 @@ class LoginController extends Controller
         ];
 
         if (!auth()->validate($credentials)) {
+
             if (!$lockedOut) {
                 $this->incrementLoginAttempts($request);
             }
