@@ -51,7 +51,7 @@ class CitiesTableSeeder extends Seeder
             ['name' => 'Quận Thủ Đức', 'parent_id' => 2, 'slug' => str_slug('Quận Thủ Đức'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Quận Gò Vấp', 'parent_id' => 2, 'slug' => str_slug('Quận Gò Vấp'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Quận Bình Thạnh', 'parent_id' => 2, 'slug' => str_slug('Quận Bình Thạnh'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['name' => 'Quận Tân Bình', 'parent_id' => 2, 'slug' => str_slug('Q'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['name' => 'Quận Tân Bình', 'parent_id' => 2, 'slug' => str_slug('Quận Tân Bình'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Quận Tân Phú', 'parent_id' => 2, 'slug' => str_slug('Quận Tân Phú'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Quận Phú Nhuận', 'parent_id' => 2, 'slug' => str_slug('Quận Phú Nhuận'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['name' => 'Quận Bình Tân', 'parent_id' => 2, 'slug' => str_slug('Quận Bình Tân'), 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],

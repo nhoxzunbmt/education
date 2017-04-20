@@ -24,8 +24,6 @@ class UsersTableSeeder extends Seeder
             ['role_id' => 1, 'name' => 'Super', 'email' => 'super@example.com', 'password' => bcrypt('admin'), 'mobile' => '09534583948', 'address' => 'So 4, Ton That Huyet', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['role_id' => 2, 'name' => 'Admin', 'email' => 'admin@example.com', 'password' => bcrypt('admin'), 'mobile' => '09534583948', 'address' => 'So 4, Ton That Huyet', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['role_id' => 3, 'name' => 'Admin Amazon', 'email' => 'amazon@example.com', 'password' => bcrypt('admin'), 'mobile' => '09534583948', 'address' => 'So 4, Ton That Huyet', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['role_id' => 4, 'name' => 'Teacher', 'email' => 'teacher@example.com', 'password' => bcrypt('admin'), 'mobile' => '09534583948', 'address' => 'So 4, Ton That Huyet', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['role_id' => 5, 'name' => 'Personal', 'email' => 'personal@example.com', 'password' => bcrypt('admin'), 'mobile' => '09534583948', 'address' => 'So 4, Ton That Huyet', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
     }
 }

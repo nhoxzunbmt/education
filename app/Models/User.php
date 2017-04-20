@@ -22,6 +22,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'role_id',
+        'is_pwd',
         'name',
         'email',
         'password',
@@ -96,4 +97,9 @@ class User extends Authenticatable
 
         return $this->save();
     }
+
+    // public function scopeRoleId($query, $role_id)
+    // {
+    //     return $query->whereRoleId($role_id);
+    // }
 }

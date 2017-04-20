@@ -104,6 +104,7 @@ class PeopleController extends FrontBaseController
         $request = $request->all();
         $request['code'] = rand(10000, 99999);
         $request['role_id'] = self::ROLE_ID;
+        $request['type'] = self::ROLE_ID;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
@@ -122,12 +123,11 @@ class PeopleController extends FrontBaseController
             $this->partner->create($request);
 
             DB::commit();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollback();
-            throw $e;
-        } catch (\Throwable $e) {
-            DB::rollback();
-            throw $e;
+
+            return redirect()->back()
+                ->with('warning', 'Xay ra loi roi');
         }
 
         return redirect('/');
@@ -155,21 +155,9 @@ class PeopleController extends FrontBaseController
 
     public function list(Request $request)
     {
-        // $key_redis = config('app.partners');
-        // $lists = Redis::get($key_redis);
         $search_grades = $this->status->search_grades();
         $params = $request->only(['grades', 'city', 'city_id']);
         $lists = $this->partner->partners(self::ROLE_ID, $request->all());
-
-        // if (!$lists)
-        // {
-        //     $lists = $this->partner->partners(self::ROLE_ID, $request->all());
-        //     $redis = Redis::connection();
-        //     $redis->set($key_redis, $lists);
-        // } else {
-        //     dd(1);
-        //     $lists = json_decode($lists);
-        // }
 
         return view('front.people.list', [
             'lists' => $lists,

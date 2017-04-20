@@ -44,7 +44,7 @@
                         <div id="birthday" class="input-append" style="position:relative;">
                             <label>{{ trans('lang.birthday') }} <span class="required">* </span></label>
                             {!! Form::text('birthday', null, ['class' => 'dateinput form-control']) !!}
-                            <span class="add-on" style="position:absolute; top:34px; right:5px; cursor:pointer"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                            <span class="add-on" style="position:absolute; top:30px; right:5px; cursor:pointer"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -58,22 +58,62 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6{{ $errors->has('city') ? ' has-error' : '' }}">
+                    <div class="col-md-12{{ $errors->has('city') ? ' has-error' : '' }}">
                         <label>{{ trans('lang.front.teacher_city') }} <span class="required">*</span></label>
-                        {!! Form::select('city', $lists, null, ['class' => 'form-control','placeholder' => trans('lang.city'), 'id' => 'city_id']) !!}
-                    </div>
-                    <div class="col-md-6{{ $errors->has('city_id') ? ' has-error' : '' }}">
-                        <label>{{ trans('lang.district') }} <span class="required">*</span></label>
-                        {!! Form::select('city_id', [], null, ['class' => 'form-control', 'placeholder' => 'Quận/Huyện', 'id' => 'district_id']) !!}
+                        {!! Form::select('city_id', $lists, null, ['class' => 'form-control','placeholder' => trans('lang.city'), 'id' => 'city_id']) !!}
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12{{ $errors->has('address') ? ' has-error' : '' }}">
-                        <label>{{ trans('lang.address') }} <span class="required">*</span></label>
-                        {!! Form::textarea('address', null, ['size' => '30x2', 'class' => 'form-control']) !!}
+                <div id="district_lable" class="row hidden">
+                    <div class="col-md-12">
+                        <label>{{ trans('lang.district') }}</label>
                     </div>
                 </div>
+
+                <div id="hn" class="row hidden">
+                    @foreach($hn as $key => $value)
+                        <div class="col-md-4">
+                            {{ Form::checkbox('districts[]', $value->name, false, ['id' => 'hn_'.$key]) }}
+                            <label for="{{ 'hn_'.$key }}"><span></span>{{ $value->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div id="hcm" class="row hidden">
+                    @foreach($hcm as $key => $value)
+                        <div class="col-md-4">
+                            {{ Form::checkbox('districts[]', $value->name, false, ['id' => 'hcm_'.$key]) }}
+                            <label for="{{ 'hcm_'.$key }}"><span></span>{{ $value->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div id="hp" class="row hidden">
+                    @foreach($hp as $key => $value)
+                        <div class="col-md-4">
+                            {{ Form::checkbox('districts[]', $value->name, false, ['id' => 'hp_'.$key]) }}
+                            <label for="{{ 'hp_'.$key }}"><span></span>{{ $value->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div id="dn" class="row hidden">
+                    @foreach($dn as $key => $value)
+                        <div class="col-md-4">
+                            {{ Form::checkbox('districts[]', $value->name, false, ['id' => 'dn_'.$key]) }}
+                            <label for="{{ 'dn_'.$key }}"><span></span>{{ $value->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div id="ct" class="row hidden">
+                    @foreach($ct as $key => $value)
+                        <div class="col-md-4">
+                            {{ Form::checkbox('districts[]', $value->name, false, ['id' => 'ct_'.$key]) }}
+                            <label for="{{ 'ct_'.$key }}"><span></span>{{ $value->name }}</label>
+                        </div>
+                    @endforeach
+                </div><br />
 
                 <div class="row">
                     <div class="col-md-5{{ $errors->has('avatar') ? ' has-error' : '' }}">
@@ -202,6 +242,103 @@
                     });
                 });
             });
+
+            $(document).on('change', 'select#city_id', function(e) {
+                e.preventDefault();
+                var e = document.getElementById("city_id");
+                var city_id = e.options[e.selectedIndex].value;
+
+                if (city_id == 1) {
+                    $('#hn').removeClass('hidden');
+                    $('#district_lable').removeClass('hidden');
+                    $('#hcm').addClass('hidden');
+                    $('#hp').addClass('hidden');
+                    $('#dn').addClass('hidden');
+                    $('#ct').addClass('hidden');
+                } else if (city_id == 2) {
+                    $('#hcm').removeClass('hidden');
+                    $('#district_lable').removeClass('hidden');
+                    $('#hn').addClass('hidden');
+                    $('#hp').addClass('hidden');
+                    $('#dn').addClass('hidden');
+                    $('#ct').addClass('hidden');
+                } else if (city_id == 3) {
+                    $('#hp').removeClass('hidden');
+                    $('#district_lable').removeClass('hidden');
+                    $('#hn').addClass('hidden');
+                    $('#hcm').addClass('hidden');
+                    $('#dn').addClass('hidden');
+                    $('#ct').addClass('hidden');
+                } else if (city_id == 4) {
+                    $('#dn').removeClass('hidden');
+                    $('#district_lable').removeClass('hidden');
+                    $('#hn').addClass('hidden');
+                    $('#hcm').addClass('hidden');
+                    $('#hp').addClass('hidden');
+                    $('#ct').addClass('hidden');
+                } else if (city_id == 5) {
+                    $('#ct').removeClass('hidden');
+                    $('#district_lable').removeClass('hidden');
+                    $('#hn').addClass('hidden');
+                    $('#hcm').addClass('hidden');
+                    $('#hp').addClass('hidden');
+                    $('#dn').addClass('hidden');
+                } else {
+                    $('#district_lable').addClass('hidden');
+                    $('#ct').addClass('hidden');
+                    $('#hn').addClass('hidden');
+                    $('#hcm').addClass('hidden');
+                    $('#hp').addClass('hidden');
+                    $('#dn').addClass('hidden');
+                }
+            });
+
+            var e = document.getElementById("city_id");
+            var city_id = e.options[e.selectedIndex].value;
+
+            if (city_id == 1) {
+                $('#hn').removeClass('hidden');
+                $('#district_lable').removeClass('hidden');
+                $('#hcm').addClass('hidden');
+                $('#hp').addClass('hidden');
+                $('#dn').addClass('hidden');
+                $('#ct').addClass('hidden');
+            } else if (city_id == 2) {
+                $('#hcm').removeClass('hidden');
+                $('#district_lable').removeClass('hidden');
+                $('#hn').addClass('hidden');
+                $('#hp').addClass('hidden');
+                $('#dn').addClass('hidden');
+                $('#ct').addClass('hidden');
+            } else if (city_id == 3) {
+                $('#hp').removeClass('hidden');
+                $('#district_lable').removeClass('hidden');
+                $('#hn').addClass('hidden');
+                $('#hcm').addClass('hidden');
+                $('#dn').addClass('hidden');
+                $('#ct').addClass('hidden');
+            } else if (city_id == 4) {
+                $('#dn').removeClass('hidden');
+                $('#district_lable').removeClass('hidden');
+                $('#hn').addClass('hidden');
+                $('#hcm').addClass('hidden');
+                $('#hp').addClass('hidden');
+                $('#ct').addClass('hidden');
+            } else if (city_id == 5) {
+                $('#ct').removeClass('hidden');
+                $('#district_lable').removeClass('hidden');
+                $('#hn').addClass('hidden');
+                $('#hcm').addClass('hidden');
+                $('#hp').addClass('hidden');
+                $('#dn').addClass('hidden');
+            } else {
+                $('#district_lable').addClass('hidden');
+                $('#ct').addClass('hidden');
+                $('#hn').addClass('hidden');
+                $('#hcm').addClass('hidden');
+                $('#hp').addClass('hidden');
+                $('#dn').addClass('hidden');
+            }
         });
     </script>
 @endsection

@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->unsignedTinyInteger('skin')->default(0); // Admin skins
             $table->unsignedTinyInteger('branch')->default(0); // Chi nhanh
             $table->date('birthday')->nullable();
-            $table->string('address', 150);
+            $table->string('address', 255)->nullable();
             $table->boolean('confirmed')->default(true);
             $table->rememberToken();
             $table->timestamp('last_login')->nullable();

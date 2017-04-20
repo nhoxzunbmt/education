@@ -20,6 +20,7 @@
                                 <td class="col-sm-4 text-vertical text-center text-bold" rowspan="2">KHỐI LỚP</td>
                                 <td class="col-sm-8 text-center text-bold" colspan="4">Học phí/buổi</td>
                             </tr>
+
                             <tr>
                                 <td colspan="2" class="text-bold text-center">Sinh viên</td>
                                 <td colspan="2" class="text-bold text-center">Giáo viên</td>
@@ -30,16 +31,19 @@
                                 <td colspan="2" class="text-center">120.000 - 140.000 đ</td>
                                 <td colspan="2" class="text-center">150.000 - 180.000 đ</td>
                             </tr>
+
                             <tr>
                                 <td>LỚP 5, 6, 7, 8</td>
                                 <td colspan="2" class="text-center">140.000 - 160.000 đ</td>
                                 <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
                             </tr>
+
                             <tr>
                                 <td>LỚP 9, 10, 11, 12</td>
                                 <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
                                 <td colspan="2" class="text-center">220.000 - 250.000 đ</td>
                             </tr>
+
                             <tr>
                                 <td>LTĐH-NGOẠI NGỮ</td>
                                 <td colspan="2" class="text-center">220.000 - 250.000 đ</td>

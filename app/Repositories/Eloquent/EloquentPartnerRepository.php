@@ -3,7 +3,6 @@
 namespace App\Repositories\Eloquent;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Redis;
 use App\Repositories\Eloquent\EloquentBaseRepository;
 use App\Repositories\Contracts\PartnerRepository;
 
@@ -12,11 +11,9 @@ class EloquentPartnerRepository extends EloquentBaseRepository implements Partne
     public function partners($role_id, $request)
     {
         $query = $this->model
-            ->with(['city', 'user' => function ($q) use ($role_id) {
-                    $q->whereRoleId($role_id);
-                }
-            ])
-        ->whereStatus(false);
+            ->with('city', 'user')
+            ->whereType($role_id)
+            ->whereStatus(false);
 
         if (isset($request['grades']) && $request['grades'] != '')
         {
@@ -29,7 +26,7 @@ class EloquentPartnerRepository extends EloquentBaseRepository implements Partne
             $query->whereCityId($request['city_id']);
         }
 
-        $datas = $query->paginate(2);
+        $datas = $query->paginate();
 
         return $datas;
     }
@@ -45,10 +42,9 @@ class EloquentPartnerRepository extends EloquentBaseRepository implements Partne
     public function branchs($city_id)
     {
         $query = $this->model
-            ->with(['city', 'user' => function ($q) {
-                    $q->whereRoleId(5);
-                 }])
+            ->with('city', 'user')
             ->whereCityId($city_id)
+            ->whereType(5)
             ->whereStatus(false);
 
         $datas = $query->paginate(config('app.page'));

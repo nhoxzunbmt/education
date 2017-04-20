@@ -15,6 +15,7 @@ return [
     'name' => 'Education',
     'slug' => 'Cần gia sư dạy môn',
     'gs' => 'gia sư dạy môn',
+    'email' => 'dovv1987@gmail.com',
 
     /*
     |--------------------------------------------------------------------------

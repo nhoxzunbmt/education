@@ -37,4 +37,11 @@ class EloquentCityRepository extends EloquentBaseRepository implements CityRepos
 
         return $city;
     }
+
+    public function getDistricts($city)
+    {
+        return $this->model
+            ->whereParentId($city)
+            ->get();
+    }
 }

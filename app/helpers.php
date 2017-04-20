@@ -12,7 +12,11 @@ if (!function_exists('set_active')) {
 if (!function_exists('format_date')) {
     function format_date($date)
     {
-        return Carbon::parse($date)->format('d.m.Y H:i');
+        if ($date) {
+            return Carbon::parse($date)->format('d.m.Y');
+        }
+        
+        return 'N/A';
     }
 }
 
@@ -100,5 +104,29 @@ if (!function_exists('his_time')) {
     function his_time($date)
     {
         return Carbon::parse($date)->format('H:i d.m.Y');
+    }
+}
+
+if (!function_exists('is_profile')) {
+    function is_profile($role)
+    {
+        if ($role == 4) {
+            return 'Gia sư';
+        }
+
+        return 'Phụ huynh';
+    }
+}
+
+if (!function_exists('gender')) {
+    function gender($gender)
+    {
+        if ($gender == 1) {
+            return 'Nam';
+        } else if ($gender == 2) {
+            return 'Nữ';
+        }
+
+        return 'N/A';
     }
 }

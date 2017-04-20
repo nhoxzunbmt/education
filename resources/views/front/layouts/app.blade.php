@@ -33,9 +33,10 @@
         {!! Html::style(elixir('css/front/bootstrap-datetimepicker.min.css')) !!}
         {!! Html::style(elixir('css/front/style.css')) !!}
         {!! Html::style(elixir('css/front/settings.css')) !!}
-        
+        {!! Html::style(elixir('css/front/profile.css')) !!}
+
         <!-- Scripts -->
-        <script type="text/javascript">
+        <script>
             window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
         </script>
     </head>
@@ -46,7 +47,7 @@
         @yield('slider')
 
         @yield('plan')
-        
+
         <div class="container">
             <div class="row">
                 @yield('breadcrumb')
@@ -80,12 +81,6 @@
         @yield('scripts')
 
         <script>
-            // $(document).ready(function() {
-            //     $('#short').sticklr({
-            //         animate: true,
-            //         showOn: 'hover'
-            //     });
-            // });
             $('#logout').click(function(e) {
                 e.preventDefault();
                 $('#logout-form').submit();
@@ -96,21 +91,5 @@
                 });
             }, 3000);
         </script>
-        <!-- <ul id="short" class="sticklr">
-            <li>
-                <a href="#" class=" icon-font" style="text-indent:-9999px"></a>
-                <ul>
-                    <li class="sticklr-title"><a href="http://themeforest.net/user/Ansonika/portfolio?ref=ansonika">Change Font Family</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="icon-purchase"></a>
-                <ul>
-                    <li class="sticklr-title">
-                        <a href="http://themeforest.net/item/edu-educational-courses-college-with-megamenu/5210923?ref=ansonika">Purchase </a>
-                    </li>
-                </ul>
-            </li>
-        </ul> -->
     </body>
 </html>

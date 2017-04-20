@@ -22,6 +22,8 @@ use Throwable;
 
 class TeachersController extends FrontBaseController
 {
+    const ROLE_ID = 4;
+
     /**
      * @var CityRepository
      */
@@ -85,6 +87,11 @@ class TeachersController extends FrontBaseController
         $days = $this->day->days();
         $subjects = $this->subject->subjects();
         $genders = $this->status->genders();
+        $hn = $this->city->getDistricts(1);
+        $hcm = $this->city->getDistricts(2);
+        $hp = $this->city->getDistricts(3);
+        $dn = $this->city->getDistricts(4);
+        $ct = $this->city->getDistricts(5);
 
         return view('front.teacher.create', [
             'lists' => $lists,
@@ -95,6 +102,11 @@ class TeachersController extends FrontBaseController
             'subjects' => $subjects,
             'genders' => $genders,
             'times' => $times,
+            'hn' => $hn,
+            'hcm' => $hcm,
+            'hp' => $hp,
+            'dn' => $dn,
+            'ct' => $ct,
             'captcha' => Captcha::html()
         ]);
     }
@@ -103,14 +115,17 @@ class TeachersController extends FrontBaseController
     {
         $request = $request->all();
         $request['code'] = rand(10000, 99999);
-        $request['role_id'] = 4;
+        $request['role_id'] = self::ROLE_ID;
+        $request['type'] = self::ROLE_ID;
         $grades = $request['grades'];
         $days = $request['days'];
         $subjects = $request['subjects'];
+        $city_list = $request['districts'];
 
         $request['grades'] = join_arr($grades);
         $request['days'] = join_arr($days);
         $request['subjects'] = join_arr($subjects);
+        $request['districts'] = join_arr($city_list);
 
         $avatar = 'avatar_'.time().'.'.$request['avatar']->getClientOriginalExtension();
         $file_id = 'file_id_'.time().'.'.$request['file_id']->getClientOriginalExtension();
@@ -131,12 +146,10 @@ class TeachersController extends FrontBaseController
             $this->partner->create($request);
 
             DB::commit();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollback();
-            throw $e;
-        } catch (\Throwable $e) {
-            DB::rollback();
-            throw $e;
+            return redirect()->back()
+                ->with('warning', 'Xay ra loi roi');
         }
 
         return redirect('/');
@@ -157,9 +170,11 @@ class TeachersController extends FrontBaseController
         return view('front.teacher.know');
     }
 
-    public function lists()
+    public function list()
     {
-        // code
+
+        return view('front.teacher.lists');
+        dd(1);
     }
 
     public function payment()
