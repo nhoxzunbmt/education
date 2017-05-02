@@ -3,25 +3,37 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Front\FrontBaseController;
+use App\Repositories\Contracts\CityRepository as City;
+use Auth;
 
-class ProfileController extends Controller
+class ProfileController extends FrontBaseController
 {
+    /**
+     * @var CityRepository
+     */
+    private $city;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(City $city)
     {
+        $this->city = $city;
+        parent::__construct();
+
         $this->middleware('auth');
     }
 
     public function show()
     {
-        dd(1);
+        $user = Auth()->user();
+
         return view('front.profile.show', [
-            // code
+            'user' => $user,
+            'city' => $this->city
         ]);
     }
 }

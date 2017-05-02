@@ -25,6 +25,7 @@ class Partner extends Model
     protected $fillable = [
         'user_id',
         'city_id',
+        'type',
         'title',
         'slug',
         'code',
@@ -36,6 +37,7 @@ class Partner extends Model
         'time',
         'salary',
         'partner_note',
+        'districts',
         'status',
     ];
 

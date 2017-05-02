@@ -13,4 +13,6 @@ interface CityRepository extends BaseRepository
     public function city($id);
 
     public function getIdBySlug($slug);
+
+    public function getDistricts($city);
 }

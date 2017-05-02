@@ -25,6 +25,7 @@ class CreatePartnersTable extends Migration
                 ->references('id')
                 ->on('cities')
                 ->onDelete('cascade');
+            $table->unsignedTinyInteger('type');
             $table->string('title', 255);
             $table->string('slug', 255);
             $table->string('code', 10)->nullable(); // Ma lop hoc
@@ -36,6 +37,7 @@ class CreatePartnersTable extends Migration
             $table->unsignedTinyInteger('time')->nullable(); // Thoi gian hoc day (sang or chieu)
             $table->string('salary', 15)->nullable(); // Muc luong mon muon
             $table->string('partner_note', 255)->nullable(); // Ghi chu
+            $table->string('districts', 255)->nullable(); // Quan, huyen
             $table->boolean('status')->default(false); // Trang thai
             $table->timestamps();
             $table->softDeletes();

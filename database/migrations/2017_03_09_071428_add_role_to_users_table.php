@@ -19,6 +19,7 @@ class AddRoleToUsersTable extends Migration
                 ->references('id')
                 ->on('roles')
                 ->onDelete('cascade');
+            $table->boolean('is_pwd')->default(false)->after('role_id');
         });
     }
 

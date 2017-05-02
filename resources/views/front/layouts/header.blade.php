@@ -46,14 +46,7 @@
         <li class="{!! set_active(['thanh-toan']) !!}">{{ link_to(url('thanh-toan'), trans('lang.payment'), ['class' => 'nodrop-down']) }}</li>
         
         <li class="drop-normal">
-            <a href="javascript:void(0)" class="drop-down">{{ trans('lang.recruit') }}</a>
-            <div class="drop-down-container normal">
-               <ul>
-                   <li><a href="about-us.html" title="About">About</a></li>
-                   <li><a href="all-courses.html" title="All courses">All Courses</a></li>
-                   <li><a href="course-detail.html" title="Course detail">Course detail</a></li>
-                </ul>
-            </div>
+            <a href="#" class="nodrop-down">{{ trans('lang.recruit') }}</a>
         </li>
 
         <li>
@@ -103,10 +96,10 @@
                 <a href="javascript:void(0)" class="drop-down" style="line-height: 0px; text-transform: none;">{{ auth()->user()->email }}</a>
                 <div class="drop-down-container normal">
                     <ul>
-                        <li>{{ link_to(url('/profile'), 'Thông tin cá nhân') }}</li>
+                        <li>{{ link_to(url('profile'), 'Thông tin cá nhân') }}</li>
                         <li>
-                            {{ link_to(url('/logout'), 'Logout', ['id' => 'logout']) }}
-                            {!! Form::open(['url' => 'backend/logout', 'class' => 'logout-form']) !!}{!! Form::close() !!}
+                            {{ link_to(url('logout'), 'Logout', ['id' => 'logout']) }}
+                            {!! Form::open(['url' => 'logout', 'id' => 'logout-form']) !!}{!! Form::close() !!}
                         </li>
                     </ul>
                 </div>
