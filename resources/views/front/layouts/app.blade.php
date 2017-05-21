@@ -25,15 +25,21 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
         <!-- Styles -->
-        {!! Html::style(elixir('css/front/bootstrap.min.css')) !!}
-        {!! Html::style(elixir('css/front/font-awesome.css')) !!}
-        {!! Html::style(elixir('css/front/jquery.fancybox.css')) !!}
-        {!! Html::style(elixir('css/front/jquery-sticklr-1.4-light-color.css')) !!}
-        {!! Html::style(elixir('css/front/bootstrap-datetimepicker.min.css')) !!}
-        {!! Html::style(elixir('css/front/style.css')) !!}
-        {!! Html::style(elixir('css/front/settings.css')) !!}
-        {!! Html::style(elixir('css/front/profile.css')) !!}
+        {!! Html::style(elixir('plugins/bootstrap/css/bootstrap.min.css')) !!}
+        {!! Html::style(elixir('css/bootstrap-datetimepicker.min.css')) !!}
+        {!! Html::style(elixir('plugins/selectbox/select_option1.css')) !!}
+        {!! Html::style(elixir('plugins/font-awesome/css/font-awesome.min.css')) !!}
+        {!! Html::style(elixir('plugins/flexslider/flexslider.css')) !!}
+        {!! Html::style(elixir('plugins/animate.css')) !!}
+        {!! Html::style(elixir('plugins/pop-up/magnific-popup.css')) !!}
+        {!! Html::style(elixir('plugins/rs-plugin/css/settings.css')) !!}
+        {!! Html::style(elixir('plugins/owl-carousel/owl.carousel.css')) !!}
+        {!! Html::style(elixir('css/style.css')) !!}
+        {!! Html::style(elixir('css/color-option2.css')) !!}
+        {!! Html::style(elixir('options/optionswitch.css')) !!}
 
         <!-- Scripts -->
         <script>
@@ -41,42 +47,43 @@
         </script>
     </head>
 
-    <body>
-        @include('front.layouts.header')
+    <body class="body-wrapper">
+        <div class="main_wrapper">
+            @include('front.layouts.header')
 
-        @yield('slider')
+            @yield('slider')
 
-        @yield('plan')
+            <div class="mainContent clearfix" style="padding: 0px;">
+                    @yield('content')
 
-        <div class="container">
-            <div class="row">
-                @yield('breadcrumb')
-
-                @include('front.layouts.left_bar')
-
-                @yield('content')
-
-                @include('front.layouts.right_bar')
+                    @yield('partner')
             </div>
         </div>
-        
+
         @include('front.layouts.footer')
     
         <!-- Scripts -->
-        {!! HTML::script(elixir('js/front/jquery.js')); !!}
-        {!! HTML::script(elixir('js/front/respond.min.js')); !!}
-        {!! HTML::script(elixir('js/front/modernizr.custom.17475.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery.easing.js')); !!}
-        {!! HTML::script(elixir('js/front/megamenu.js')); !!}
-        {!! HTML::script(elixir('js/front/functions.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery.fancybox.pack.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery.fancybox-media.js')); !!}
-        {!! HTML::script(elixir('js/front/fancy_func.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery.themepunch.plugins.min.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery.themepunch.revolution.min.js')); !!}
-        {!! HTML::script(elixir('js/front/revolutio-slider-func.js')); !!}
-        {!! HTML::script(elixir('js/front/jquery-sticklr-1.4.min.js')); !!}
-        {!! HTML::script(elixir('js/front/bootstrap-datetimepicker.min.js')); !!}
+        {!! HTML::script(elixir('plugins/jquery/jquery-1.11.1.min.js')); !!}
+        {!! HTML::script(elixir('plugins/bootstrap/js/bootstrap.min.js')); !!}
+        {!! HTML::script(elixir('plugins/flexslider/jquery.flexslider.js')); !!}
+        {!! HTML::script(elixir('plugins/rs-plugin/js/jquery.themepunch.tools.min.js')); !!}
+        {!! HTML::script(elixir('plugins/rs-plugin/js/jquery.themepunch.revolution.min.js')); !!}
+        {!! HTML::script(elixir('plugins/selectbox/jquery.selectbox-0.1.3.min.js')); !!}
+        {!! HTML::script(elixir('plugins/pop-up/jquery.magnific-popup.js')); !!}
+        {!! HTML::script(elixir('plugins/animation/waypoints.min.js')); !!}
+        {!! HTML::script(elixir('plugins/count-up/jquery.counterup.js')); !!}
+        {!! HTML::script(elixir('plugins/animation/wow.min.js')); !!}
+        {!! HTML::script(elixir('plugins/animation/moment.min.js')); !!}
+        {!! HTML::script(elixir('plugins/calender/fullcalendar.min.js')); !!}
+        {!! HTML::script(elixir('plugins/owl-carousel/owl.carousel.js')); !!}
+        {!! HTML::script(elixir('plugins/timer/jquery.syotimer.js')); !!}
+        {!! HTML::script(elixir('plugins/smoothscroll/SmoothScroll.js')); !!}
+        {!! HTML::script(elixir('js/bootstrap-datetimepicker.js')); !!}
+        {!! HTML::script(elixir('js/moment.js')); !!}
+        {!! HTML::script(elixir('js/custom.js')); !!}
+
+       {!! HTML::script(elixir('options/optionswitcher.js')); !!}
+
 
         @yield('scripts')
 
@@ -85,11 +92,11 @@
                 e.preventDefault();
                 $('#logout-form').submit();
             });
-            window.setTimeout(function() {
-                $(".alert").fadeTo(500, 0).slideUp(500, function(){
-                    $(this).remove(); 
-                });
-            }, 3000);
+            // window.setTimeout(function() {
+            //     $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            //         $(this).remove(); 
+            //     });
+            // }, 3000);
         </script>
     </body>
 </html>
