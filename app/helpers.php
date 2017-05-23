@@ -145,9 +145,9 @@ if (!function_exists('image_teacher')) {
 if (!function_exists('sub_string')) {
     function sub_string($str)
     {
-        if (strlen($str) > 20)
+        if (strlen($str) > 35)
         {
-            $str = substr($str, 0, 29).'...';
+            $str = substr($str, 0, 34).'...';
         }
         
         return $str;

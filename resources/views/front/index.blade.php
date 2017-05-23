@@ -272,7 +272,7 @@
                                 <div class="col-xs-12 col-sm-12">
                                     <div class="testimonial">
                                         <div class="carousal_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                            <p>Trang web mới xuất hiện nhưng nhờ các nhân viên tuyệt vời của Giasutritue.com mà tôi đã có thể tìm được giáo viên tiếng Anh một cách nhanh chóng, cám ơn các bạn!</p>
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
@@ -293,7 +293,7 @@
                                 <div class="col-xs-12 col-sm-12">
                                     <div class="testimonial">
                                         <div class="carousal_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                            <p>Giáo viên đầu tiên mà tôi liên hệ trên Giasutritue.com chính là giáo viên mà tôi cần: chuyên nghiệp, sẵn sàng dạy và học phí hợp lý, tuyệt vời! Cảm ơn các bạn nhiều lắm!</p>
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
