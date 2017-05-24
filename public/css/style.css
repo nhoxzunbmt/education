@@ -2082,7 +2082,7 @@ li.language.dropdown>a:focus {
     list-style-type: none;
 }
 .features ul li:hover {
-    color: black;
+    color: #05b197;
     transition: color 0.3s;
 }
 .features ul li:hover i {

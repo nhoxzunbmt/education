@@ -55,9 +55,9 @@
             @yield('slider')
 
             <div class="mainContent clearfix" style="padding: 0px;">
-                    @yield('content')
+                @yield('content')
 
-                    @yield('partner')
+                @yield('partner')
             </div>
         </div>
 

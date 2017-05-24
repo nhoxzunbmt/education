@@ -141,3 +141,15 @@ if (!function_exists('image_teacher')) {
         return 'default.jpg';
     }
 }
+
+if (!function_exists('sub_string')) {
+    function sub_string($str)
+    {
+        if (strlen($str) > 20)
+        {
+            $str = substr($str, 0, 29).'...';
+        }
+        
+        return $str;
+    }
+}
