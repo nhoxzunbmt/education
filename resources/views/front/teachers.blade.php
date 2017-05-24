@@ -38,8 +38,8 @@
                                                     <h3 class="m-t-10">
                                                         {{ link_to($list->slug, $list->user->name, $list->title) }}
                                                     </h3>
-                                                    <p><strong>Dạy lớp: </strong>{{ $list->grades }}</p>
-                                                    <p class="m-b-15"><strong>Lớp</strong>{{ $list->subjects }}</p>
+                                                    <p><strong>Dạy lớp: </strong>{{ sub_string($list->grades) }}</p>
+                                                    <p class="m-b-15"><strong>Lớp: </strong>{{ sub_string($list->subjects) }}</p>
                                                     <div class="caption-bottom">
                                                         <div class="price">
                                                             <span class="offer-price">{{ salary($list->salary) }}</span>
