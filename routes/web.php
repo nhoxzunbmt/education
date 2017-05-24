@@ -35,7 +35,7 @@ $router->get('thanh-toan', 'TeachersController@payment');
 $router->get('gia-su-can-biet', 'TeachersController@know');
 $router->get('{id}', 'TeachersController@view');
 $router->post('subscribe', 'SubscribesController@store');
-
+$router->get('i/{slug}', 'TeachersController@branch');
 
 // $router->group(['namespace' => 'Front'], function (Router $router) {
 //     $router->get('profile', 'ProfileController@show');

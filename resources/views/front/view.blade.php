@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    
+
     @section('partner')
         @include('front.layouts.partner')
     @endsection

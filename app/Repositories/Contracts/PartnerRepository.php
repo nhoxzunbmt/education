@@ -10,5 +10,5 @@ interface PartnerRepository extends BaseRepository
 
     public function partner($slug);
 
-    public function branchs($city_id);
+    public function branchs($city_id, $type);
 }

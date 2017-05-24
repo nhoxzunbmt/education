@@ -114,6 +114,7 @@ iframe {
 ._dk-gs { padding: 5px 10px;margin-top: 7px; font-size: 13px; }
 ._dk-gs:hover { background-color: #fff; border: 2px solid #05b197; color: #05b197; padding: 3px 7px; }
 .text-b-v { vertical-align: middle !important; text-align: center; font-weight: bold; }
+.active { color: #05b197; }
 /*profile*/
 .profile-sidebar {
     position: relative

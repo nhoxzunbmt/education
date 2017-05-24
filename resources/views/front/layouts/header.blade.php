@@ -36,7 +36,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <a class="navbar-brand logo clearfix" href="{{ url('/') }}">
-                                    <img src="img/logo.png" alt="" class="img-responsive" />
+                                    <img src="{{ url('/') }}/img/logo.png" alt="" class="img-responsive" />
                                 </a>
                             </div>
 

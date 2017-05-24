@@ -181,9 +181,29 @@ class TeachersController extends BaseController
 
     public function know()
     {
-        
-        return view('front.teacher_know', [
-            
+        return view('front.teacher_know');
+    }
+
+    // public function view($id)
+    // {
+    //     $teacher = $this->partner->partner($id);
+
+    //     return view('front.view', [
+    //         'teacher' => $teacher
+    //     ]);
+    // }
+
+    public function branch($slug)
+    {
+        $city = $this->city->getIdBySlug($slug);
+        $partners = $this->partner->branchs($city->id, self::ROLE_ID);
+
+        return view('front.branch', [
+            'lists' => $partners,
+            'city_name' => $city,
+            'city' => $this->city,
+            'cities' => $this->city->cities(),
+            'status' => $this->status
         ]);
     }
 

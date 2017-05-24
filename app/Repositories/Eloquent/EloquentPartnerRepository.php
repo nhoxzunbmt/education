@@ -39,12 +39,12 @@ class EloquentPartnerRepository extends EloquentBaseRepository implements Partne
             ->firstOrFail();
     }
 
-    public function branchs($city_id)
+    public function branchs($city_id, $type)
     {
         $query = $this->model
             ->with('city', 'user')
             ->whereCityId($city_id)
-            ->whereType(5)
+            ->whereType($type)
             ->whereStatus(false);
 
         $datas = $query->paginate(config('app.page'));
