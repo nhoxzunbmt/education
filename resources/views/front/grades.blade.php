@@ -38,8 +38,8 @@
                                                         <p><strong>Địa chỉ: </strong>{{ $list->city->name.', '.$city->city($list->city->parent_id).'.' }}</p>
                                                         <p><strong>Số buổi: </strong>{{ $list->number }} buổi</p>
                                                         <p><strong>Thời gian: </strong>{{ $status->time($list->time) }}</p>
-                                                        <p><strong>Yêu cầu: </strong>{{ $status->level($list->level) }}</p>
-                                                        <p><strong>Liên hệ ngay: </strong>0974 502 420</p>
+                                                        <p><strong>Yêu cầu: </strong><span class="required">{{ $status->level($list->level) }}</span></p>
+                                                        <p><strong>Liên hệ ngay: </strong><span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 20px;"> 0974 502 420</span></p>
                                                     </div>
                                                     <div class="caption-bottom">
                                                         <div class="price">
@@ -58,7 +58,7 @@
                         @else
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p class="red">{{ trans('lang.no_result') }}</p>
+                                    <p class="required">{{ trans('lang.no_result') }}</p>
                                 </div>
                             </div>
                         @endif

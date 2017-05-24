@@ -25,10 +25,10 @@ if (!function_exists('salary')) {
     {
         if ($value)
         {
-            return number_format($value).'đ/buổi';
+            return number_format($value).' đ/buổi';
         }
 
-        return number_format(200000).'đ/buổi';
+        return number_format(200000).' đ/buổi';
     }
 }
 
@@ -128,5 +128,16 @@ if (!function_exists('gender')) {
         }
 
         return 'N/A';
+    }
+}
+
+if (!function_exists('image_teacher')) {
+    function image_teacher($img)
+    {
+        if (isset($img) && $img) {
+            return $img;
+        }
+
+        return 'default.jpg';
     }
 }

@@ -22,4 +22,12 @@ class EloquentUserRepository extends EloquentBaseRepository implements UserRepos
 
         return $query;
     }
+
+    public function isCheck($mobile, $email)
+    {
+        return $this->model
+            ->where('mobile', $mobile)
+            ->orWhere('email', $email)
+            ->first();
+    }
 }

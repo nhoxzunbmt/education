@@ -120,16 +120,7 @@
                             </div>
                             
                             <div class="row">
-                                <div class="col-md-12{{ $errors->has('captcha') ? ' has-error' : '' }}">
-                                    <label>{{ trans('lang.captcha') }} <span class="required">*</span></label>
-                                </div>
-                                <div class="col-md-2 col-xs-3 col-sm-3">
-                                    {!! Form::text('captcha', null, ['class' => 'form-control']) !!}
-                                </div>
-                                <div class="col-md-2 col-xs-3 col-sm-3">
-                                    {!! $captcha !!}
-                                </div>
-                                <div class="col-md-8 col-xs-6 col-sm-4">
+                                <div class="col-md-12 col-xs-6 col-sm-4">
                                     {{ Form::checkbox('term', null, false, ['id' => 'term']) }}
                                     <label for="term" style="padding-top: 6px;padding-left: 10px;"><span></span>{{ trans('lang.term_1') }} <a href="#">{{ trans('lang.term_2') }}</a> {{ trans('lang.term_3') }}</label>
                                 </div>

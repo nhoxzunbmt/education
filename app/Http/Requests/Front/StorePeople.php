@@ -28,19 +28,16 @@ class StorePeople extends FormRequest
             'mobile' => [
                 'bail',
                 'required',
-                'unique:users',
                 'regex: /^(01[2689]|09|0[123456789])[0-9]{8}$/',
             ],
             'city' => 'bail|required',
             'city_id' => 'bail|required',
-            'address' => 'bail|required',
             'number' => 'bail|required|between: 1, 7',
             'time' => 'bail|required|between: 1, 4',
             'level' => 'bail|required|between: 1, 12',
             'grades' => 'bail|required|between: 1, 18',
             'subjects' => 'bail|required|min: 1|between: 1, 24',
             'days' => 'bail|required|min: 1|between: 1, 7',
-            'captcha' => 'bail|required|bone_captcha',
             'term' => 'bail|required'
         ];
     }
@@ -64,7 +61,6 @@ class StorePeople extends FormRequest
             'grade.required' => trans('lang.message.grade'),
             'subjects.required' => trans('lang.message.subjects'),
             'days.required' => trans('lang.message.days'),
-            'captcha.required' => trans('lang.message.captcha'),
             'term.required' => trans('lang.message.term'),
         ];
     }

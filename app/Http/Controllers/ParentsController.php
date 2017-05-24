@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\BaseController;
-use LaravelCaptcha\Facades\Captcha;
 use App\Repositories\Contracts\CityRepository as City;
 use App\Repositories\Contracts\DayRepository as Day;
 use App\Repositories\Contracts\SubjectRepository as Subject;
@@ -94,8 +93,7 @@ class ParentsController extends BaseController
             'levels' => $levels,
             'days' => $days,
             'subjects' => $subjects,
-            'times' => $times,
-            'captcha' => Captcha::html()
+            'times' => $times
         ]);
     }
 
@@ -114,20 +112,27 @@ class ParentsController extends BaseController
         $request['subjects'] = join_arr($subjects);
         $request['password'] = $request['mobile'];
         $request['title'] = config('app.slug').' '.$request['subjects'].' '.$request['grades'];
-        $request['slug'] = str_slug($request['title'].'-'.$request['code']);
+        $request['slug'] = str_slug($request['title']).'-'.$request['code'];
+
+        $checkUser = $this->user->isCheck($request['mobile'], $request['email']);
 
         DB::beginTransaction();
         try {
-            $user = $this->user->create($request);
-            $request['user_id'] = $user->id;
-            $this->partner->create($request);
+            if ($checkUser) {
+                $request['user_id'] = $checkUser->id;
+                $this->partner->create($request);
+            } else {
+                $user = $this->user->create($request);
+                $request['user_id'] = $user->id;
+                $this->partner->create($request);
+            }
 
             DB::commit();
         } catch (Exception $e) {
             DB::rollback();
 
             return redirect()->back()
-                ->with('warning', 'Xay ra loi roi');
+                ->with('warning', 'Lỗi đăng ký mất rồi, xin lỗi vì sự bất tiện này. Hãy liên hệ với chúng tôi để được trợ giúp');
         }
 
         return redirect('/');
@@ -151,15 +156,11 @@ class ParentsController extends BaseController
 
     public function fee()
     {
-        return view('front.parent_fee', [
-            // code
-        ]);
+        return view('front.parent_fee');
     }
 
     public function know()
     {
-        return view('front.parent_know', [
-            // code
-        ]);
+        return view('front.parent_know');
     }
 }

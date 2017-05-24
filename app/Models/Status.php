@@ -187,6 +187,11 @@ class Status
         return $this->teacher_levels;
     }
 
+    public function teacher_level($value)
+    {
+        return $this->teacher_levels[$value];
+    }
+
     public function times()
     {
         return $this->times;
