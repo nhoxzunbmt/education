@@ -9,35 +9,36 @@
                         <div class="post single_post" style="border-bottom: none;">
                             <h1>Học phí gia sư</h1>
                             <div class="post_desc">
-                                <p class="required">Bạn có thể thuê gia sư là giáo viên hoặc sinh viên cũng như sinh viên đã tốt nghiệp để kèm cặp cho con. Dưới đây là bảng giá tham khảo giúp bạn có thể dễ dàng thuê gia sư tại nhà.</p>
-                                <table class="table table-bordered table-striped">
+                                <p>- Bạn có thể thuê gia sư là giáo viên hoặc sinh viên cũng như sinh viên đã tốt nghiệp để kèm cặp cho con.</p>
+                                <p class="required"><em>Dưới đây là bảng giá tham khảo giúp bạn có thể dễ dàng thuê gia sư tại nhà.</em></p>
+                                <table class="table table-bordered m-t-10">
                                     <tbody>
                                         <tr>
-                                            <td class="col-sm-4 text-vertical text-center text-bold" rowspan="2">KHỐI LỚP</td>
-                                            <td class="col-sm-8 text-center text-bold" colspan="4">Học phí/buổi</td>
+                                            <td class="col-sm-4 text-b-v" rowspan="2">KHỐI LỚP</td>
+                                            <td class="col-sm-8 text-b-v" colspan="4">Học phí/buổi</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2" class="text-bold text-center">Sinh viên</td>
-                                            <td colspan="2" class="text-bold text-center">Giáo viên</td>
+                                            <td colspan="2" class="text-b-v">Sinh viên</td>
+                                            <td colspan="2" class="text-b-v">Giáo viên</td>
                                         </tr>
 
                                         <tr>
-                                            <td>LỚP Lá, 1, 2, 3, 4</td>
+                                            <td class="text-b-v">LỚP Lá, 1, 2, 3, 4</td>
                                             <td colspan="2" class="text-center">120.000 - 140.000 đ</td>
                                             <td colspan="2" class="text-center">150.000 - 180.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td>LỚP 5, 6, 7, 8</td>
+                                            <td class="text-b-v">LỚP 5, 6, 7, 8</td>
                                             <td colspan="2" class="text-center">140.000 - 160.000 đ</td>
                                             <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td>LỚP 9, 10, 11, 12</td>
+                                            <td class="text-b-v">LỚP 9, 10, 11, 12</td>
                                             <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
                                             <td colspan="2" class="text-center">220.000 - 250.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td>LTĐH-NGOẠI NGỮ</td>
+                                            <td class="text-b-v">LTĐH-NGOẠI NGỮ</td>
                                             <td colspan="2" class="text-center">220.000 - 250.000 đ</td>
                                             <td colspan="2" class="text-center">280.000 - 300.000 đ</td>
                                         </tr>

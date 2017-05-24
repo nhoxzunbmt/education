@@ -190,12 +190,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        // Captcha
-        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
         /*---- Debug -----*/
         Barryvdh\Debugbar\ServiceProvider::class,
-        /* ---- Social ----*/
-        Chencha\Share\ShareServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
     ],
 
     /*
@@ -246,7 +243,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Share' => Chencha\Share\ShareFacade::class,
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 ];

@@ -25,13 +25,12 @@ class StoreTeacher extends FormRequest
     {
         return [
             'name' => 'bail|required',
-            'email' => 'bail|required|email|unique:users',
+            'email' => 'bail|required|email',
             'gender' => 'bail|required|between: 1, 2',
             'birthday' => 'bail|required|date_format: "d-m-Y"',
             'mobile' => [
                 'bail',
                 'required',
-                'unique:users',
                 'regex: /^(01[2689]|09|0[123456789])[0-9]{8}$/',
             ],
             'city_id' => 'bail|required',
@@ -43,7 +42,6 @@ class StoreTeacher extends FormRequest
             'grades' => 'bail|required|between: 1, 18',
             'subjects' => 'bail|required|min: 1|between: 1, 24',
             'days' => 'bail|required|min: 1|between: 1, 7',
-            'captcha' => 'bail|required|bone_captcha',
             'term' => 'bail|required'
         ];
     }
@@ -71,7 +69,6 @@ class StoreTeacher extends FormRequest
             'grade.required' => trans('lang.message.grade'),
             'subjects.required' => trans('lang.message.subjects'),
             'days.required' => trans('lang.message.days'),
-            'captcha.required' => trans('lang.message.captcha'),
             'term.required' => trans('lang.message.term')
         ];
     }

@@ -20,13 +20,15 @@
         <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@yield('title')</title>
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+        {!! SEO::generate() !!}
+
         <!-- Styles -->
         {!! Html::style(elixir('plugins/bootstrap/css/bootstrap.min.css')) !!}
         {!! Html::style(elixir('css/bootstrap-datetimepicker.min.css')) !!}
@@ -39,7 +41,6 @@
         {!! Html::style(elixir('plugins/owl-carousel/owl.carousel.css')) !!}
         {!! Html::style(elixir('css/style.css')) !!}
         {!! Html::style(elixir('css/color-option2.css')) !!}
-        {!! Html::style(elixir('options/optionswitch.css')) !!}
 
         <!-- Scripts -->
         <script>
@@ -82,9 +83,6 @@
         {!! HTML::script(elixir('js/moment.js')); !!}
         {!! HTML::script(elixir('js/custom.js')); !!}
 
-       {!! HTML::script(elixir('options/optionswitcher.js')); !!}
-
-
         @yield('scripts')
 
         <script>
@@ -92,11 +90,12 @@
                 e.preventDefault();
                 $('#logout-form').submit();
             });
-            // window.setTimeout(function() {
-            //     $(".alert").fadeTo(500, 0).slideUp(500, function(){
-            //         $(this).remove(); 
-            //     });
-            // }, 3000);
+
+            window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                    $(this).remove(); 
+                });
+            }, 5000);
         </script>
     </body>
 </html>

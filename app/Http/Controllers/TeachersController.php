@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\BaseController;
-use LaravelCaptcha\Facades\Captcha;
 use App\Repositories\Contracts\CityRepository as City;
 use App\Repositories\Contracts\DayRepository as Day;
 use App\Repositories\Contracts\SubjectRepository as Subject;
@@ -107,8 +106,7 @@ class TeachersController extends BaseController
             'hcm' => $hcm,
             'hp' => $hp,
             'dn' => $dn,
-            'ct' => $ct,
-            'captcha' => Captcha::html()
+            'ct' => $ct
         ]);
     }
 
@@ -134,20 +132,27 @@ class TeachersController extends BaseController
         $request['birthday'] = Carbon::parse($request['birthday'])->format('Y-m-d');
         $request['password'] = $request['mobile'];
         $request['title'] = $request['name'].' '.config('app.gs').' '.$request['subjects'];
-        $request['slug'] = str_slug($request['title']);
+        $request['slug'] = str_slug($request['title']).'-'.$request['code'];
+
+        $checkUser = $this->user->isCheck($request['mobile'], $request['email']);
 
         DB::beginTransaction();
 
         try {
-            $user = $this->user->create($request);
-            $request['user_id'] = $user->id;
-            $this->partner->create($request);
+            if ($checkUser) {
+                $request['user_id'] = $checkUser->id;
+                $this->partner->create($request);
+            } else {
+                $user = $this->user->create($request);
+                $request['user_id'] = $user->id;
+                $this->partner->create($request);
+            }
 
             DB::commit();
         } catch (Exception $e) {
             DB::rollback();
             return redirect()->back()
-                ->with('warning', 'Xay ra loi roi');
+                ->with('warning', 'Lỗi đăng ký mất rồi, xin lỗi vì sự bất tiện này. Hãy liên hệ với chúng tôi để được trợ giúp');
         }
 
         return redirect('/');
@@ -155,17 +160,22 @@ class TeachersController extends BaseController
 
     public function payment()
     {
-
-        return view('front.payment', [
-            // code
-        ]);
+        return view('front.payment');
     }
 
-    public function list()
+    public function list(Request $request)
     {
+        $search_grades = $this->status->search_grades();
+        $params = $request->only(['grades', 'city', 'city_id']);
+        $lists = $this->partner->partners(self::ROLE_ID, $request->all());
 
         return view('front.teachers', [
-            // code
+            'lists' => $lists,
+            'city' => $this->city,
+            'cities' => $this->city->cities(),
+            'search_grades' => $search_grades,
+            'status' => $this->status,
+            'params' => $params ?: $params = null
         ]);
     }
 
@@ -174,6 +184,15 @@ class TeachersController extends BaseController
         
         return view('front.teacher_know', [
             
+        ]);
+    }
+
+    public function view($id)
+    {
+        $teacher = $this->partner->partner($id);
+
+        return view('front.view', [
+            'teacher' => $teacher
         ]);
     }
 }

@@ -171,11 +171,14 @@ return [
     'message' => [
         'log' => 'Email hoặc số điện thoại không được để trống',
         'password' => 'Mật khẩu không được để trống',
+        'email' => 'Bạn chưa nhập email hoặc sai định dạng',
         'name' => 'Họ và tên không được để trống',
         'city' => 'Không được bỏ trống tỉnh/thành phố',
         'city_id' => 'Không được bỏ trống quận/huyện',
         'address' => 'Nhập địa chỉ của bạn',
         'mobile' => 'Nhập số điện thoại của bạn',
+        'birthday' => 'Bạn chưa chọn ngày sinh',
+        'gender' => 'Bạn chưa chọn giới tính',
         'grade' => 'Bạn chưa chọn lớp',
         'number' => 'Bạn chưa chọn số buổi học',
         'time' => 'Bạn chưa chọn thời gian cho con bạn học',
@@ -187,5 +190,8 @@ return [
         'locked' => 'Tài khoản của ban đang bị khóa, vui lòng liên hệ với quản trị',
         'err_login' => 'Email hoặc mật khẩu không đúng',
         'logouted' => 'Logoutd',
+        'contact' => 'Cảm ơn bạn đã gửi thông tin đến chúng tôi, chúng tôi sẽ phản hồi bạn trong vòng 24 giờ tới.',
+        'mess' => 'Nội dung không được bỏ trống',
+        '',
     ],
 ];

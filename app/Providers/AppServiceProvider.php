@@ -11,6 +11,8 @@ use App\Repositories\Eloquent\EloquentCityRepository;
 use App\Repositories\Eloquent\EloquentSubjectRepository;
 use App\Repositories\Eloquent\EloquentDayRepository;
 use App\Repositories\Eloquent\EloquentPartnerRepository;
+use App\Repositories\Eloquent\EloquentContactRepository;
+use App\Repositories\Eloquent\EloquentSubscribeRepository;
 use App\Repositories\Contracts\RoleRepository;
 use App\Repositories\Contracts\UserRepository;
 use App\Repositories\Contracts\BlogRepository;
@@ -18,6 +20,8 @@ use App\Repositories\Contracts\CityRepository;
 use App\Repositories\Contracts\SubjectRepository;
 use App\Repositories\Contracts\DayRepository;
 use App\Repositories\Contracts\PartnerRepository;
+use App\Repositories\Contracts\ContactRepository;
+use App\Repositories\Contracts\SubscribeRepository;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Blog;
@@ -25,6 +29,8 @@ use App\Models\City;
 use App\Models\Subject;
 use App\Models\Day;
 use App\Models\Partner;
+use App\Models\Contact;
+use App\Models\Subscribe;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -78,6 +84,16 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             PartnerRepository::class, function () {
                 return new EloquentPartnerRepository(new Partner());
+            }
+        );
+        $this->app->bind(
+            ContactRepository::class, function () {
+                return new EloquentContactRepository(new Contact());
+            }
+        );
+        $this->app->bind(
+            SubscribeRepository::class, function () {
+                return new EloquentSubscribeRepository(new Subscribe());
             }
         );
     }

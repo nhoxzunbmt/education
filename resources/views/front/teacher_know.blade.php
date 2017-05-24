@@ -9,6 +9,9 @@
                         <div class="post single_post" style="border-bottom: none;">
                             <h1>Các điều khoản gia sư cần nắm rõ</h1>
                             <div class="post_desc">
+                                <div class="post_thumb">
+                                    <img src="{{ url('/') }}/img/news/news-post-03.jpg" alt="">
+                                </div>
                                 <p>Chia sẻ kinh nghiệm làm gia sư, các bước chuẩn bị làm gia sư, để có được một công việc gia sư ổn định và lâu dài.</p>
                                 <p>Hiện nay, để kiếm thêm thu nhập phục vụ cho việc chi tiêu của bản thân và phụ giúp gia đình, nhiều học sinh, sinh viên đã chọn công việc gia sư để làm thêm ngoài giờ học của mình. Trong khi có rất nhiều gia sư tự do hoặc làm việc trong các trung tâm gia sư, các em học sinh và các bậc phụ huynh có vô vàn lựa chọn. Nhưng điều họ quan tâm đầu tiên ở các gia sư chính là kinh nghiệm dạy, ôn thi. Đừng quá coi trọng việc bạn đã dạy được bao nhiêu năm, bao nhiêu học sinh. Đó không hoàn toàn thể hiện kinh nghiệm làm gia sư của bạn.  Kinh nghiệm làm gia sư ở đây trên hết là cách bạn làm việc, cách bạn truyền đạt kiến thức, cách nắm bắt tâm lý học sinh, thậm chí là cách để bạn trò chuyện với học sinh và phụ huynh.</p>
                                 <h5>Kinh nghiệm làm gia sư buổi đầu tiên :</h5>

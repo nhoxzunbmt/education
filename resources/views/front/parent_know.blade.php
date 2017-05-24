@@ -8,9 +8,10 @@
                     <div class="post_left_section">
                         <div class="post single_post" style="border-bottom: none;">
                             <h1>Phụ huynh cần biết</h1>
+
                             <div class="post_desc">
                                 <div class="post_thumb">
-                                    <img src="img/news/news-post-03.jpg" alt="">
+                                    <img src="{{ url('/') }}/img/news/news-post-03.jpg" alt="">
                                 </div>
                                 <p>Bạn luôn mong con em mình giỏi giang, nhưng các em dường như đã rất vất vả với chuyện học ở trường?</p>
                                 <p>Bạn nghĩ nên tìm cho con một gia sư tốt? <span class="required">Chúng tôi có một số lời khuyên dành cho bạn.</span></p>

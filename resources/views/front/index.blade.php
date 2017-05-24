@@ -10,6 +10,7 @@
             <div class="sectionTitle text-center">
                 <h3>Danh sách lớp cần gia sư</h3>
             </div>
+
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
@@ -114,7 +115,7 @@
 
             <div class="row">
                 <div class="btnArea text-center">
-                    <a href="#" class="btn btn-default commonBtn">Xem thêm</a>
+                    {{ link_to('danh-sach-lop', 'Xem thêm', ['class' => 'btn btn-default commonBtn']) }}
                 </div>
             </div>
         </div>
@@ -160,6 +161,7 @@
             <div class="sectionTitle text-center">
                 <h3>Gia sư tiêu biểu</h3>
             </div>
+
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
@@ -174,8 +176,7 @@
                                     <span class="offer-price">250.000 d/buoi</span>
                                 </div>
                                 <div class="user">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="course-user">50 <br> Hiển thị</span>
+                                    <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +196,7 @@
                                     <span class="offer-price">250.000 d/buoi</span>
                                 </div>
                                 <div class="user">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="course-user">50 <br> Hiển thị</span>
+                                    <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
                                 </div>
                             </div>
                         </div>
@@ -216,8 +216,7 @@
                                     <span class="offer-price">250.000 d/buoi</span>
                                 </div>
                                 <div class="user">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="course-user">50 <br> Hiển thị</span>
+                                    <a href="#" class="btn_sign _dk-gs">ĐK gia sư</a>
                                 </div>
                             </div>
                         </div>
@@ -237,8 +236,7 @@
                                     <span class="offer-price">250.000 d/buoi</span>
                                 </div>
                                 <div class="user">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="course-user">50 <br> Hiển thị</span>
+                                    <a href="#" class="btn_sign _dk-gs">ĐK gia sư</a>
                                 </div>
                             </div>
                         </div>
@@ -248,20 +246,20 @@
 
             <div class="row">
                 <div class="btnArea text-center">
-                    <a href="" class="btn btn-default commonBtn">Xem thêm</a>
+                    {{ link_to('danh-sach-gia-su', 'Xem thêm', ['class' => 'btn btn-default commonBtn']) }}
                 </div>
             </div>
         </div>
     </div>
 
     <div class="padding clearfix paralax" style="background-image: url(img/home/paralax/paralax01.jpg);">
-      <div class="container">
-        <div class="paralax-text text-center paralaxInner">
-          <h2>Bạn có thể dạy những gì?</h2>
-          <p>Cùng đăng ký làm một gia sư miễn phí và kiếm thêm thu nhập nhé.</p>
-          <a href="#" class="btn btn-default commonBtn">Đăng ký miễn phí</a>
-        </div><!-- row -->
-      </div>
+        <div class="container">
+            <div class="paralax-text text-center paralaxInner">
+                <h2>Bạn có thể dạy những gì?</h2>
+                <p>Cùng đăng ký làm một gia sư miễn phí và kiếm thêm thu nhập nhé.</p>
+                {{ link_to('dang-ky-lam-gia-su', 'Đăng ký miễn phí', ['class' => 'btn btn-default commonBtn']) }}
+            </div>
+        </div>
     </div>
 
     <div class="testimonial-section clearfix">
@@ -285,7 +283,7 @@
                                                 <span class="author_designation">Student<a href="#"> English Literature</a></span>
                                             </div>
                                         </div>
-                                    </div><!-- testimonial -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -306,58 +304,79 @@
                                                 <span class="author_designation">Student<a href="#"> English Literature</a></span>
                                             </div>
                                         </div>
-                                    </div><!-- testimonial -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-          <div class="slide">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-                <div class="testimonial">
-                  <div class="carousal_content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                  </div>
-                  <div class="carousal_bottom">
-                    <div class="thumb">
-                      <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
-                    </div>
-                    <div class="thumb_title">
-                      <span class="author_name">Sara Lisbon</span>
-                      <span class="author_designation">Student<a href="#"> English Literature</a></span>
-                    </div>
-                  </div>
-                </div><!-- testimonial -->
-              </div>
-            </div>
-          </div>
-        </div>
-          </div><!-- col-xs-12 -->
-          <div class="col-xs-12 col-sm-6">
-            <div class="features">
-              <h3>Lý do bạn đến với chúng tôi?</h3>
-              <ul>
-                <li>
-                    <i class="fa fa-check-circle-o"></i>
-                    Dạy thử miễn phí 3 buổi đầu
-                </li>
-                <li>
-                    <i class="fa fa-check-circle-o"></i>
-                    Luôn đưa ra mức học phí rẻ, phù hợp với từng đối tượng học sinh
-                </li>
-                <li>
-                    <i class="fa fa-check-circle-o"></i>
-                    SASS file included for unlimited hasel free style customization
-                </li>
-                <li><i class="fa fa-check-circle-o"></i>Theme option switcher for live cusomization preview</li>
-                <li><i class="fa fa-check-circle-o"></i>Được hỗ trợ 27/4</li>
-              </ul>
-            </div>
-          </div><!-- col-xs-12 -->
-        </div><!-- row -->
-      </div><!-- container -->
-    </div>
+                        <div class="slide">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="testimonial">
+                                        <div class="carousal_content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                        </div>
+                                        <div class="carousal_bottom">
+                                            <div class="thumb">
+                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                            </div>
+                                            <div class="thumb_title">
+                                                <span class="author_name">Sara Lisbon</span>
+                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="slide">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="testimonial">
+                                        <div class="carousal_content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                        </div>
+                                        <div class="carousal_bottom">
+                                            <div class="thumb">
+                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                            </div>
+                                            <div class="thumb_title">
+                                                <span class="author_name">Sara Lisbon</span>
+                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="features">
+                        <h3>Lý do bạn đến với chúng tôi?</h3>
+                        <ul>
+                            <li>
+                                <i class="fa fa-check-circle-o"></i>
+                                Dạy thử miễn phí 3 buổi đầu
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle-o"></i>
+                                Luôn đưa ra mức học phí rẻ, phù hợp với từng đối tượng học sinh
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle-o"></i>
+                                SASS file included for unlimited hasel free style customization
+                            </li>
+                            <li><i class="fa fa-check-circle-o"></i>Theme option switcher for live cusomization preview</li>
+                            <li><i class="fa fa-check-circle-o"></i>Được hỗ trợ 27/4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @section('partner')
         @include('front.layouts.partner')
