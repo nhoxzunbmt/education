@@ -6,8 +6,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-9 custom_right">
                     <div class="single_content_left">
-                        <p>Tôi có thể {{ link_to('dang-ky-lam-gia-su', 'đăng ký gia sư') }} ở đây</p>
-                        <h3 style="margin-bottom: 20px;">Dành cho phụ huynh tìm gia sư</h3>
+                        <h1 class="m-b-15">Đăng ký tìm gia sư</h1>
 
                         @include('front.layouts.message')
 

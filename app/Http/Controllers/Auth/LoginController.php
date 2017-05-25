@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-use LaravelCaptcha\Facades\Captcha;
-use App\Http\Controllers\Front\FrontBaseController;
 use App\Http\Requests\Front\LoginRequest;
 
-class LoginController extends FrontBaseController
+class LoginController extends Request
 {
     /*
     |--------------------------------------------------------------------------
@@ -42,13 +40,6 @@ class LoginController extends FrontBaseController
         parent::__construct();
     }
 
-    public function getLogin()
-    {
-        return view('auth.login', [
-            'captcha' => Captcha::html()
-        ]);
-    }
-
     /**
      * Handle a login request to the application
      *
@@ -57,6 +48,7 @@ class LoginController extends FrontBaseController
      */
     public function login(LoginRequest $request)
     {
+        dd($request->all());
         if ($lockedOut = $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
             return redirect('login')->with('error', trans('lang.message.locked'));

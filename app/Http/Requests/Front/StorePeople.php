@@ -58,7 +58,7 @@ class StorePeople extends FormRequest
             'number.required' => trans('lang.message.number'),
             'time.required' => trans('lang.message.time'),
             'level.required' => trans('lang.message.level'),
-            'grade.required' => trans('lang.message.grade'),
+            'grades.required' => trans('lang.message.grade'),
             'subjects.required' => trans('lang.message.subjects'),
             'days.required' => trans('lang.message.days'),
             'term.required' => trans('lang.message.term'),

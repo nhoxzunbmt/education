@@ -39,7 +39,7 @@
                                                         <p><strong>Số buổi: </strong>{{ $list->number }} buổi</p>
                                                         <p><strong>Thời gian: </strong>{{ $status->time($list->time) }}</p>
                                                         <p><strong>Yêu cầu: </strong><span class="required">{{ $status->level($list->level) }}</span></p>
-                                                        <p><strong>Liên hệ ngay: </strong><span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 20px;"> 0974 502 420</span></p>
+                                                        <p><strong>Liên hệ ngay: </strong><span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 20px;"> 01674.537.055</span></p>
                                                     </div>
                                                     <div class="caption-bottom">
                                                         <div class="price">
@@ -62,23 +62,6 @@
                                 </div>
                             </div>
                         @endif
-
-                        <ul class="pagination">
-                            <li>
-                                <a aria-label="Previous" href="#">
-                                    <span aria-hidden="true">Previous</span>
-                                </a>
-                            </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">38</a></li>
-                            <li>
-                                <a aria-label="Next" href="#">
-                                    <span aria-hidden="true">Next</span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 

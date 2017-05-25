@@ -15,7 +15,6 @@
         <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
-        <link rel="manifest" href="ico/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
@@ -97,5 +96,56 @@
                 });
             }, 5000);
         </script>
+
+        <div class="modal fade customModal" id="loginModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-default formPanel">
+                        <div class="panel-heading" style="padding: 15px 25px;">
+                            <h3 class="panel-title">Đăng nhập</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="panel-body">
+                            {!! Form::open(['action' => ['Auth\LoginController@login'], 'method' => 'POST']) !!}
+                                <div class="form-group formField">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    {!! Form::text('log', null, ['class' => 'form-control', 'placeholder' => 'Email hoặc số điện thoại']) !!}
+                                </div>
+
+                                <div class="form-group formField">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Mật khẩu']) !!}
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        {{ Form::checkbox('remember', null, old('remember') ? 'checked' : '', ['id' => 'remember']) }}
+                                        <label for="remember" style="padding-left: 0px;"><span></span>{{ trans('lang.remember') }}</label>
+                                    </div>
+                                </div>
+
+                                <button id="login" type="submit" class="btn btn-block commonBtn">Log in</button>
+                            {!! Form::close() !!}
+
+                            <div class="alt-text">or</div>
+                            <div class="modal-border"></div>
+                            <div class="alt-btn">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="facebook-btn btn btn-block" href="#"><i class="fa fa-facebook"></i> Log in with Facebook</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <a class="twitter-btn btn btn-block" href="#"><i class="fa fa-twitter" style="font-size: 24px;"></i> Log in with Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

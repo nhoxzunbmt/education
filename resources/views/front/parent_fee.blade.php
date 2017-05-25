@@ -7,69 +7,82 @@
                 <div class="col-xs-12 col-sm-9 custom_right">
                     <div class="post_left_section">
                         <div class="post single_post" style="border-bottom: none;">
-                            <h1>Học phí gia sư</h1>
+                            <h1 class="font-w required text-center">Gia sư trí tuệ nhận dạy kèm tại nhà</h1>
                             <div class="post_desc">
-                                <p>- Bạn có thể thuê gia sư là giáo viên hoặc sinh viên cũng như sinh viên đã tốt nghiệp để kèm cặp cho con.</p>
-                                <p class="required"><em>Dưới đây là bảng giá tham khảo giúp bạn có thể dễ dàng thuê gia sư tại nhà.</em></p>
+                                <p class="font-w font-18 text-center text-u active">
+                                    Nhận dạy kèm từ lớp 1 đến lớp 12 và LT Đại Học
+                                </p>
+
+                                <p class="font-w font-18 text-center text-u active">
+                                    Nhận dậy kèm trên tất cả các nơi ở địa bàn Hà nội và HCM
+                                </p>
+
+                                <p class="font-w font-26 text-center text-u required p-t-b">
+                                    Không ngại đường xa
+                                </p>
+
+                                <p class="font-w font-18 text-center text-u active">
+                                    Các môn: toán ,lý, hóa, sinh, văn, ngoại ngữ, tin học, đàn, nhạc, vẽ, luyện thi đại học . . . 
+                                </p>
+
+                                <p class="font-w font-18 text-center text-u active">
+                                    Quý phụ huynh học sinh có nhu cầu xin liên hệ. 
+                                </p>
+
+                                <p class="font-w font-18 text-center text-u required p-t-b">
+                                    Điện thoại để tư vấn - đăng ký gia sư trực tiếp. 
+                                </p>
+                                <p class="text-center font-26 font-w required">01674.537.055</p>
+
+                                <p class="font-18">Xin chân thành cảm ơn đến tất cả Quý Phụ Huynh Học Sinh đã tín nhiệm trung tâm gia sư chúng tôi trong suốt thời gian qua.</p>
+
+                                <p class="font-w font-18 text-center text-u required p-t-b">Tất cả vì học sinh thân yêu</p>
+                                <p class="font-w font-18 text-center text-u active">Hãy để cho chúng tôi thắp sáng ước mơ của các em bằng con đường "giáo dục"</p>
+                                <p class="font-18 font-w text-center">Kinh chúc quý phụ huynh và các em học sinh sức khỏe và thành đạt.</p>
+                                <hr />
+                                <h2 class="text-center font-w text-u required p-t-b">Bảng học phí tham khảo</h2>
+                                <p class="p-t-b font-18">- <font class="required">Trung tâm gia sư trí tuệ</font> đưa ra bảng học phí 1 buổi dạy của gia sư cho quý phụ huynh và các bạn gia sư tham khảo <font class="required">(một buổi dạy 2h với sinh viên và 1h30' đối với giáo viên)</font>. </p>
+                                <p class="font-18">- Mức học phí áp dụng với 1 học sinh, nếu học nhóm hay có yêu cầu khác vui lòng liên hệ trung tâm.</p>
+                                
                                 <table class="table table-bordered m-t-10">
                                     <tbody>
                                         <tr>
-                                            <td class="col-sm-4 text-b-v" rowspan="2">KHỐI LỚP</td>
-                                            <td class="col-sm-8 text-b-v" colspan="4">Học phí/buổi</td>
+                                            <td class="col-sm-4 text-b-v font-18" rowspan="2">Khối lớp</td>
+                                            <td class="col-sm-8 text-b-v font-18" colspan="4">Học phí/buổi</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2" class="text-b-v">Sinh viên</td>
-                                            <td colspan="2" class="text-b-v">Giáo viên</td>
+                                            <td colspan="2" class="text-b-v font-18">Sinh viên</td>
+                                            <td colspan="2" class="text-b-v font-18">Giáo viên</td>
                                         </tr>
 
                                         <tr>
-                                            <td class="text-b-v">LỚP Lá, 1, 2, 3, 4</td>
-                                            <td colspan="2" class="text-center">120.000 - 140.000 đ</td>
-                                            <td colspan="2" class="text-center">150.000 - 180.000 đ</td>
+                                            <td class="text-b-v font-18">Lớp lá, 1, 2, 3, 4</td>
+                                            <td colspan="2" class="text-center font-18">120.000 - 140.000 đ</td>
+                                            <td colspan="2" class="text-center font-18">150.000 - 180.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td class="text-b-v">LỚP 5, 6, 7, 8</td>
-                                            <td colspan="2" class="text-center">140.000 - 160.000 đ</td>
-                                            <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
+                                            <td class="text-b-v font-18">Lớp 5, 6, 7, 8</td>
+                                            <td colspan="2" class="text-center font-18">140.000 - 160.000 đ</td>
+                                            <td colspan="2" class="text-center font-18">180.000 - 200.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td class="text-b-v">LỚP 9, 10, 11, 12</td>
-                                            <td colspan="2" class="text-center">180.000 - 200.000 đ</td>
-                                            <td colspan="2" class="text-center">220.000 - 250.000 đ</td>
+                                            <td class="text-b-v font-18">Lớp 9, 10, 11, 12</td>
+                                            <td colspan="2" class="text-center font-18">180.000 - 200.000 đ</td>
+                                            <td colspan="2" class="text-center font-18">220.000 - 250.000 đ</td>
                                         </tr>
                                         <tr>
-                                            <td class="text-b-v">LTĐH-NGOẠI NGỮ</td>
-                                            <td colspan="2" class="text-center">220.000 - 250.000 đ</td>
-                                            <td colspan="2" class="text-center">280.000 - 300.000 đ</td>
+                                            <td class="text-b-v font-18">Ltđh - ngoại ngữ</td>
+                                            <td colspan="2" class="text-center font-18">220.000 - 250.000 đ</td>
+                                            <td colspan="2" class="text-center font-18">280.000 - 300.000 đ</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                
-                                <p>Bạn nghĩ nên tìm cho con một gia sư tốt? <span class="required">Chúng tôi có một số lời khuyên dành cho bạn.</span></p>
-                                <h5>Nên xác định rõ nhu cầu :</h5>
-                                <p><em>- Vì sao bạn nghĩ rằng con mình cần học gia sư.</em></p>
-                                <p><em>- Cháu có khó khăn trong việc học môn nào.</em></p>
-                                <p><em>- Cháu vô cùng vất vả khi làm bài tập về nhà.</em></p>
-                                <p><em>- Mối quan hệ giữa bạn và con có tốt không.</em></p>
-                                <p><em>- Liệu con bạn không có vấn đề gì về phát triển trí tuệ.</em></p>
-                                <p><em>- Một kỳ thi cực kỳ quan trọng tới gần.</em></p>
-                                <p><strong>Hãy rà soát lại và suy nghĩ thật kỹ xem liệu con có cần một sự giúp đỡ đặc biệt nào mà thầy cô ở trường không thể đáp ứng...</strong></p>
-                                <p><strong>Theo bạn, con mình không theo kịp bạn bè trong lớp có phải vì cháu ốm, hay vì mới chuyển trường?... Hãy nhận rõ mục tiêu để tìm cho con một gia sư phù hợp nhất!</strong></p>
-                                <h5>Nên trao đổi với giáo viên của con :</h5>
-                                <p>Mục đích cuối cùng của bạn là giúp con học hành tiến bộ, bởi thế hãy liên lạc với thầy cô của con trên lớp để hỏi thăm những thông tin cần thiết như.</p>
-                                <p><em>- Cháu đặc biệt yếu kém và cần được kèm cặp riêng môn nào?</em></p>
-                                <p><em>- Có cần tìm một Gia sư có kinh nghiệm giảng dạy không?</em></p>
-                                <p><em>- Hãy hỏi thầy cô về lịch thi, kiểm tra để Gia sư của con bạn có kế hoạch cụ thể cho việc ôn luyện, bồi dưỡng kiến thức.</em></p>
-                                <h5>Kế hoạch học tập</h5>
-                                <p>Khi đã tìm được Gia sư cho con, hãy ngồi lại cùng bàn kế hoạch giúp con tiến bộ. Ví dụ: Có thể hỏi Gia sư xem thầy cô ấy dự định tiến hành những bước cụ thể nào trong kế hoạch giúp con bạn? Mức độ tiến bộ của con sẽ được đánh giá bằng cách nào? Các buổi học sẽ đề cập đến kiến thức, các bài tập, bài kiểm tra trên lớp chứ?</p>
-                                <p>Hãy rõ ràng ngay từ đầu vấn đề học phí cũng như nguyện vọng của gia sư khi hợp tác cùng gia đình bạn. Sau cùng, ít nhất tuần 1 lần, hãy để ý xem việc học của con và gia sư đang tiến triển đến đâu?</p>
-                                <h5>Hãy thực tế</h5>
-                                <p>Gia sư không phải là một ảo thuật gia tài thánh, quá trình học tập của con bạn cần thời gian mới thấy rõ sự tiến bộ. Bởi thế, hãy tỉnh táo trước những kỳ vọng, đừng quên cổ vũ con: "Mẹ biết con học vất vả, nhưng đây là kết quả của con tuần trước. Hãy xem, tuần này con tiến bộ"...</p>
-                            </div><!--end post desc-->
-                        </div><!--end post-->
+                            </div>
+                        </div>
                     </div>
                 </div>
-            @include('front.layouts.right')
+
+                @include('front.layouts.right')
             </div>
         </div>
     </div>

@@ -15,8 +15,7 @@
                 </li>
                 <li>
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <a href='#loginModal' data-toggle="modal" >Login</a><span>/</span>
-                    <a href='#createAccount' data-toggle="modal">Register</a>
+                    <a href='#loginModal' data-toggle="modal" >Login</a>
                 </li>
             </ul>
         </div>

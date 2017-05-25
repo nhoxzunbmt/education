@@ -17,13 +17,72 @@
                         <div class="productCaption boder-grade clearfix">
                             <p class="title-grade">Lớp đang cần gia sư</p>
                             <div style="margin: 10px 0;">
+                                <p><strong>Lớp dạy: </strong>Lớp 8.</p>
+                                <p><strong>Môn dạy: </strong>Toán, Lý, Hóa.</p>
+                                <p><strong>Địa chỉ: </strong>Q.Cầu Giấy - Hà Nội</p>
+                                <p><strong>Số buổi: </strong>2 buổi</p>
+                                <p><strong>Thời gian: </strong>Buổi chiều</p>
+                                <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                <p><strong>Liên hệ ngay: </strong>
+                                    <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="caption-bottom">
+                                <div class="price">
+                                    <span class="offer-price">170.000 đ/buổi</span>
+                                </div>
+                                <div class="price" style="border-right: none;">
+                                    <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="imageBox">
+                        <div class="productCaption boder-grade clearfix">
+                            <p class="title-grade">Lớp đang cần gia sư</p>
+                            <div style="margin: 10px 0;">
                                 <p><strong>Lớp dạy: </strong>Lớp 2.</p>
-                                <p><strong>Môn dạy: </strong>Toán. Tiếng việt.</p>
-                                <p><strong>Địa chỉ: </strong>Q.Phú Nhuận - Hồ Chí Minh</p>
+                                <p><strong>Môn dạy: </strong>Toán, Tiếng việt.</p>
+                                <p><strong>Địa chỉ: </strong>Q.Nam Từ Liêm - Hà Nội</p>
                                 <p><strong>Số buổi: </strong>3 buổi</p>
-                                <p><strong>Thời gian: </strong>Buổi các tối từ 17h-21h</p>
-                                <p><strong>Yêu cầu: </strong>Nữ Cử Nhân kinh nghiệm</p>
-                                <p><strong>Liên hệ ngay: </strong>0974 502 420</p>
+                                <p><strong>Thời gian: </strong>Buổi sáng</p>
+                                <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                <p><strong>Liên hệ ngay: </strong>
+                                    <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="caption-bottom">
+                                <div class="price">
+                                    <span class="offer-price">160.000 đ/buổi</span>
+                                </div>
+                                <div class="price" style="border-right: none;">
+                                    <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="imageBox">
+                        <div class="productCaption boder-grade clearfix">
+                            <p class="title-grade">Lớp đang cần gia sư</p>
+                            <div style="margin: 10px 0;">
+                                <p><strong>Lớp dạy: </strong>Lớp 5.</p>
+                                <p><strong>Môn dạy: </strong>Toán, Tiếng Anh.</p>
+                                <p><strong>Địa chỉ: </strong>Q.Nam Từ Liêm - Hà Nội</p>
+                                <p><strong>Số buổi: </strong>2 buổi</p>
+                                <p><strong>Thời gian: </strong>Buổi Sáng</p>
+                                <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                <p><strong>Liên hệ ngay: </strong>
+                                    <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                    </span>
+                                </p>
                             </div>
                             <div class="caption-bottom">
                                 <div class="price">
@@ -44,65 +103,18 @@
                             <div style="margin: 10px 0;">
                                 <p><strong>Lớp dạy: </strong>Lớp 2.</p>
                                 <p><strong>Môn dạy: </strong>Toán. Tiếng việt.</p>
-                                <p><strong>Địa chỉ: </strong>Q.Phú Nhuận - Hồ Chí Minh</p>
-                                <p><strong>Số buổi: </strong>3 buổi</p>
-                                <p><strong>Thời gian: </strong>Buổi các tối từ 17h-21h</p>
-                                <p><strong>Yêu cầu: </strong>Nữ Cử Nhân kinh nghiệm</p>
-                                <p><strong>Liên hệ ngay: </strong>0974 502 420</p>
+                                <p><strong>Địa chỉ: </strong>Q. Bắc Từ Liêm - Hà Nội</p>
+                                <p><strong>Số buổi: </strong>2 buổi</p>
+                                <p><strong>Thời gian: </strong>Buổi Sáng</p>
+                                <p><strong>Yêu cầu: </strong>Sinh viên</p>
+                                <p><strong>Liên hệ ngay: </strong>
+                                    <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                    </span>
+                                </p>
                             </div>
                             <div class="caption-bottom">
                                 <div class="price">
-                                    <span class="offer-price">200.000 đ/buổi</span>
-                                </div>
-                                <div class="price" style="border-right: none;">
-                                    <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="imageBox">
-                        <div class="productCaption boder-grade clearfix">
-                            <p class="title-grade">Lớp đang cần gia sư</p>
-                            <div style="margin: 10px 0;">
-                                <p><strong>Lớp dạy: </strong>Lớp 2.</p>
-                                <p><strong>Môn dạy: </strong>Toán. Tiếng việt.</p>
-                                <p><strong>Địa chỉ: </strong>Q.Phú Nhuận - Hồ Chí Minh</p>
-                                <p><strong>Số buổi: </strong>3 buổi</p>
-                                <p><strong>Thời gian: </strong>Buổi các tối từ 17h-21h</p>
-                                <p><strong>Yêu cầu: </strong>Nữ Cử Nhân kinh nghiệm</p>
-                                <p><strong>Liên hệ ngay: </strong>0974 502 420</p>
-                            </div>
-                            <div class="caption-bottom">
-                                <div class="price">
-                                    <span class="offer-price">200.000 đ/buổi</span>
-                                </div>
-                                <div class="price" style="border-right: none;">
-                                    <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="imageBox">
-                        <div class="productCaption boder-grade clearfix">
-                            <p class="title-grade">Lớp đang cần gia sư</p>
-                            <div style="margin: 10px 0;">
-                                <p><strong>Lớp dạy: </strong>Lớp 2.</p>
-                                <p><strong>Môn dạy: </strong>Toán. Tiếng việt.</p>
-                                <p><strong>Địa chỉ: </strong>Q.Phú Nhuận - Hồ Chí Minh</p>
-                                <p><strong>Số buổi: </strong>3 buổi</p>
-                                <p><strong>Thời gian: </strong>Buổi các tối từ 17h-21h</p>
-                                <p><strong>Yêu cầu: </strong>Nữ Cử Nhân kinh nghiệm</p>
-                                <p><strong>Liên hệ ngay: </strong>0974 502 420</p>
-                            </div>
-                            <div class="caption-bottom">
-                                <div class="price">
-                                    <span class="offer-price">200.000 đ/buổi</span>
+                                    <span class="offer-price">180.000 đ/buổi</span>
                                 </div>
                                 <div class="price" style="border-right: none;">
                                     <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
@@ -121,13 +133,13 @@
         </div>
     </div>
 
-    <div class="count clearfix wow fadeIn paralax" data-wow-delay="100ms" style="background-image: url(img/home/paralax/paralax03.jpg);">
+    <div class="count clearfix wow fadeIn paralax" data-wow-delay="100ms" style="background-image: url(img/p-0.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-4">
                     <div class="text-center">
                         <div class="icon"><i class="fa fa-group"></i></div>
-                        <div class="counter"><span class="timer">8298</span></div>
+                        <div class="counter"><span class="timer">190</span></div>
                         <div class="seperator-small"></div>
                         <p>Giáo viên</p>
                     </div>
@@ -147,7 +159,7 @@
                 <div class="col-xs-6 col-sm-4">
                     <div class="text-center">
                         <div class="icon"><i class="fa fa-male"></i></div>
-                        <div class="counter"><span class="timer">1047</span></div>
+                        <div class="counter"><span class="timer">200</span></div>
                         <div class="seperator-small"></div>
                         <p>Lớp chưa giao</p>
                     </div>
@@ -166,14 +178,14 @@
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
                         <div class="productImage clearfix">
-                            <a href="#"><img src="img/home/course/course-img1.jpg" alt="Image"></a>
+                            {{ Html::image(url('/avatars').'/d_3.jpg', 'Nguyễn Thị Liên', ['width' => 262, 'height' => 186]) }}
                             <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
                         </div>
                         <div class="productCaption clearfix">
-                            <h3 style="margin-top: 10px;"><a href="#">Chu Thi Hai</a></h3>
+                            <h3 style="margin-top: 10px;"><a href="#">Nguyễn Thị Liên</a></h3>
                             <div class="caption-bottom">
                                 <div class="price">
-                                    <span class="offer-price">250.000 d/buoi</span>
+                                    <span class="offer-price">190.000 đ/buổi</span>
                                 </div>
                                 <div class="user">
                                     <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
@@ -186,14 +198,14 @@
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
                         <div class="productImage clearfix">
-                            <a href="#"><img src="img/home/course/course-img1.jpg" alt="Image"></a>
+                            {{ Html::image(url('/avatars').'/d_4.jpg', 'Phạm Quốc Long', ['width' => 262, 'height' => 186]) }}
                             <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
                         </div>
                         <div class="productCaption clearfix">
-                            <h3 style="margin-top: 10px;"><a href="#">Chu Thi Hai</a></h3>
+                            <h3 style="margin-top: 10px;"><a href="#">Phạm Quốc Long</a></h3>
                             <div class="caption-bottom">
                                 <div class="price">
-                                    <span class="offer-price">250.000 d/buoi</span>
+                                    <span class="offer-price">250.000 đ/buổi</span>
                                 </div>
                                 <div class="user">
                                     <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
@@ -206,14 +218,14 @@
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
                         <div class="productImage clearfix">
-                            <a href="#"><img src="img/home/course/course-img1.jpg" alt="Image"></a>
+                            {{ Html::image(url('/avatars').'/d_1.jpg', 'Hoàng Thu Hải', ['width' => 262, 'height' => 186]) }}
                             <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
                         </div>
                         <div class="productCaption clearfix">
-                            <h3 style="margin-top: 10px;"><a href="#">Chu Thi Hai</a></h3>
+                            <h3 style="margin-top: 10px;"><a href="#">Hoàng Thu Hải</a></h3>
                             <div class="caption-bottom">
                                 <div class="price">
-                                    <span class="offer-price">250.000 d/buoi</span>
+                                    <span class="offer-price">200.000 đ/buổi</span>
                                 </div>
                                 <div class="user">
                                     <a href="#" class="btn_sign _dk-gs">ĐK gia sư</a>
@@ -226,14 +238,14 @@
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="imageBox">
                         <div class="productImage clearfix">
-                            <a href="#"><img src="img/news/news-post-03.jpg" alt="Image"></a>
+                            {{ Html::image(url('/avatars').'/d_2.jpg', 'Nguyễn Kiều Loan', ['width' => 262, 'height' => 186]) }}
                             <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
                         </div>
                         <div class="productCaption clearfix">
-                            <h3 style="margin-top: 10px;"><a href="#">Chu Thi Hai</a></h3>
+                            <h3 style="margin-top: 10px;"><a href="#">Nguyễn Kiều Loan</a></h3>
                             <div class="caption-bottom">
                                 <div class="price">
-                                    <span class="offer-price">250.000 d/buoi</span>
+                                    <span class="offer-price">180.000 đ/buổi</span>
                                 </div>
                                 <div class="user">
                                     <a href="#" class="btn_sign _dk-gs">ĐK gia sư</a>
@@ -252,7 +264,7 @@
         </div>
     </div>
 
-    <div class="padding clearfix paralax" style="background-image: url(img/home/paralax/paralax01.jpg);">
+    <div class="padding clearfix paralax" style="background-image: url(img/p-1.jpg);">
         <div class="container">
             <div class="paralax-text text-center paralaxInner">
                 <h2>Bạn có thể dạy những gì?</h2>
@@ -276,7 +288,7 @@
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
-                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                                {{ Html::image(url('/img').'/pp_1.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
                                                 <span class="author_name">Sara Lisbon</span>
@@ -297,7 +309,7 @@
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
-                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                                {{ Html::image(url('/img').'/pp_2.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
                                                 <span class="author_name">Sara Lisbon</span>
@@ -314,11 +326,11 @@
                                 <div class="col-xs-12 col-sm-12">
                                     <div class="testimonial">
                                         <div class="carousal_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                            <p>Tôi đã tìm giáo viên dạy tiếng Anh trong một thời gian khá dài, và thật sự khó để có thể tìm được một giáo viên giỏi và nhiệt tâm để theo học trong thời gian dài.</p>
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
-                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                                {{ Html::image(url('/img').'/pp_3.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
                                                 <span class="author_name">Sara Lisbon</span>
@@ -335,11 +347,11 @@
                                 <div class="col-xs-12 col-sm-12">
                                     <div class="testimonial">
                                         <div class="carousal_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                                            <p>Là một giáo viên giảng dạy tại Việt Nam đôi khi việc tìm học sinh chiếm rất nhiều thời gian của tôi. Thông qua Giasutritue.com tôi nhanh chóng nhận được những yêu cầu của học sinh và tôi có thể có thêm thu nhập từ việc giảng dạy này.</p>
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
-                                                <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                                                {{ Html::image(url('/img').'/pp_4.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
                                                 <span class="author_name">Sara Lisbon</span>
@@ -367,10 +379,16 @@
                             </li>
                             <li>
                                 <i class="fa fa-check-circle-o"></i>
-                                SASS file included for unlimited hasel free style customization
+                                Phương pháp dạy phù hợp với lứa tuổi, tính cách người học
                             </li>
-                            <li><i class="fa fa-check-circle-o"></i>Theme option switcher for live cusomization preview</li>
-                            <li><i class="fa fa-check-circle-o"></i>Được hỗ trợ 27/4</li>
+                            <li>
+                                <i class="fa fa-check-circle-o"></i>
+                                Học sinh tiến bộ rõ rệt trong thời gian ngắn nhất
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle-o"></i>
+                                Được hỗ trợ 27/4
+                            </li>
                         </ul>
                     </div>
                 </div>
