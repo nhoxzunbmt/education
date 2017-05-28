@@ -115,6 +115,12 @@ iframe {
 ._dk-gs:hover { background-color: #fff; border: 2px solid #05b197; color: #05b197; padding: 3px 7px; }
 .text-b-v { vertical-align: middle !important; text-align: center; font-weight: bold; }
 .active { color: #05b197; }
+.text-c { font-size: 18px; color: #05b197; }
+.font-26 { font-size: 26px!important; }
+.font-18 { font-size: 18px !important; }
+.font-w { font-weight: 800; }
+.text-u { text-transform: uppercase; }
+.p-t-b { padding: 15px 0 !important; }
 /*profile*/
 .profile-sidebar {
     position: relative
@@ -564,11 +570,9 @@ li.language.dropdown>a:focus {
     }
 }
 .header .navbar-default .navbar-nav li a {
-    font-size: 14px;
     text-decoration: none;
     color: #545454;
     text-transform: uppercase;
-    font-weight: 600;
     background: none!important;
 }
 .header .navbar-default .navbar-nav li a:hover {
@@ -3805,7 +3809,6 @@ li.language.dropdown>a:focus {
     height: 27px;
     position: absolute;
     content: " ";
-    background: url(../img/about/bottom_arrow.png) no-repeat center center;
     bottom: -27px;
     left: 30px;
 }
@@ -4097,7 +4100,7 @@ li.language.dropdown>a:focus {
     border-color: #49c32c;
     box-shadow: none;
 }
-.required { color: red; }
+.required { color: red!important; }
 input[type="checkbox"] {
     display: none;
 }

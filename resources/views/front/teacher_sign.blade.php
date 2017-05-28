@@ -6,8 +6,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-9 custom_right">
                     <div class="single_content_left">
-                        <p>Tôi có thể {{ link_to('dang-ky-tim-gia-su', 'đăng ký tìm gia sư') }} ở đây</p>
-                        <h3 style="margin-bottom: 20px;">Dành cho gia sư</h3>
+                        <h1 class="m-b-15">Đăng ký gia sư</h1>
 
                         @include('front.layouts.message')
 
@@ -39,10 +38,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-4{{ $errors->has('mobile') ? ' has-error' : '' }}">
                                 <label>{{ trans('lang.mobile') }} <span class="required"> * </span></label>
                                 {!! Form::text('mobile', null, ['class' => 'form-control']) !!}
                             </div>
+
                             <div class="col-md-4{{ $errors->has('avatar') ? ' has-error' : '' }}">
                                 <label>{{ trans('lang.avatar') }} <span class="required"> * </span></label>
                                 {!! Form::file('avatar', ['class' => 'form-control']) !!}
@@ -50,7 +51,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12{{ $errors->has('city') ? ' has-error' : '' }}">
+                            <div class="col-md-12{{ $errors->has('city_id') ? ' has-error' : '' }}">
                                 <label>{{ trans('lang.front.teacher_city') }} <span class="required">*</span></label>
                                 {!! Form::select('city_id', $lists, null, ['class' => 'form-control','placeholder' => trans('lang.city'), 'id' => 'city_id']) !!}
                             </div>

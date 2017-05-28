@@ -14,6 +14,7 @@ use App\Repositories\Contracts\PartnerRepository as Partner;
 use App\Http\Requests\Front\StoreTeacher;
 use App\Models\Status;
 use Carbon\Carbon;
+use Image;
 use File;
 use DB;
 use Exception;
@@ -126,9 +127,15 @@ class TeachersController extends BaseController
         $request['subjects'] = join_arr($subjects);
         $request['districts'] = join_arr($city_list);
 
+        $image = $request['avatar'];
         $avatar = 'avatar_'.time().'.'.$request['avatar']->getClientOriginalExtension();
-        $request['avatar']->move(public_path('avatars'), $avatar);
-        $request['avatar'] = $avatar;
+        $path = public_path('avatars/' . $avatar);
+        Image::make($image->getRealPath())->resize(345, 245)->save($path);
+         $request['avatar'] = $avatar;
+
+        // $request['avatar']->move(public_path('avatars'), $avatar);
+        // $request['avatar'] = $avatar;
+
         $request['birthday'] = Carbon::parse($request['birthday'])->format('Y-m-d');
         $request['password'] = $request['mobile'];
         $request['title'] = $request['name'].' '.config('app.gs').' '.$request['subjects'];

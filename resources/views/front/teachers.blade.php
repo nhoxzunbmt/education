@@ -62,14 +62,14 @@
                             </div>
                         @endif
 
-                        <ul class="pagination">
+                        <!-- <ul class="pagination">
                             <li><a href="#"><span aria-hidden="true">Previous</span></a></li>
                             <li class="active"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">...</a></li>
                             <li><a href="#">38</a></li>
                             <li><a href="#"><span aria-hidden="true">Next</span></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
 

@@ -317,4 +317,10 @@ jQuery(document).ready(function($) {
             time: 2000
         });
     });
+
+    $('#login').on('click', function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        alert(1);
+    });
 });

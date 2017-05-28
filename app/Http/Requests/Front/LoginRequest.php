@@ -25,8 +25,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'log' => 'bail|required',
-            'password' => 'bail|required',
-            'captcha' => 'bail|required|bone_captcha'
+            'password' => 'bail|required'
         ];
     }
 
@@ -39,8 +38,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'log.required' => trans('lang.message.log'),
-            'password.required' => trans('lang.message.password'),
-            'captcha.required' => trans('lang.message.captcha')
+            'password.required' => trans('lang.message.password')
         ];
     }
 }
