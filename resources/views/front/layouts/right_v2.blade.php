@@ -3,10 +3,10 @@
         <div class="list_block sidebar_item">
             <h3>Liên hệ</h3>
             <ul class="contact_info">
-                <li><i class="fa fa-home"></i> Lorem ipsum dolor sit amet, consectetur</li>
-                <li><i class="fa fa-envelope"></i> {{ link_to('mailto:giasutritue@gmail.com', 'giasutritue@gmail.com') }}</li>
+                <li><i class="fa fa-home"></i> Số 4, Ngõ 225/95/25, Đường Mỹ Đình, Nam Từ Liêm, Hà Nội.</li>
+                <li><i class="fa fa-envelope"></i> {{ link_to('mailto:giasutritue2017@gmail.com', 'giasutritue2017@gmail.com') }}</li>
                 <li><i class="fa fa-phone"></i> {{ link_to('tel:+841674537055', '(+84)1674.537.055') }}</li>
-                <li><i class="fa fa-globe"></i>{{ link_to('/', 'http://www.giasutritue.com') }}</li>
+                <li><i class="fa fa-globe"></i>{{ link_to('/', 'www.giasutritue.com') }}</li>
             </ul>
         </div>
         <div class="list_block">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" id="tesst" class="btn btn_sign" style="padding: 5px 15px; font-size: 14px;">Đăng ký</a>
+                        <a id="subsc" class="btn btn_sign" style="padding: 5px 15px; font-size: 14px;">Đăng ký</a>
                     </div>
                 </div>
             </div>

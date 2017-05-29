@@ -115,7 +115,7 @@
                             </div>
 
                             <div class="col-md-4{{ $errors->has('number') ? ' has-error' : '' }}">
-                                <label>{{ trans('lang.timer') }} <span class="required">*</span></label>
+                                <label>Tôi có thể dạy được các buổi <span class="required">*</span></label>
                                 {!! Form::select('time', $times, null, ['class' => 'form-control','placeholder' => trans('lang.p_timer')]) !!}
                             </div>
 
@@ -180,7 +180,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 {{ Form::checkbox('term', null, false, ['id' => 'term']) }}
-                                <label for="term" style="padding-top: 6px;padding-left: 10px;"><span></span>{{ trans('lang.term_1') }} <a href="#">{{ trans('lang.term_2') }}</a> {{ trans('lang.term_3') }}</label>
+                                <label for="term"><span></span>{{ trans('lang.term_1') }} <a href="#">{{ trans('lang.term_2') }}</a> {{ trans('lang.term_3') }}</label>
                             </div>
                         </div>
 

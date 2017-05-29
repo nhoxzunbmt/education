@@ -23,7 +23,7 @@
                 <div class="col-sm-3 col-xs-6 borderLeft">
                     <div class="footer-address">
                         <h5>Địa chỉ:</h5>
-                        <address>Số 4, Ngõ 225/95/15, Đường Mỹ Đình, Nam Từ Liêm, Hà Nội</address>
+                        <address>Số 4, Ngõ 225/95/25, Đường Mỹ Đình, Nam Từ Liêm, Hà Nội</address>
                     </div>
                 </div>
 

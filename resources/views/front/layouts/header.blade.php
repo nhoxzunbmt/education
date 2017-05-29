@@ -3,7 +3,7 @@
         <div class="container">
             <ul class="topbar-left">
                 <li class="phoneNo"><i class="fa fa-phone"></i>{{ link_to('tel:+841674537055', '01674.537.055') }}</li>
-                <li class="email-id hidden-xs hidden-sm"><i class="fa fa-envelope"></i>{{ link_to('mailto:dovv1987@gmail.com', 'dovv1987@gmail.com') }}
+                <li class="email-id hidden-xs hidden-sm"><i class="fa fa-envelope"></i>{{ link_to('mailto:giasutritue2017@gmail.com', 'giasutritue2017@gmail.com') }}
                 </li>
             </ul>
             <ul class="topbar-right">
@@ -13,10 +13,14 @@
                         <option value="1">English</option>
                     </select>
                 </li>
-                <li>
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <a href='#loginModal' data-toggle="modal" >Login</a>
-                </li>
+                @if(!auth()->check())
+                    <li>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <a href='#loginModal' data-toggle="modal" >Login</a>
+                    </li>
+                @else
+                    <li>{{ auth()->user()->name }}</li>
+                @endif
             </ul>
         </div>
     </div>

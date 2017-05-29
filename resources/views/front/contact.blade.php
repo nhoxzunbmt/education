@@ -62,7 +62,7 @@
     </div>
 
     <div class="contact_map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6996633.738164338!2d-104.57070294113542!3d31.10069597439005!2m3!1f0!2f0!3f0!3m2!1í024!2i768!4f13.1!3m3!1m2!1s0x864070360b823249%3A0x16éb1c8f808de3c!2sTexas%2C+USA!5e0!3m2!1sen!2sbd!4v1460121293489" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d3724.2769216342144!2d105.77032977322636!3d21.021602892966836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d21.0215599!2d105.77187149999999!4m3!3m2!1d21.0215529!2d105.77185639999999!5e0!3m2!1svi!2s!4v1496026463329" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
     @section('partner')
@@ -73,7 +73,7 @@
 @section('scripts')
     <script>
         $(function () {
-            $('#tesst').on('click', function(e) {
+            $('#subsc').on('click', function(e) {
                 e.preventDefault();
                 var form = $(this).closest('#subscribes'),
                     CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content'),
