@@ -183,6 +183,8 @@
                         </div>
                         <div class="productCaption clearfix">
                             <h3 style="margin-top: 10px;"><a href="#">Nguyễn Thị Liên</a></h3>
+                            <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                            <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
                             <div class="caption-bottom">
                                 <div class="price">
                                     <span class="offer-price">190.000 đ/buổi</span>
@@ -203,6 +205,8 @@
                         </div>
                         <div class="productCaption clearfix">
                             <h3 style="margin-top: 10px;"><a href="#">Phạm Quốc Long</a></h3>
+                            <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                            <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
                             <div class="caption-bottom">
                                 <div class="price">
                                     <span class="offer-price">250.000 đ/buổi</span>
@@ -223,6 +227,8 @@
                         </div>
                         <div class="productCaption clearfix">
                             <h3 style="margin-top: 10px;"><a href="#">Hoàng Thu Hải</a></h3>
+                            <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                            <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
                             <div class="caption-bottom">
                                 <div class="price">
                                     <span class="offer-price">200.000 đ/buổi</span>
@@ -243,6 +249,8 @@
                         </div>
                         <div class="productCaption clearfix">
                             <h3 style="margin-top: 10px;"><a href="#">Nguyễn Kiều Loan</a></h3>
+                            <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                            <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
                             <div class="caption-bottom">
                                 <div class="price">
                                     <span class="offer-price">180.000 đ/buổi</span>
@@ -291,8 +299,8 @@
                                                 {{ Html::image(url('/img').'/pp_1.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
-                                                <span class="author_name">Sara Lisbon</span>
-                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                                <span class="author_name">Phùng Thị Hoài Ngọc</span>
+                                                <span class="author_designation"><a href="#">Kinh doanh</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -312,8 +320,8 @@
                                                 {{ Html::image(url('/img').'/pp_2.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
-                                                <span class="author_name">Sara Lisbon</span>
-                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                                <span class="author_name">Nguyễn Kim Dung</span>
+                                                <span class="author_designation"><a href="#">Công chức</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -330,11 +338,11 @@
                                         </div>
                                         <div class="carousal_bottom">
                                             <div class="thumb">
-                                                {{ Html::image(url('/img').'/pp_3.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
+                                                {{ Html::image(url('/img').'/pp_3.jpg', 'Hoàng Tuấn Nghĩa', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
-                                                <span class="author_name">Sara Lisbon</span>
-                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                                <span class="author_name">Hoàng Tuấn Nghĩa</span>
+                                                <span class="author_designation"><a href="#">Nhân viên thiết kế</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -354,8 +362,8 @@
                                                 {{ Html::image(url('/img').'/pp_4.jpg', 'Nguyễn Kiều Loan', ['width' => 70, 'height' => 70]) }}
                                             </div>
                                             <div class="thumb_title">
-                                                <span class="author_name">Sara Lisbon</span>
-                                                <span class="author_designation">Student<a href="#"> English Literature</a></span>
+                                                <span class="author_name">Hoàng Kim Anh Vũ</span>
+                                                <span class="author_designation"><a href="#">Nhân viên văn phòng</a></span>
                                             </div>
                                         </div>
                                     </div>

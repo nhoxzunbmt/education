@@ -89,10 +89,10 @@ class Status
     ];
 
     const TIMES = [
-        1 => 'Buổi sáng',
-        2 => 'Buổi chiều',
-        3 => 'Buổi tối',
-        4 => 'Tất cả'
+        1 => 'Buổi sáng (8h - 11h30)',
+        2 => 'Buổi chiều (14h - 17h)',
+        3 => 'Buổi tối (18 - 20h)',
+        4 => 'Tất cả các buổi'
     ];
 
     const STATUS = [

@@ -318,9 +318,27 @@ jQuery(document).ready(function($) {
         });
     });
 
-    $('#login').on('click', function (e) {
+    var formLogin = $("#formLogin");
+    formLogin.submit(function(e) {
         e.preventDefault();
-        var $form = $(this);
-        alert(1);
+        var formData = formLogin.serialize();
+
+        $.ajax({
+            url: 'login',
+            type: 'post',
+            data: formData,
+            success: function(data) {
+                $('#loginModal').modal('hide');
+                location.reload(true);
+            },
+            error: function(data) {
+                console.log(data);
+                var obj = $.parseJSON(data.responseText);
+
+                if (obj.error) {
+                    $('p#login-error').addClass('required').html(obj.error);
+                }
+            }
+        });
     });
 });

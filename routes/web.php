@@ -13,8 +13,9 @@ use Illuminate\Routing\Router;
 |
 */
 
+// Auth::routes();
 $router->get('districts/{city_id}', 'DistrictsController@show');
-$router->post('login', ['as' => 'login', 'uses' => 'Auth\LoginController@login']);
+$router->post('login', 'Auth\LoginController@login');
 $router->get('logout', 'Auth\LoginController@logout');
 $router->post('logout', 'Auth\LoginController@logout');
 

@@ -2,21 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -94,7 +94,7 @@
                 $(".alert").fadeTo(500, 0).slideUp(500, function(){
                     $(this).remove(); 
                 });
-            }, 5000);
+            }, 3000);
         </script>
 
         <div class="modal fade customModal" id="loginModal" tabindex="-1" role="dialog">
@@ -109,13 +109,14 @@
                         </div>
 
                         <div class="panel-body">
-                            {!! Form::open(['action' => ['Auth\LoginController@login'], 'method' => 'POST']) !!}
-                                <div class="form-group formField">
+                            <p id="login-error"></p>
+                            {!! Form::open(['action' => ['Auth\LoginController@login'], 'method' => 'POST', 'id' => 'formLogin']) !!}
+                                <div class="form-group">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    {!! Form::text('log', null, ['class' => 'form-control', 'placeholder' => 'Email hoặc số điện thoại']) !!}
+                                    {!! Form::text('log', null, ['id' => 'log', 'class' => 'form-control', 'placeholder' => 'Email hoặc số điện thoại']) !!}
                                 </div>
 
-                                <div class="form-group formField">
+                                <div class="form-group">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
                                     {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Mật khẩu']) !!}
                                 </div>

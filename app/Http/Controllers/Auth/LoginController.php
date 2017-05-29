@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Front\LoginRequest;
 
-class LoginController extends Request
+class LoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +38,7 @@ class LoginController extends Request
     {
         $this->middleware('guest', ['except' => 'logout']);
 
-        parent::__construct();
+        // parent::__construct();
     }
 
     /**
@@ -48,10 +49,11 @@ class LoginController extends Request
      */
     public function login(LoginRequest $request)
     {
-        dd($request->all());
         if ($lockedOut = $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
-            return redirect('login')->with('error', trans('lang.message.locked'));
+            return response()->json([
+                'error' => trans('lang.message.locked')
+            ], 401);
         }
 
         $logValue = $request->input('log');
@@ -63,13 +65,13 @@ class LoginController extends Request
         ];
 
         if (!auth()->validate($credentials)) {
-
             if (!$lockedOut) {
                 $this->incrementLoginAttempts($request);
             }
 
-            return redirect('login')
-                ->with('error', trans('lang.message.err_login'));
+            return response()->json([
+                'error' => trans('lang.message.err_login')
+            ], 401);
         }
 
         $user = auth()->getLastAttempted();
@@ -82,11 +84,12 @@ class LoginController extends Request
             auth()->login($user, $request->has('remember'));
             $user->last_login();
 
-            return redirect('/');
+            return redirect('/')->with('success', 'Login success');
         }
 
-        return redirect('login')
-            ->with('error', trans('lang.message.locked'));
+        return response()->json([
+            'error' => trans('lang.message.locked')
+        ], 401);
     }
 
     public function logout(Request $request)
