@@ -24,6 +24,74 @@
                             {!! Form::close() !!}
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productImage clearfix">
+                                        {{ Html::image(url('/avatars').'/d_3.jpg', 'Nguyễn Thị Liên', ['width' => 262, 'height' => 186]) }}
+                                        <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
+                                    </div>
+                                    <div class="productCaption clearfix">
+                                        <h3 style="margin-top: 10px;"><a href="#">Nguyễn Thị Liên</a></h3>
+                                        <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                                        <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">190.000 đ/buổi</span>
+                                            </div>
+                                            <div class="user">
+                                                <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productImage clearfix">
+                                        {{ Html::image(url('/avatars').'/d_4.jpg', 'Phạm Quốc Long', ['width' => 262, 'height' => 186]) }}
+                                        <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
+                                    </div>
+                                    <div class="productCaption clearfix">
+                                        <h3 style="margin-top: 10px;"><a href="#">Phạm Quốc Long</a></h3>
+                                        <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                                        <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">250.000 đ/buổi</span>
+                                            </div>
+                                            <div class="user">
+                                                <a onclick="notify('_dk-gs')" class="btn_sign _dk-gs">ĐK gia sư</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productImage clearfix">
+                                        {{ Html::image(url('/avatars').'/d_1.jpg', 'Hoàng Thu Hải', ['width' => 262, 'height' => 186]) }}
+                                        <span class="sticker"><strong><i class="fa fa-graduation-cap" aria-hidden="true"></i>Sinh vien</strong></span>
+                                    </div>
+                                    <div class="productCaption clearfix">
+                                        <h3 style="margin-top: 10px;"><a href="#">Hoàng Thu Hải</a></h3>
+                                        <p><strong>Dạy lớp: </strong>Lớp lá, Lớp 1, Lớp 3, Lớp...</p>
+                                        <p class="m-b-15"><strong>Môn: </strong>Toán, Văn.</p>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">200.000 đ/buổi</span>
+                                            </div>
+                                            <div class="user">
+                                                <a href="#" class="btn_sign _dk-gs">ĐK gia sư</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         @if ($lists->count())
                             @foreach ($lists->chunk(3) as $grades)
                                 <div class="row">

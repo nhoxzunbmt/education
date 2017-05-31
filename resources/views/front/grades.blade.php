@@ -24,6 +24,92 @@
                             {!! Form::close() !!}
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productCaption boder-grade clearfix">
+                                        <p class="title-grade">Lớp đang cần gia sư</p>
+                                        <div style="margin: 10px 0;">
+                                            <p><strong>Lớp dạy: </strong>Lớp 8.</p>
+                                            <p><strong>Môn dạy: </strong>Toán, Lý, Hóa.</p>
+                                            <p><strong>Địa chỉ: </strong>Q.Cầu Giấy - Hà Nội</p>
+                                            <p><strong>Số buổi: </strong>2 buổi</p>
+                                            <p><strong>Thời gian: </strong>Buổi chiều</p>
+                                            <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                            <p><strong>Liên hệ ngay: </strong>
+                                                <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">170.000 đ/buổi</span>
+                                            </div>
+                                            <div class="price" style="border-right: none;">
+                                                <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productCaption boder-grade clearfix">
+                                        <p class="title-grade">Lớp đang cần gia sư</p>
+                                        <div style="margin: 10px 0;">
+                                            <p><strong>Lớp dạy: </strong>Lớp 2.</p>
+                                            <p><strong>Môn dạy: </strong>Toán, Tiếng việt.</p>
+                                            <p><strong>Địa chỉ: </strong>Q.Nam Từ Liêm - Hà Nội</p>
+                                            <p><strong>Số buổi: </strong>3 buổi</p>
+                                            <p><strong>Thời gian: </strong>Buổi sáng</p>
+                                            <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                            <p><strong>Liên hệ ngay: </strong>
+                                                <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">160.000 đ/buổi</span>
+                                            </div>
+                                            <div class="price" style="border-right: none;">
+                                                <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="imageBox">
+                                    <div class="productCaption boder-grade clearfix">
+                                        <p class="title-grade">Lớp đang cần gia sư</p>
+                                        <div style="margin: 10px 0;">
+                                            <p><strong>Lớp dạy: </strong>Lớp 5.</p>
+                                            <p><strong>Môn dạy: </strong>Toán, Tiếng Anh.</p>
+                                            <p><strong>Địa chỉ: </strong>Q.Nam Từ Liêm - Hà Nội</p>
+                                            <p><strong>Số buổi: </strong>2 buổi</p>
+                                            <p><strong>Thời gian: </strong>Buổi Sáng</p>
+                                            <p><strong>Yêu cầu: </strong>Sinh Viên</p>
+                                            <p><strong>Liên hệ ngay: </strong>
+                                                <span class="fa fa-phone" style="color: #f57137; font-weight: 900; font-size: 18px;"> 01674.537.055
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="caption-bottom">
+                                            <div class="price">
+                                                <span class="offer-price">200.000 đ/buổi</span>
+                                            </div>
+                                            <div class="price" style="border-right: none;">
+                                                <span class="offer-price" style="color: #16d5b8;">MS: 09873</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         @if ($lists->count())
                             @foreach ($lists->chunk(3) as $grades)
                                 <div class="row">
