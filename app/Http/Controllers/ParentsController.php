@@ -18,6 +18,9 @@ use DB;
 use Exception;
 use Log;
 use Throwable;
+use SEOMeta;
+use OpenGraph;
+use Twitter;
 
 class ParentsController extends BaseController
 {
@@ -78,6 +81,28 @@ class ParentsController extends BaseController
 
     public function create()
     {
+        // SEO
+        SEOMeta::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        SEOMeta::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        SEOMeta::setCanonical(request()->getUri());
+        SEOMeta::addMeta('article:published_time', '2017-05-30 12:00:01', 'property');
+        SEOMeta::addMeta('article:section', 'Home', 'property');
+        SEOMeta::addKeyword(['Gia su', 'Tim gia su', 'Gia su gioi', 'Gia su uy tin']);
+
+        OpenGraph::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        OpenGraph::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        OpenGraph::setUrl(request()->getUri());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName('Gia Su Tri Tue');
+        OpenGraph::addImage(request()->getUri().'img/1.png');
+
+        Twitter::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        Twitter::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        Twitter::setUrl(request()->getUri());
+        Twitter::addImage(request()->getUri().'img/1.png');
+        Twitter::setSite('card');
+
+        // End SEO
         $lists = $this->city->cities();
         $grades = $this->status->grades();
         $numbers = $this->status->numbers();
@@ -140,6 +165,28 @@ class ParentsController extends BaseController
 
     public function list(Request $request)
     {
+        // SEO
+        SEOMeta::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        SEOMeta::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        SEOMeta::setCanonical(request()->getUri());
+        SEOMeta::addMeta('article:published_time', '2017-05-30 12:00:01', 'property');
+        SEOMeta::addMeta('article:section', 'Home', 'property');
+        SEOMeta::addKeyword(['Gia su', 'Tim gia su', 'Gia su gioi', 'Gia su uy tin']);
+
+        OpenGraph::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        OpenGraph::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        OpenGraph::setUrl(request()->getUri());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName('Gia Su Tri Tue');
+        OpenGraph::addImage(request()->getUri().'img/1.png');
+
+        Twitter::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        Twitter::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        Twitter::setUrl(request()->getUri());
+        Twitter::addImage(request()->getUri().'img/1.png');
+        Twitter::setSite('card');
+        // End SEO
+
         $search_grades = $this->status->search_grades();
         $params = $request->only(['grades', 'city', 'city_id']);
         $lists = $this->partner->partners(self::ROLE_ID, $request->all());
@@ -156,11 +203,55 @@ class ParentsController extends BaseController
 
     public function fee()
     {
+        // SEO
+        SEOMeta::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        SEOMeta::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        SEOMeta::setCanonical(request()->getUri());
+        SEOMeta::addMeta('article:published_time', '2017-05-30 12:00:01', 'property');
+        SEOMeta::addMeta('article:section', 'Home', 'property');
+        SEOMeta::addKeyword(['Gia su', 'Tim gia su', 'Gia su gioi', 'Gia su uy tin']);
+
+        OpenGraph::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        OpenGraph::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        OpenGraph::setUrl(request()->getUri());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName('Gia Su Tri Tue');
+        OpenGraph::addImage(request()->getUri().'img/1.png');
+
+        Twitter::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        Twitter::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        Twitter::setUrl(request()->getUri());
+        Twitter::addImage(request()->getUri().'img/1.png');
+        Twitter::setSite('card');
+        // End SEO
+
         return view('front.parent_fee');
     }
 
     public function know()
     {
+        // SEO
+        SEOMeta::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        SEOMeta::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        SEOMeta::setCanonical(request()->getUri());
+        SEOMeta::addMeta('article:published_time', '2017-05-30 12:00:01', 'property');
+        SEOMeta::addMeta('article:section', 'Home', 'property');
+        SEOMeta::addKeyword(['Gia su', 'Tim gia su', 'Gia su gioi', 'Gia su uy tin']);
+
+        OpenGraph::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        OpenGraph::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        OpenGraph::setUrl(request()->getUri());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName('Gia Su Tri Tue');
+        OpenGraph::addImage(request()->getUri().'img/1.png');
+
+        Twitter::setTitle('Gia Sư Trí Tuệ | Trung tâm gia sư dạy kèm uy tín chất lượng');
+        Twitter::setDescription('Trung tâm Gia sư dạy kèm uy tín: Đội ngũ gia sư dạy kèm giỏi nhiều năm giảng dạy (Miễn Phí dạy thử 3b, Cam kết tiến bộ trong 10 buổi) LH: 01674.537.055.');
+        Twitter::setUrl(request()->getUri());
+        Twitter::addImage(request()->getUri().'img/1.png');
+        Twitter::setSite('card');
+        // End SEO
+
         return view('front.parent_know');
     }
 }
